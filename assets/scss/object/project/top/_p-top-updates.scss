@@ -1,0 +1,84 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-top-updates
+-----------------------------------------*/
+.p-top-updates {
+  padding: 120px 0;
+  @include mq(md) {
+    padding: 50px 0;
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    @include mq(lg) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .c-primary-title__ja {
+      @include mq(lg) {
+        justify-content: center;       
+      }
+    }
+  }
+
+  &__cate-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-left: 20px;
+    @include mq(lg) {
+      margin: 40px 0 0 0;      
+    }
+    @include mq(md) {
+      max-width: 350px;
+    }
+  }
+
+  &__cate {
+    display: inline-block;
+    border-radius: 100px;
+    background-color: #fff;
+    border: 1px solid $main-color;
+    color: $main-color;
+    font-size: 1.4rem;
+    font-weight: $medium;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+    padding: 7px 14px;
+    cursor: pointer;
+  }
+
+  &__cate.is-active {
+    background-color: $main-color;
+    color: #fff;
+  }
+
+  &__list {
+    margin-top: 50px;
+    @include mq(md) {
+      margin-top: 40px;
+    }
+  }
+
+  &__item {
+    display: none;
+  }
+
+  &__item.is-show {
+    display: block;
+  }
+
+  &__btn {
+    text-align: center;
+    margin-top: 60px;
+    @include mq(md) {
+      margin-top: 40px;
+    }
+  }
+}

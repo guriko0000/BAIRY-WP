@@ -1,0 +1,265 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-top-recruit
+-----------------------------------------*/
+.p-top-recruit {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+  @include mq(md) {
+    padding: 30px 0 50px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: calc(100% - 50px);
+    height: 100%;
+    background: linear-gradient(90deg, #246EB8 0%, #00A2EC 100%);
+    border-radius: 15px 0 0 15px;
+    z-index: -1;
+    @include mq(xxl) {
+      width: calc(100% - 40px);
+    }
+    @include mq(md) {
+      width: calc(100% - 20px);
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: transparent url(../img/top/bg_pattern01.png) no-repeat right center/cover;
+    z-index: -1;
+    @include mq(md) {
+      background-position: center center;
+    }
+  }
+
+  .l-inner {
+    max-width: 1580px;
+    @include mq(md) {
+      max-width: none!important;
+    }
+  }
+
+  &__content {
+    display: flex;
+    padding-left: 110px;
+    @include mq(xl) {
+      padding-left: 60px;
+    }
+    @include mq(lg) {
+      flex-direction: column;
+    }
+    @include mq(md) {
+      padding-left: 30px;
+    }
+  }
+
+  &__text-area {
+    flex-shrink: 0;
+    color: #fff;
+    max-width: 500px;
+    width: 40%;
+    margin-right: 40px;
+    @include mq(lg) {
+      display: contents;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-family: $second-font-family;
+    color: #fff;
+    font-size: 7rem;
+    font-weight: $bold;
+    line-height: 1.2;
+    @include mq(xl) {
+      font-size: 6rem;      
+    }
+    @include mq(lg) {
+      order: 0;
+    }
+    @include mq(md) {
+      font-size: 4rem;
+    }
+  }
+
+  &__lead {
+    font-size: 2.4rem;
+    font-weight: $medium;
+    line-height: 1.5;
+    margin-top: 5px;
+    @include mq(xl) {
+      font-size: 2rem;      
+    }
+    @include mq(lg) {
+      order: 1;
+    }
+    @include mq(md) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__text-wrap {
+    margin-top: 30px;
+    @include mq(lg) {
+      order: 2;
+    }
+  }
+
+  &__text {
+    font-weight: $medium;
+    letter-spacing: 0.06em;
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
+    & + & {
+      margin-top: 20px;
+    }
+  }
+
+  &__btn-wrap {
+    margin-top: 50px;
+    @include mq(lg) {
+      order: 4;
+      text-align: right;
+    }
+    @include mq(md) {
+      margin-top: 30px;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    &:hover, &:focus-visible {
+
+      .p-top-recruit__btn-icon::before {
+        animation: slideIn1 0.2s forwards;
+      }
+      .p-top-recruit__btn-icon::after {
+        opacity: 0;
+        animation: slideIn2 0.25s forwards;
+        animation-delay: 0.2s;
+      }
+    }
+  }
+
+  &__btn-icon {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 18px;
+    &::before, &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 17px;
+      aspect-ratio: 13 / 10;
+      background: url(../img/icon/icon_arrow-right.svg) no-repeat center / contain;
+    }
+
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  &__slider-area {
+    width: 84%;
+    margin-left: auto;
+    margin-right: calc(-50vw - -50%);
+    @media screen and (min-width: 1921px){
+      margin-right: calc(-52vw - -50%);
+    }
+    @media screen and (max-width: 1700px){
+      width: 72%;
+    }
+    @include mq(lg) {
+      width: 160vw;
+      order: 3;
+      margin-top: 30px;
+    }
+    @include mq(md) {
+      width: 127vw;
+    }
+  }
+}
+
+
+// スライダー
+.my-carousel-progress {
+  background: #ccc;
+}
+
+.my-carousel-progress-bar {
+  background: #fff;
+  height: 2px;
+  transition: width 400ms ease;
+  width: 0;
+}
+
+.splide__bottom {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 75%;
+  margin-top: 30px;
+}
+
+.my-carousel-progress {
+  width: 100%;
+  height: 2px;
+  background-color: #75BBF0;
+  @include mq(lg) {
+    width: 95%;
+  }
+}
+
+.splide__arrows {
+  display: flex;
+  gap: 10px;
+  @include mq(lg) {
+    display: none;
+  }
+}
+.splide__arrow {
+  position: relative;
+  top: auto;
+  transform: translateY(0);
+  left: auto;
+  right: auto;
+}
+
+.splide__arrow svg {
+  fill: #fff;
+}
+
+.splide__arrow {
+  background-color: transparent;
+  border: 1px solid #fff;
+  // opacity: 1;
+  // transition: opacity 0.25s;
+}
+// .splide__arrow:hover:not(:disabled) {
+//     opacity: .7;
+// }

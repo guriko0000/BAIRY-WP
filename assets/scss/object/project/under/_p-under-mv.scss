@@ -1,0 +1,89 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-under-mv
+-----------------------------------------*/
+.p-under-mv {
+  position: relative;
+  background: $main-gradient;
+  padding: 70px 0;
+  @include mq(md) {
+    padding: 36px 0;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    max-width: 1200px;
+    height: 100%;
+    background: url(../img/under/under-mv-bg.png) no-repeat 0% 50% / cover;
+    @include mq(lg) {
+      width: 31.5%;
+      background: url(../img/under/under-mv-bg-sp.png) no-repeat 0% 50% / cover;
+    }
+    @include mq(md) {
+      max-width: 130px;
+    }
+    @include mq(sm) {
+      width: 40%;
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+    color: #fff;
+    z-index: 10;
+
+    .en {
+      display: flex;
+      align-items: center;
+      font-family: $second-font-family;
+      font-size: 2rem;
+      font-weight: $bold;
+      @include mq(md) {
+        font-size: 1.4rem;
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: url(../img/icon/icon_hexagon-white.svg) no-repeat center / contain;
+        margin-right: 8px;
+        @include mq(md) {
+          width: 16px;
+          height: 16px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .ja {
+      display: inline-block;
+      font-size: 4.4rem;
+      font-weight: $bold;
+      margin-top: 5px;
+      @include mq(md) {
+        font-size: 2.6rem;
+      }
+    }
+  }
+
+  &__breadcrumb {
+    margin-top: 40px;
+    @include mq(md) {
+      margin-top: 0;
+    }
+  }
+
+
+}

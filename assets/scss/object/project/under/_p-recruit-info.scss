@@ -1,0 +1,40 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-recruit-info
+-----------------------------------------*/
+.p-recruit-info {
+  background: transparent url(../img/under/recruit-info_bg.jpg) no-repeat center center/cover;
+  padding: 110px 0;
+  @include mq(md) {
+    background-image: url(../img/under/recruit-info_bg-sp.jpg);
+    padding: 60px 0;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 3.6rem;
+    font-weight: $medium;
+    text-align: center;
+    @include mq(md) {
+      font-size: 2rem;
+    }
+  }
+
+  &__btn-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 50px;
+    text-align: center;
+    margin-top: 60px;
+    @include mq(lg) {
+      gap: 30px;
+    }
+    @include mq(md) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+  }
+}

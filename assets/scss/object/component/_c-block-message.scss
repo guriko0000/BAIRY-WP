@@ -1,0 +1,82 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-block-message
+-----------------------------------------*/
+.c-block-message {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 40px;
+  @include mq(md) {
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  &__img-area {
+    flex-shrink: 0;
+    width: 134px;
+    @include mq(md) {
+      width: 70px;
+    }
+  }
+
+  &__img {
+    width: 134px;
+    @include mq(md) {
+      width: 70px;
+    }
+
+    img {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+
+  &__name {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 10px;
+    @include mq(md) {
+      font-size: 1rem;
+    }
+  }
+
+  &__bubble {
+    position: relative;
+    flex: 1;
+    background-color: $main-bg;
+    border-radius: 15px;
+    padding: 30px;
+    @include mq(md) {      
+      padding: 20px 25px;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: -27px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 27px solid $main-bg;
+      border-left: 0;
+      @include mq(md) {
+        content: none;
+      }
+    }
+  }
+}
+

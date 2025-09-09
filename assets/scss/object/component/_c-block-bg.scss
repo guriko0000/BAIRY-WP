@@ -1,0 +1,19 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-block-bg
+-----------------------------------------*/
+.c-block-bg {
+  background-color: $main-bg;
+  border-radius: 15px;
+  padding: 40px 50px;
+  margin-top: 40px;
+  @include mq(md) {
+    padding: 20px 30px;
+    margin-top: 30px;
+  }
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+}

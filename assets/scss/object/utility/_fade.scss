@@ -1,0 +1,59 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        fade
+-----------------------------------------*/
+// gsap
+// そのままフェードイン
+  // .js-fade {
+  //   opacity: 0;
+  //   transform: translateY(20px);
+  //   transition: opacity 0.8s, transform 0.8s;
+
+  //   &.show {
+  //     opacity: 1;
+  //     transform: translateY(0);
+  //   }
+  // }
+
+  // 上から
+  .js-fadeUp, .js-fadeUp2 {
+    opacity: 0;
+  }
+  .js-fadeUp-inView.show .js-fadeUp, .js-fadeUp-inView2.show .js-fadeUp  {
+      opacity: 1;
+      animation: fadeInUp 2s ease forwards;
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translate(0, 10px);
+        visibility: visible;
+      }
+      100% {
+        opacity: 1;
+        transform: translate(0, 0);
+        visibility: visible;
+      }
+    }
+  }
+
+  // 右から
+  // .js-fadeRight {
+  //   opacity: 0;
+  //   transform: translateX(20px);
+  //   transition: opacity 0.8s, transform 0.8s;
+
+  //   &.show {
+  //     opacity: 1;
+  //     transform: translateY(0);
+  //   }
+  // }
+
+
+
+  .js-wipeAnimation {
+    display: inline-block;
+    opacity: 1!important;
+    clip-path: inset(0 100% 0 0);
+  }

@@ -1,0 +1,30 @@
+@use "../global/index" as *;
+
+/* -------------------------------------
+        l-post
+-----------------------------------------*/
+.l-post {
+  display: flex;
+  align-items: flex-start;
+  // padding-bottom: 100px;
+  @include mq(lg) {
+    display: block;
+    // padding-bottom: 72px;
+  }
+
+  &__main {
+    width: calc(100% - 262px - 100px);
+    @include mq(lg) {
+      width: 100%;
+    }
+  }
+
+  &__sub {
+    width: 262px;
+    margin-left: 100px;
+    @include mq(lg) {
+      width: 100%;
+      margin: 80px 0 0 0;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-progress
+-----------------------------------------*/
+.c-progress {
+
+  & + * {
+    margin-top: 60px;
+    @include mq(md) {
+      margin-top: 40px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 54px;
+    @include mq(md) {
+      gap: 34px;
+    }
+    @include mq(xs) {
+      gap: 32px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    background-color: $main-bg;
+    border-radius: 50%;
+    @include mq(md) {
+      width: 95px;
+      height: 95px;
+    }
+    @include mq(xs) {
+      width: 90px;
+      height: 90px;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -35px;
+      width: 15px;
+      height: 28px;
+      background: url(../img/icon/icon_triangle-blue.svg) no-repeat center / contain;
+      @include mq(md) {
+        width: 10px;
+        height: 19px;
+        right: -23px;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+
+    &.active {
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    @include mq(md) {
+      font-size: 1.2rem;
+    }
+  }
+
+}

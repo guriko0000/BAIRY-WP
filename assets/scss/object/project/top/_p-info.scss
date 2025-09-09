@@ -1,0 +1,159 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-info
+-----------------------------------------*/
+.p-info {
+  position: relative;
+  background-color: $main-color;
+  padding: 120px 0;
+  @include mq(md) {
+    padding: 50px 0;
+  }
+  &::before, &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    width: 217px;
+    aspect-ratio: 217 / 292;
+    background: url(../img/common/info_bg-left.png) no-repeat center / contain;
+    @include mq(md) {
+      content: none;
+    }
+  }
+  &::after {
+    bottom: 0;
+    right: 0;
+    width: 241px;
+    aspect-ratio: 241 / 321;
+    background: url(../img/common/info_bg-right.png) no-repeat center / contain;
+    @include mq(md) {
+      background-image: url(../img/common/info_bg-right-sp.png);
+      width: 125px;
+      aspect-ratio: 125 / 152;
+      top: 0;
+      bottom: auto;
+    }
+  }
+
+  .l-inner {
+    max-width: 1040px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    @include mq(md) {
+      gap: 40px;
+    }
+  }
+
+  &__head {
+    flex-shrink: 0;
+    width: 48%;
+    max-width: 400px;
+    color: #fff;
+    @include mq(lg) {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    .ja {
+      font-size: 2.4rem;
+      font-weight: $medium;
+      @include mq(md) {
+        font-size: 1.8rem;
+      }
+    }
+    .en {
+      display: block;
+      font-family: $second-font-family;
+      font-weight: $semibold;
+      font-size: 7.2rem;
+      line-height: 1.2;
+      @include mq(md) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: $medium;
+    margin-top: 40px;
+    @include mq(md) {
+      font-size: 1.4rem;
+      margin-top: 15px;
+    }
+  }
+
+  &__body {
+    width: 48%;
+    max-width: 415px;
+    flex-shrink: 0;
+    color: #fff;
+    margin-top: 20px;
+    @include mq(lg) {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  &__tel-link {
+    display: flex;
+    align-items: center;
+    font-size: 5.2rem;
+    font-weight: $medium;
+    line-height: 1;
+    transition: opacity 0.25s;
+    @include mq(lg) {
+      justify-content: center;
+    }
+    @include mq(md) {
+      font-size: 3.8rem;
+    }
+    &:hover, &:focus-visible {
+      opacity: 0.7;
+    }
+    &::before {
+      content: '';
+      display: inline-block;
+      transform: translateY(5px);
+      width: 32px;
+      aspect-ratio: 32 / 47;
+      background: url(../img/icon/icon_tel.svg) no-repeat center / contain;
+      margin-right: 10px;
+      @include mq(md) {
+        width: 20px;
+      }
+    }
+  }
+
+  &__tel-text {
+    font-weight: $medium;
+    text-align: center;
+    margin-top: 8px;
+    @include mq(md) {
+      margin-top: 15px;
+    }
+  }
+
+  &__btn {
+    margin-top: 40px;
+    @include mq(lg) {
+      text-align: center;
+    }
+    @include mq(md) {
+      margin-top: 30px;
+    }
+  }
+}

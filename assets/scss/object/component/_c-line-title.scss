@@ -1,0 +1,29 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-line-title
+-----------------------------------------*/
+.c-line-title {
+  position: relative;
+  font-size: 2.8rem;
+  font-weight: $medium;
+  line-height: 1.4;
+  padding-left: 10px;
+  @include mq(md) {
+    font-size: 2rem;
+  }
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 3px;
+    height: calc(100% - 11px);
+    background-color: $main-color;
+    @include mq(md) {
+      height: calc(100% - 6px);
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-mv
+-----------------------------------------*/
+.p-mv {
+  position: relative;
+  background-color: rgba(6, 100, 194, 0.3);
+  overflow: hidden;
+  &__inner {
+
+  }
+
+  .p-mv__video {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  .p-mv__video.is-visible {
+    opacity: 1;
+  }
+
+  &__video-wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      object-fit: cover;
+      object-position: 50% 50%;
+      @include mq(md) {
+        top: auto;
+        bottom: 0;
+        transform: translate(-50%, 0%);
+      }
+    }
+  }
+  
+  &__text-area {
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+    color: #fff;
+    @include mq(sm) {
+      bottom: 20%;
+      left: 20px;
+    }
+
+    .text-wrapper{
+      display: inline-block;
+      overflow: hidden;
+    }
+    .text{
+      display: inline-block;
+      transform: translateY(125%);
+    }
+  }
+
+  &__title {
+    font-size: 7.5rem;
+    font-weight: $bold;
+    line-height: 1.25;
+    letter-spacing: 0.06em;
+    @include mq(md) {
+      font-size: 3.4rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: $medium;
+    letter-spacing: 0.06em;
+    line-height: 2.2;
+    margin-top: 10px;
+    @include mq(md) {
+      font-size: 1.6rem;
+    }
+  }
+
+}

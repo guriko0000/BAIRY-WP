@@ -1,0 +1,103 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-product
+-----------------------------------------*/
+.p-product {
+  
+  &__box {
+    margin-top: 80px;
+    @include mq(md) {
+      margin-top: 30px;
+    }
+  }
+
+  &__box-container {
+    max-width: 990px;
+    background-color: $main-bg;
+    border-radius: 15px;
+    padding: 50px 60px;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(md) {
+      padding: 40px 30px;
+    }
+  }
+
+  &__box-title {
+    font-size: 2.6rem;
+    font-weight: $medium;
+    line-height: 1.5;
+    text-align: center;
+    @include mq(md) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__box-text {
+    margin-top: 30px;
+    @include mq(md) {
+      font-size: 1.4rem;
+      margin-top: 20px;
+    }
+  }
+
+  &__box-btn {
+    margin-top: 40px;
+    text-align: center;
+    @include mq(md) {
+      margin-top: 20px;
+    }
+  }
+
+  &__lineup {
+    margin-top: 60px;
+  }
+
+  &__lineup-media {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    @include mq(lg) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__lineup-textarea {
+    flex: 1;
+
+    .c-secondary-title {
+      @include mq(lg) {
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+
+  &__lineup-body {
+    @include mq(md) {
+      margin-top: 20px;
+    }
+  }
+
+  &__lineup-text {
+    & + * {
+      margin-top: 20px;
+    }
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__lineup-img {
+    max-width: 576;
+    width: 48%;
+    @include mq(lg) {
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+}

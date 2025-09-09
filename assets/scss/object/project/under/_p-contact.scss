@@ -1,0 +1,78 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-contact
+-----------------------------------------*/
+.p-contact {
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: $medium;
+    line-height: 1.5;
+    text-align: center;
+    @include mq(md) {
+      font-size: 1.8rem;
+    }
+
+    & + * {
+      margin-top: 50px;
+      @include mq(md) {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__item {
+    a {
+      display: flex;
+      gap: 25px;
+      height: 100%;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+      padding: 28px;
+      transition: border 0.25s, background-color 0.25s;
+      @include mq(lg) {
+        gap: 20px;
+        padding: 23px 18px;
+      }
+
+      &:hover, &:focus-visible {
+        border-color: $main-color;
+        background-color: $main-bg;
+      }
+    }
+  }
+
+  &__item-num {
+    flex-shrink: 0;
+    display: inline-block;
+    color: $main-color;
+    font-family: $second-font-family;
+    line-height: 1.5;
+  }
+  
+  &__item-body {
+    flex: 1;
+  }
+
+  &__item-title {
+    font-size: 2rem;
+    font-weight: $medium;
+    line-height: 1.5;
+    @include mq(lg) {
+      font-size: 1.8rem;
+    }
+
+    & + * {
+      margin-top: 10px;
+    }
+  }
+
+  &__item-text {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    @include mq(lg) {
+      font-size: 1.4rem;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-post-recruit
+-----------------------------------------*/
+.p-post-recruit {
+  margin-top: 50px;
+  @include mq(md) {
+    margin-top: 25px;
+  }
+
+  & > *:first-child {
+    margin-top: 0;
+}
+
+  h2 {
+    background-color: $main-bg;
+    border-left: 3px solid $main-color;
+    font-size: 2.4rem;
+    font-weight: $medium;
+    padding: 10px 22px;
+    margin-top: 50px;
+    @include mq(md) {
+      font-size: 1.8rem;
+      border-left-width: 2px;
+      padding: 8px 18px;
+    }
+
+    & + * {
+      margin-top: 20px;
+    }
+  }
+
+  p {
+    margin-top: 20px;
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
+  }
+
+  ul {
+    padding-left: 1em;
+    margin-top: 20px;
+    @include mq(md) {
+      padding-left: 0.8em;
+    }
+  }
+
+  li {
+    text-indent: -0.9em;
+    @include mq(md) {
+      font-size: 1.4rem;
+      text-indent: -1em;
+    }
+
+    &::before {
+      content:  "";
+      width: 6px;
+      height: 6px;
+      display: inline-block;
+      background-color: $main-color;
+      border-radius: 50%;  
+      margin-right: 8px;
+      margin-bottom: 3px;
+    }
+  }
+
+  li + li {
+    margin-top: 3px;
+  }
+
+  a {
+    text-decoration: underline;
+    transition: opacity 0.25s;
+    &:hover, &:focus-visible {
+      opacity: 0.7;
+    }
+  }
+}

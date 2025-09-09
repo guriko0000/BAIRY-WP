@@ -1,0 +1,61 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-tags
+-----------------------------------------*/
+.c-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  &__item {
+    display: inline-block;
+    background-color: $main-bg;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    padding: 6px 8px;
+    @include mq(md) {
+      border-radius: 3px;
+    }
+  }
+}
+
+.c-tags--larg {
+  .c-tags__item {
+    font-size: 1.4rem;
+    padding: 4px 14px;
+    @include mq(md) {
+      font-size: 1.2rem;
+      padding: 4px 9px;
+    }
+  }
+}
+
+a.c-tags__item {
+  transition: 0.25s;
+  &:hover, &:focus-visible {
+    color: $main-color;
+    border-color: $main-color;
+  }
+}
+
+.c-tags--blue {
+  .c-tags__item {
+    background-color: $main-color;
+    border: 1px solid transparent;
+    color: #fff;
+  }
+
+  a.c-tags__item {
+    transition: 0.25s;
+    &:hover, &:focus-visible {
+      color: $main-color;
+      background-color: #fff;
+      border-color: $main-color;
+      }
+    }
+
+
+}

@@ -1,0 +1,151 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-page-nav
+-----------------------------------------*/
+.c-page-nav {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @include mq(md) {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    gap: 30px 50px;
+    @include mq(xl) {
+      gap: 20px;
+    }
+    @include mq(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mq(md) {
+      gap: 10px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border: 2px solid #eee;
+    border-radius: 3px;
+    font-weight: $medium;
+    padding: 20px 30px;
+    transition: border 0.25s;
+    @include mq(xl) {
+      padding: 20px;
+    }
+    @include mq(md) {
+      font-size: 1.4rem;
+      padding: 10px 13px;
+    }
+    @media screen and (max-width: 380px){
+      font-size: 1.2rem;
+    }
+
+    &:hover, &:focus-visible {
+      color: $main-color;
+      border-color: $main-color;
+
+      .c-page-nav__btn-icon {
+        border-color: $main-color;
+      }
+
+      .c-page-nav__btn-icon::before {
+        animation: slideIn1 0.2s forwards;
+      }
+      .c-page-nav__btn-icon::after {
+        opacity: 0;
+        animation: slideIn2 0.25s forwards;
+        animation-delay: 0.2s;
+      }
+    }
+
+    &--active {
+      color: $main-color;
+      border-color: $main-color;
+
+      .c-page-nav__btn-icon {
+        border-color: $main-color;
+      }
+    }
+  }
+
+  &__btn-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18px;
+    display: inline-block;
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    background-color: #fff;
+    border: 2px solid #eee;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: border 0.25s;
+    @include mq(md) {
+      width: 20px;
+      right: 13px;
+    }
+    @media screen and (max-width: 390px){
+      right: 10px;
+    }
+    &::before, &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 13px;
+      aspect-ratio: 13 / 12;
+      background: url(../img/icon/icon_arrow-right.svg) no-repeat center / contain;
+      @include mq(md) {
+        width: 9px;
+      }
+    }
+
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
+
+.c-page-nav--inpage {
+  .c-page-nav__btn {
+        &:hover, &:focus-visible {
+      color: $main-color;
+      border-color: $main-color;
+
+      .c-page-nav__btn-icon {
+        border-color: $main-color;
+      }
+
+      .c-page-nav__btn-icon::before {
+        animation: slideDown1 0.2s forwards;
+      }
+      .c-page-nav__btn-icon::after {
+        opacity: 0;
+        animation: slideDown2 0.25s forwards;
+        animation-delay: 0.2s;
+      }
+    }
+  }
+
+  .c-page-nav__btn-icon {
+    &::before, &::after {
+      width: 12px;
+      aspect-ratio: 12 / 13;
+      background: url(../img/icon/icon_arrow-down.svg) no-repeat center / contain;
+      @include mq(md) {
+        width: 8px;
+      }
+    }
+  }
+}

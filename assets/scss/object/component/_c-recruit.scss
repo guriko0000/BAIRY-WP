@@ -1,0 +1,68 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-recruit
+-----------------------------------------*/
+.c-recruit {
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #eee;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 30px;
+    transition: 0.25s;
+    @include mq(md) {
+      padding: 20px 25px;
+    }
+    &:hover, &:focus-visible {
+      border-color: $main-color;
+    }
+  }
+
+  &__title {
+    border-bottom: 1px solid #ddd;
+    color: $main-color;
+    font-size: 1.8rem;
+    font-weight: $medium;
+    line-height: 1.5;
+    padding-bottom: 14px;
+    @include mq(md) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__text {
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__body {
+    margin-top: 15px;
+  }
+
+  &__tag-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  &__tag {
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid $main-color;
+    background-color: $main-bg;
+    color: $main-color;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    text-align: center;
+    padding: 2px 14px;
+    @include mq(md) {
+      font-size: 1.2rem;
+      padding: 2px 9px;
+    }
+  }
+}

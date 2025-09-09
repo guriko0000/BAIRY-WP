@@ -1,0 +1,81 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-timeline
+-----------------------------------------*/
+.c-timeline {
+  max-width: 784px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__item {
+    display: flex;
+    position: relative;
+    line-height: 1.5;
+    padding-bottom: 40px;
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      left: 0;
+      width: 11px;
+      height: 11px;
+      background: url(../img/icon/icon_hexagon-blue.svg) no-repeat center / contain;
+      @include mq(md) {
+        top: 12px;
+      }
+    }
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      left: 5px;
+      width: 1px;
+      height: 100%;
+      background-color: $main-color;
+      @include mq(md) {
+        top: 14px;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+
+      &::after {
+        height: calc(100% - 20px);
+        @include mq(md) {
+          height: calc(100% - 14px);
+        }
+      }
+    }
+  }
+
+  &__time {
+    flex-shrink: 0;
+    width: 100px;
+    color: $main-color;
+    font-family: $fourth-font-family;
+    font-size: 3.2rem;
+    font-weight: $medium;
+    padding-left: 29px;
+    @include mq(md) {
+      width: 74px;
+      font-size: 2rem;
+    }
+  }
+
+  &__body {
+    flex: 1;
+    margin: 14px 0 0 108px;
+    line-height: 1.5;
+    @include mq(md) {
+      font-size: 1.4rem;
+      margin: 3px 0 0 30px;
+    }
+  }
+
+  &__text {
+  }
+}

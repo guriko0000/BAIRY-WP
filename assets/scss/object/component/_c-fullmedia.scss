@@ -1,0 +1,252 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-fullmedia
+-----------------------------------------*/
+.c-fullmedia {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 100px;
+  @include mq(xl) {
+    gap: 40px;
+  }
+  @include mq(lg) {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  & + & {
+    margin-top: 100px;
+    @include mq(md) {
+      margin-top: 60px;
+    }
+  }
+
+  &__text-area {
+    flex-shrink: 0;
+    width: 48%;
+    @include mq(lg) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 3.4rem;
+    // font-weight: $medium;
+    line-height: 1.5;
+    @include mq(md) {
+      font-size: 2rem;
+    }
+
+    & + * {
+      margin-top: 35px;
+      @include mq(md) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__sub-title {
+    font-size: 2.4rem;
+    font-weight: $medium;
+    line-height: 1.5;
+    @include mq(md) {
+      font-size: 2rem;
+      font-weight: $regular;
+      text-align: center;
+    }
+
+    & + * {
+      margin-top: 25px;
+      @include mq(md) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__text {
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
+    & + & {
+      margin-top: 20px;
+    }
+  }
+
+  &__img-area {
+    width: 100%;
+    margin-right: auto;
+    margin-left: calc(-50vw - -50%);
+    @include mq(lg) {
+      margin-left: auto;
+    }
+  }
+
+  &__img {
+    border-radius: 0 15px 15px 0;
+    overflow: hidden;
+    @include mq(lg) {
+      border-radius: 12px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 0%;
+      max-height: 700px;
+      min-height: 600px;
+      border-radius: 0 15px 15px 0;
+      @include mq(md) {
+        min-height: auto;
+      }
+    }
+
+    figcaption {
+      display: inline-block;
+      margin-top: 10px;
+      @include mq(md) {
+        font-size: 1.3rem;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .c-secondary-title {
+    @include mq(lg) {
+      align-items: center;
+
+      & + * {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__list-box {
+    display: flex;
+    gap: 40px;
+    background-color: $main-bg;
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 40px;
+    @include mq(xl) {
+      gap: 20px;
+      padding:30px;
+    }
+    @include mq(md) {
+      flex-direction: column;
+      gap: 0;
+      padding: 30px 35px;
+      margin-top: 20px;
+    }
+  }
+
+  &__list {
+    @include mq(xxl) {
+      flex: 1;
+    }
+    @include mq(md) {
+      & + & {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    line-height: 1.5;
+    @include mq(xl) {
+      font-size: 1.4rem;
+    }
+    @include mq(md) {
+      font-size: 1.5rem;
+    }
+
+    & + & {
+      margin-top: 25px;
+      @include mq(md) {
+        margin-top: 10px;
+      }
+    }
+
+    .num {
+      display: inline-block;
+      color: $main-color;
+      font-family: $second-font-family;
+      margin-right: 10px;
+    }
+
+    br {
+      @include mq(xxl) {
+        display: none;
+      }
+    }
+  }
+}
+
+
+.c-fullmedia--reverse {
+  gap: 50px;
+  flex-direction: row;
+  @include mq(xl) {
+    gap: 40px;
+  }
+  @include mq(lg) {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .c-fullmedia__img-area {
+    margin-right: calc(-50vw - -50%);
+    margin-left: auto;
+    @include mq(lg) {
+      margin-right: auto;
+    }
+  }
+
+  .c-fullmedia__img {
+    border-radius: 15px 0 0 15px;
+    @include mq(lg) {
+      border-radius: 12px;
+    }
+
+    img {
+      border-radius: 15px 0 0 15px;
+    }
+  }
+}
+
+
+.c-fullmedia--sp-switch {
+  @include mq(lg) {
+    gap: 0;
+  }
+  .c-fullmedia__text-area {
+    @include mq(lg) {
+      display: contents;
+    }
+  }
+
+  .c-secondary-title {
+    @include mq(lg) {
+      text-align: center;
+      order: 3;
+    }
+  }
+  .c-fullmedia__sub-title {
+    @include mq(lg) {
+      order: 2;
+    }
+  }
+  .c-fullmedia__img-area {
+    @include mq(lg) {
+      order: 1;
+      margin-top: 20px;
+    }
+  }
+  .c-fullmedia__body {
+    @include mq(lg) {
+      order: 0;
+    }
+  }
+}

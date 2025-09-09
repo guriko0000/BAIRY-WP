@@ -1,0 +1,68 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-block-product
+-----------------------------------------*/
+.c-block-product {
+  background-color: $main-bg;
+  border-radius: 15px;
+  padding: 40px 50px;
+  margin-top: 40px;
+  @include mq(md) {
+    padding: 30px;
+    margin-top: 30px;
+  }
+
+  &__row {
+    display: flex;
+    gap: 40px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    @include mq(md) {
+      flex-direction: column;
+      gap: 10px;
+      font-size: 1.4rem;
+    }
+
+    & + & {
+      margin-top: 20px;
+      @include mq(md) {
+        margin-top: 25px;
+      }
+    }
+
+    dt {
+      min-width: 160px;
+      color: $main-color;
+      font-weight: $medium;
+      @include mq(md) {
+        width: 100%;
+        min-width: none;
+      }
+    }
+
+    dd {
+      flex: 1;
+
+    a {
+        display: inline-block;
+        transition: opacity 0.25s;
+        &:hover, &:focus-visible {
+          opacity: 0.7;
+        }
+      }
+
+      // a + a {
+      //   margin-top: 10px;
+      // }
+
+      p {
+        margin-top: 0;
+      }
+
+      p + p {
+        margin-top: 10px;
+      }
+    }
+  }
+}

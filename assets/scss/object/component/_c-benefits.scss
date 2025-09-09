@@ -1,0 +1,67 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-benefits
+-----------------------------------------*/
+.c-benefits {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  @include mq(xl) {
+    gap: 30px;
+  }
+  @include mq(md) {
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(25% - 150px / 4);
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1.5;
+    padding: 24px 20px;
+    @include mq(xl) {
+      width: calc(25% - 90px / 4);
+    }
+    @include mq(lg) {
+      width: calc(33.3333% - 60px / 3);
+    }
+    @include mq(md) {
+      width: calc(50% - 10px);
+      padding: 30px 20px;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__icon {
+    display: inline-block;
+    max-width: 45px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-weight: $medium;
+    text-align: center;
+    margin-top: 20px;
+    @include mq(md) {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    @include mq(md) {
+      font-size: 1.3rem;
+    }
+  }
+}

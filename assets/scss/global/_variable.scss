@@ -1,0 +1,42 @@
+// 透過度
+$opacity: 0.6;
+$hover-opacity: 0.7;
+
+//汎用色
+$color-black01: #333;
+$color-black02: #222;
+
+$main-color: #246EB8;
+$second-color: #75BBF0;
+
+$main-bg: #F0F8FE;
+
+$accent-color: #92846F;
+
+$main-gradient: linear-gradient(90deg, $main-color 0%, #00A2EC 100%);
+$main-gradient-reverse: linear-gradient(90deg, #00A2EC 0%, $main-color 100%);
+
+
+
+/* FontFamily */
+$base-font-family: 'Notosans_subset', sans-serif;
+$second-font-family: "Outfit", sans-serif;
+$third-font-family: 'Roboto Condensed', sans-serif;
+$fourth-font-family: "Ubuntu", sans-serif;
+// $third-font-family: 'Roboto', sans-serif;
+
+
+/* font-weight */
+$thin: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$black: 900;
+
+body {
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: $color-black01;
+}
