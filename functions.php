@@ -29,7 +29,7 @@ function change_set_post($query)
   }
   //トップページの場合
   if ($query->is_front_page()) {
-    $query->set('posts_per_page', '3');
+    $query->set('posts_per_page', '16');
     return;
   }
 }
@@ -47,17 +47,17 @@ function customize_query_display($query)
 
   // ホームページの場合
   if ($query->is_home()) {
-    $query->set('posts_per_page', 20);
+    $query->set('posts_per_page', 10);
   }
 
   // カテゴリーページの場合
   elseif ($query->is_category()) {
-    $query->set('posts_per_page', 20);
+    $query->set('posts_per_page', 10);
   }
 
   // アーカイブページの場合
   elseif ($query->is_archive()) {
-    $query->set('posts_per_page', 20);
+    $query->set('posts_per_page', 10);
   }
 }
 
@@ -80,9 +80,178 @@ add_filter('register_post_type_args','post_has_archive',10,2);
  * アイキャッチ画像を有効化
  * -------------------------------------------- */
 function setup_post_thumnails(){
-	add_theme_support('post-thumbnails', ['post','blog','faq','works',]);
+	add_theme_support('post-thumbnails', ['post','jobs','voices',]);
 }
 add_action('after_setup_theme', 'setup_post_thumnails');
+
+/* --------------------------------------------
+ * カスタム投稿タイプ【採用情報】
+ * -------------------------------------------- */
+function cpt_register_josbs(){
+	$args = [
+		'label' => '採用情報',
+		'labels' => [
+			'singular_name' => '採用情報',
+			'edit_item' => '採用情報を編集',
+			'add_new_item' => '新規採用情報を追加',
+		],
+		'public' => true, //カスタム投稿タイプを一般に公開するかどうか
+		'show_in_rest' => true, //REST APIにカスタム投稿タイプを含めるかどうか → カスタム投稿タイプでブロックエディタを使うならtrue
+		'has_archive' => true, //アーカイブページを持つかどうか
+    'rewrite' => ['slug' => 'jobs', 'with_front' => false], // 一覧URL: /jobs/
+		'delete_with_user' => false, //ユーザーを削除した後、コンテンツも削除するかどうか
+		'exclude_from_search' => false, //検索から除外するかどうか
+		'hierarchical' => false, //階層化するかどうか
+		'query_var' => true, //クエリパラメーターを使えるようにする → プレビュー画面を使うためにはtrue
+		'menu_position' => 5, //管理画面に表示するメニューの位置
+		'supports' => [
+			'title', 'editor', 'thumbnail', 'custom-fields'
+		], //カスタム投稿タイプがサポートする機能
+	];
+	register_post_type('josbs', $args);
+}
+add_action('init', 'cpt_register_josbs');
+
+//  * ターム（業種）【採用情報】
+function tax_register_josbs_type(){
+	$args = [
+		'label' => '業種',
+		'labels' => [
+			'singular_name' => '業種',
+			'edit_item' => '業種を編集',
+			'add_new_item' => '新規業種を追加'
+		],
+		'hierarchical' => true, //階層化するかどうか（カテゴリー的に使うならtrue、タグ的に使うならfalse）
+		'query_var' => true, //クエリパラメーターを使えるようにする
+		'show_in_rest' => true //REST APIにカスタムタクソノミーを含めるかどうか、グーテンベルクのブロックエディターで分類を使用するにはtrue
+	];
+	register_taxonomy('josbs-type', 'josbs', $args);
+}
+add_action('init', 'tax_register_josbs_type');
+
+//  * ターム（給与）【採用情報】
+function tax_register_josbs_salary(){
+	$args = [
+		'label' => '給与',
+		'labels' => [
+			'singular_name' => '給与',
+			'edit_item' => '給与を編集',
+			'add_new_item' => '新規給与を追加'
+		],
+		'hierarchical' => true, //階層化するかどうか（カテゴリー的に使うならtrue、タグ的に使うならfalse）
+		'query_var' => true, //クエリパラメーターを使えるようにする
+		'show_in_rest' => true //REST APIにカスタムタクソノミーを含めるかどうか、グーテンベルクのブロックエディターで分類を使用するにはtrue
+	];
+	register_taxonomy('josbs-salary', 'josbs', $args);
+}
+add_action('init', 'tax_register_josbs_salary');
+
+//  * ターム（勤務地）【採用情報】
+function tax_register_josbs_area(){
+	$args = [
+		'label' => '勤務地',
+		'labels' => [
+			'singular_name' => '勤務地',
+			'edit_item' => '勤務地を編集',
+			'add_new_item' => '新規勤務地を追加'
+		],
+		'hierarchical' => true, //階層化するかどうか（カテゴリー的に使うならtrue、タグ的に使うならfalse）
+		'query_var' => true, //クエリパラメーターを使えるようにする
+		'show_in_rest' => true //REST APIにカスタムタクソノミーを含めるかどうか、グーテンベルクのブロックエディターで分類を使用するにはtrue
+	];
+	register_taxonomy('josbs-area', 'josbs', $args);
+}
+add_action('init', 'tax_register_josbs_area');
+
+
+/* --------------------------------------------
+ * シングルを /jobs/{ID}/ にする
+ * -------------------------------------------- */
+add_filter('post_type_link', function($permalink, $post){
+  if ($post->post_type === 'josbs') {
+    // 詳細URLを /jobs/{ID}/ に固定
+    return home_url( user_trailingslashit('jobs/' . $post->ID) );
+  }
+  return $permalink;
+}, 10, 2);
+
+add_action('init', function(){
+  // /jobs/123/ → post_type=josbs のID=123へ解決
+  add_rewrite_rule(
+    '^jobs/([0-9]+)/?$',
+    'index.php?post_type=josbs&p=$matches[1]',
+    'top'
+  );
+});
+
+
+/* --------------------------------------------
+ * カスタム投稿タイプ【社員の声】
+ * -------------------------------------------- */
+function cpt_register_voices(){
+	$args = [
+		'label' => '社員の声',
+		'labels' => [
+			'singular_name' => '社員の声',
+			'edit_item' => '社員の声を編集',
+			'add_new_item' => '新規社員の声を追加'
+		],
+
+		'public' => true, //カスタム投稿タイプを一般に公開するかどうか
+		'show_in_rest' => true, //REST APIにカスタム投稿タイプを含めるかどうか → カスタム投稿タイプでブロックエディタを使うならtrue
+		'has_archive' => true, //アーカイブページを持つかどうか
+    'rewrite' => ['slug' => 'voices', 'with_front' => false],
+		'delete_with_user' => false, //ユーザーを削除した後、コンテンツも削除するかどうか
+		'exclude_from_search' => false, //検索から除外するかどうか
+		'hierarchical' => false, //階層化するかどうか
+		'query_var' => true, //クエリパラメーターを使えるようにする → プレビュー画面を使うためにはtrue
+		'menu_position' => 5, //管理画面に表示するメニューの位置
+		'supports' => [
+			'title', 'editor', 'thumbnail', 'custom-fields'
+		], //カスタム投稿タイプがサポートする機能
+	];
+	register_post_type('voices', $args);
+}
+add_action('init', 'cpt_register_voices');
+
+//  * ターム（業種）【社員の声】
+function tax_register_voices_type(){
+	$args = [
+		'label' => '社員の声業種',
+		'labels' => [
+			'singular_name' => '社員の声業種',
+			'edit_item' => '社員の声業種を編集',
+			'add_new_item' => '新規社員の声業種を追加'
+		],
+		'hierarchical' => true, //階層化するかどうか（カテゴリー的に使うならtrue、タグ的に使うならfalse）
+		'query_var' => true, //クエリパラメーターを使えるようにする
+		'show_in_rest' => true //REST APIにカスタムタクソノミーを含めるかどうか、グーテンベルクのブロックエディターで分類を使用するにはtrue
+	];
+	register_taxonomy('voices-type', 'voices', $args);
+}
+add_action('init', 'tax_register_voices_type');
+
+
+/* --------------------------------------------
+ * シングルを /voices/{ID}/ にする
+ * -------------------------------------------- */
+add_filter('post_type_link', function($permalink, $post){
+  if ($post->post_type === 'voices') {
+    // 詳細URLを /voices/{ID}/ に固定
+    return home_url( user_trailingslashit('voices/' . $post->ID) );
+  }
+  return $permalink;
+}, 10, 2);
+
+add_action('init', function(){
+  // /voices/123/ → post_type=voices のID=123へ解決
+  add_rewrite_rule(
+    '^voices/([0-9]+)/?$',
+    'index.php?post_type=voices&p=$matches[1]',
+    'top'
+  );
+});
+
 
 
 /* --------------------------------------------
@@ -121,3 +290,89 @@ add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
 function wpcf7_autop_return_false() {
   return false;
 } 
+
+
+/* --------------------------------------------
+ * ACFブロック
+ * -------------------------------------------- */
+if ( function_exists( 'acf_custom_block_add' ) ) {
+	add_action( 'acf/init', 'acf_custom_block_add' );
+}
+
+/**
+ * カスタムブロックカテゴリーの登録
+ */
+add_filter('block_categories_all', function ($categories) {
+  $new_category = [
+      'slug' => 'custom-layout-category',
+      'title' => 'ACFブロック',
+  ];
+  
+  // Insert the new category at the second position
+  array_splice($categories, 1, 0, [$new_category]);
+  
+  return $categories;
+});
+
+
+
+/**
+ * カスタムブロックの登録
+ */
+function acf_custom_block_add() {
+
+  if ( function_exists( 'acf_register_block_type' ) ) {
+
+    
+  /* 背景色ブロック*/
+  acf_register_block_type(
+    array(
+    'name'            => 'staff-profile', 
+    'title'           => __( '社員プロフィール' ), 
+    'description'     => __( '社員プロフィールです。' ), 
+    'render_template' => 'acf-blocks/acf-block/bg-block.php', 
+    'category'        => 'custom-layout-category',
+    'icon'            => 'media-default', 
+    'keywords'        => array( '社員プロフィール' ), 
+    'enqueue_style'   => get_template_directory_uri() . '/assets/css/acf-block.css',
+    'mode'            => 'auto', //どのエリアにブロック入力欄を表示させるか
+    )
+);
+
+  /* インタビューブロック*/
+  acf_register_block_type(
+    array(
+    'name'            => 'interview', 
+    'title'           => __( 'インタビュー' ), 
+    'description'     => __( 'インタビューです。' ), 
+    'render_template' => 'acf-blocks/acf-block/interview.php', 
+    'category'        => 'custom-layout-category',
+    'icon'            => 'media-default', 
+    'keywords'        => array( 'インタビュー' ), 
+    'enqueue_style'   => get_template_directory_uri() . '/assets/css/acf-block.css',
+    'mode'            => 'auto', //どのエリアにブロック入力欄を表示させるか
+    )
+);
+
+  
+  /* ボタンセンターブロック*/
+  acf_register_block_type(
+    array(
+    'name'            => 'btn-center-block', 
+    'title'           => __( 'ボタン(センター)' ), 
+    'description'     => __( 'ボタン(センター)です。' ), 
+    'render_template' => 'acf-blocks/acf-block/btn-center-block.php', 
+    'category'        => 'custom-layout-category',
+    'icon'            => 'button', 
+    'keywords'        => array( 'ボタン','ボタンセンター' ), 
+    'enqueue_style'   => get_template_directory_uri() . '/assets/css/acf-block.css',
+    'mode'            => 'auto', //どのエリアにブロック入力欄を表示させるか
+    )
+);
+  
+
+
+
+
+  }
+}

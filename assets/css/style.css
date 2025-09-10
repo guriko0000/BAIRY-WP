@@ -2692,7 +2692,7 @@ body {
   position: relative;
 }
 .c-news:nth-child(1)::before, .c-news:nth-child(2)::before {
-  content: "NEWS";
+  content: "NEW";
   display: inline-block;
   position: absolute;
   top: 0;

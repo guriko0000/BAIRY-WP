@@ -1,126 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-  <!-- meta情報 -->
-  <title></title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <!-- ogp -->
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:site_name" content="">
-  <meta property="og:description" content="">
-  <!-- ファビコン -->
-  <link rel="shortcut icon" type="image/x-icon" href="">
-  <!-- fontawesome -->
-  <!-- <script src="https://kit.fontawesome.com/39d42e1acb.js" crossorigin="anonymous"></script> -->
-  <!-- Googleフォント -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..900&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <!-- css -->
-  <link rel="stylesheet" href="/assets/js/splide/splide.min.css">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <script>
-    console.log("")
-  </script>
-</head>
-
-<body>
-  <header id="header" class="l-header js-header">
-    <div class="l-header__inner">
-      <!-- ロゴ -->
-      <div class="l-header__logo">
-        <a href="/">
-          <span class="l-header__logo">
-            <img class="l-header__logo-img l-header__logo-img--white" src="/assets/img/common/logo-white.svg" alt="BAIRY" width="152" height="38">
-            <img class="l-header__logo-img l-header__logo-img--black" src="/assets/img/common/logo-black.svg" alt="BAIRY" width="152" height="38">
-          </span>
-        </a>
-      </div>
-      <!-- ヘッダーナビ -->
-      <div class="l-header__container">
-        <nav class="p-header-nav">
-          <ul class="p-header-nav__list">
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="/">ホーム</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="/#business">事業案内</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="/corporate-sales">事業部紹介</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="/company">会社概要</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="/recruit">採用情報</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="/news">お知らせ</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="/contact">お問い合わせ</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="c-search l-header__search">
-          <script async src="https://cse.google.com/cse.js?cx=6757d19abf2304aeb">
-          </script>
-          <div class="gcse-search"></div>
-        </div>
-      </div>
-      <!-- ハンバーガーメニュー -->
-      <button class="c-hamburger-btn js-header-btn" aria-label="メニューボタン" aria-expanded="false">
-        <p class="c-hamburger-btn__text">MENU</p>
-        <span class="c-hamburger-btn__inner">
-          <span class="c-hamburger-btn__line"></span>
-          <span class="c-hamburger-btn__line"></span>
-          <span class="c-hamburger-btn__line"></span>
-        </span>
-      </button>
-    </div>
-
-    <!-- ハンバーガーメニュー内ナビ -->
-    <nav class="p-sub-nav" aria-hidden="true">
-      <div class="l-inner p-sub-nav__inner">
-        <ul class="p-sub-nav__list">
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="/">ホーム</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="/#business">事業案内</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="/corporate-sales">事業部紹介</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="/company">会社概要</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="/recruit">採用情報</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="/news">お知らせ</a></p>
-          </li>
-        </ul>
-        <div class="p-sub-nav__btn-wrap">
-          <a href="" target="_blank" rel="noopener noreferrer" class="p-sub-nav__btn p-sub-nav__btn--border">製品情報サイト BAIRY</a>
-          <a href="/contact/" class="p-sub-nav__btn">お問い合わせ</a>
-        </div>
-
-      </div>
-    </nav>
-  </header>
-  <main class="l-main">
+<?php get_header(); ?>
     <section class="p-under-mv">
       <div class="l-inner">
         <hgroup class="p-under-mv__title">
@@ -172,7 +50,7 @@
               <picture>
                 <source media="(min-width: 768px)" srcset="/assets/img/under/company_img.jpg" width="463" height="735">
                 <source media="(max-width: 767px)" srcset="/assets/img/under/company_img-sp.jpg" width="360" height="258">
-                <img src="/assets/img/under/company_img.jpg" alt="" width="463" height="735">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/under/company_img.jpg" alt="" width="463" height="735">
               </picture>
             </figure>
           </div>
@@ -309,7 +187,7 @@
               <div class="c-office__container">
                 <div class="c-office__text-area">
                   <figure class="c-office__img">
-                    <img src="/assets/img/under/company_office01.jpg" alt="福岡本社ビル外観" width="369" height="333" loading="lazy">
+                    <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/under/company_office01.jpg" alt="福岡本社ビル外観" width="369" height="333" loading="lazy">
                   </figure>
                   <div class="c-office__body">
                     <p class="c-office__address">〒815-0033<br>福岡市南区大橋1丁目9-16 Lente FUKUOKA 5階</p>
@@ -332,7 +210,7 @@
               <div class="c-office__container">
                 <div class="c-office__text-area">
                   <figure class="c-office__img">
-                    <img src="/assets/img/under/company_office02.jpg" alt="東京本店ビル外観" width="369" height="333" loading="lazy">
+                    <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/under/company_office02.jpg" alt="東京本店ビル外観" width="369" height="333" loading="lazy">
                   </figure>
                   <div class="c-office__body">
                     <p class="c-office__address">〒102-0072<br>東京都千代田区飯田橋3-1-5 S3千代田飯田橋 5階</p>
@@ -427,136 +305,10 @@
               <p class="p-info__tel-text">営業時間／平日9:00〜18:00</p>
             </div>
             <div class="p-info__btn">
-              <a href="/contact/" class="c-white-btn">メールでのお問合せ<span class="c-white-btn__icon"></span></a>
+              <a href="<?php echo esc_url(home_url()); ?>/contact/" class="c-white-btn">メールでのお問合せ<span class="c-white-btn__icon"></span></a>
             </div>
           </div>
         </div>
       </div>
     </section>
-  </main>
-  <!-- footer -->
-  <footer class="l-footer">
-    <div class="l-inner">
-      <div class="l-footer__container">
-        <div class="l-footer__info-area">
-          <div class="l-footer__logo"><a href="/"><img src="/assets/img/common/logo-footer.svg" alt="" width="158" height="40" loading="lazy"></a></div>
-          <address class="l-footer__address-wrap">
-            <p class="l-footer__company">株式会社BAIRY</p>
-            <p class="l-footer__address">〒815-0033<br>福岡市南区大橋1丁目9-16<br>Lente FUKUOKA 5階</p>
-            <div class="l-footer__tel-wrap">
-              <p class="l-footer__tel">TEL:<a href="tel:092-982-5940">092-982-5940</a>（代表）</p>
-              <p class="l-footer__tel">FAX:092-982-5941</p>
-            </div>
-          </address>
-          <div class="l-footer__btn">
-            <a href="" class="c-btn">お問い合わせ<span class="c-btn__icon"></span></a>
-          </div>
-          <div class="c-search l-footer__search">
-            <script async src="https://cse.google.com/cse.js?cx=6757d19abf2304aeb">
-            </script>
-            <div class="gcse-search"></div>
-          </div>
-        </div>
-        <div class="l-footer__nav-area">
-          <nav>
-            <div class="l-footer__nav">
-              <div class="l-footer__nav-item-wrap">
-                <div class="l-footer__nav-item">
-                  <p class="l-footer__nav-item-main"><a href="/#business">事業内容<span class="icon"></span></a></p>
-                  <ul class="l-footer__nav-sub">
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/corporate-sales/">法人営業部</a>
-                    </li>
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/product-division/">プロダクト事業部</a>
-                    </li>
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/management-department/">管理部</a>
-                    </li>
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/system-department/">情通システム部</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="l-footer__nav-item">
-                  <p class="l-footer__nav-item-main"><a href="/company/">企業情報<span class="icon"></span></a></p>
-                  <ul class="l-footer__nav-sub">
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/company/#greeting">代表挨拶</a>
-                    </li>
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/company/#about">会社概要</a>
-                    </li>
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/company/#history">沿革</a>
-                    </li>
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/company/#office">事業所</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="l-footer__nav-item-wrap">
-                <div class="l-footer__nav-item">
-                  <p class="l-footer__nav-item-main"><a href="/recruit/">採用情報<span class="icon"></span></a></p>
-                  <ul class="l-footer__nav-sub">
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/recruit/#positions">現在募集中の職種</a>
-                    </li>
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/recruit/#voice">社員の声</a>
-                    </li>
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/recruit/#benefits">福利厚生</a>
-                    </li>
-                    <li class="l-footer__nav-sub-item">
-                      <a href="">応募フォーム</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="l-footer__nav-item">
-                  <p class="l-footer__nav-item-main"><a href="/news/">最新情報<span class="icon"></span></a></p>
-                  <ul class="l-footer__nav-sub">
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/news/">お知らせ</a>
-                    </li>
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/news/">製品情報</a>
-                    </li>
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/news/">イベント</a>
-                    </li>
-                    <li class="l-footer__nav-sub-item">
-                      <a href="/news/">社員ブログ</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="l-footer__nav-item-wrap">
-                <div class="l-footer__nav-item">
-                  <p class="l-footer__nav-item-main"><a href="">製品情報サイト<span class="icon"></span></a></p>
-                  <ul class="l-footer__nav-menu">
-                    <li class="l-footer__nav-menu-item"><a href="">プライバシーポリシー</a></li>
-                    <li class="l-footer__nav-menu-item"><a href="">クッキーポリシー</a></li>
-                  </ul>
-                  <div class="l-footer__nav-sns">
-                    <a href="" target="_blank" rel="noopener noreferrer" class="l-footer__nav-sns-item"><img src="/assets/img/icon/icon_insta.svg" alt="Instagram" width="21" height="21" loading="lazy"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-      <p class="l-footer__copyright">©<span id="current-year"></span> 株式会社BAIRY</p>
-    </div>
-  </footer>
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="/assets/js/splide/splide.min.js"></script>
-  <script defer src="/assets/js/common.js"></script>
-</body>
-
-</html>
+  <?php get_footer(); ?>

@@ -2,7 +2,7 @@
     <section id="mv" class="p-mv">
       <div class="p-mv__inner">
         <div class="p-mv__video-wrap">
-          <video class="p-mv__video" rel="preload" as="video" src="/assets/img/movie/mv_video.mp4" autoplay loop muted></video>
+          <video class="p-mv__video" rel="preload" as="video" src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/movie/mv_video.mp4" autoplay loop muted></video>
           <div class="p-mv__text-area">
             <p class="p-mv__title">
               <span class="text-wrapper"><span class="text">テクノロジーで、</span></span><br>
@@ -25,14 +25,14 @@
           <div class="p-top-news__inner">
             <div class="p-top-news__head">
               <h2 class="p-top-news__title">News</h2>
-              <a href="/news/" class="p-top-news__link">一覧を見る<span class="p-top-news__link-icon"></span></a>
+              <a href="<?php echo esc_url(home_url()); ?>/news/" class="p-top-news__link">一覧を見る<span class="p-top-news__link-icon"></span></a>
             </div>
             <ul class="p-top-news__list">
               <li class="p-top-news__item">
-                <a href="/news/single-news01/">
+                <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
                   <div class="p-top-news__item-thumb-wrap">
                     <figure class="p-top-news__item-thumb">
-                      <img src="/assets/img/top/news_thumb01.png" alt="" width="128" height="88" loading="lazy">
+                      <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="128" height="88" loading="lazy">
                     </figure>
                   </div>
                   <div class="p-top-news__item-body">
@@ -42,10 +42,10 @@
                 </a>
               </li>
               <li class="p-top-news__item">
-                <a href="/news/single-news02/">
+                <a href="<?php echo esc_url(home_url()); ?>/news/single-news02/">
                   <div class="p-top-news__item-thumb-wrap">
                     <figure class="p-top-news__item-thumb">
-                      <img src="/assets/img/top/news_thumb02.png" alt="" width="128" height="88" loading="lazy">
+                      <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb02.png" alt="" width="128" height="88" loading="lazy">
                     </figure>
                   </div>
                   <div class="p-top-news__item-body">
@@ -55,10 +55,10 @@
                 </a>
               </li>
               <li class="p-top-news__item">
-                <a href="/news/single-news03">
+                <a href="<?php echo esc_url(home_url()); ?>/news/single-news03">
                   <div class="p-top-news__item-thumb-wrap">
                     <figure class="p-top-news__item-thumb">
-                      <img src="/assets/img/top/news_thumb03.png" alt="" width="128" height="88" loading="lazy">
+                      <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb03.png" alt="" width="128" height="88" loading="lazy">
                     </figure>
                   </div>
                   <div class="p-top-news__item-body">
@@ -93,20 +93,20 @@
               <div class="c-loop js-fadeUp">
                 <div class="c-loop__inner">
                   <div class="c-loop__list c-loop__list--01">
-                    <div class="c-loop__item"><img src="/assets/img/top/slider_img01.jpg" alt="" width="309" height="504" loading="lazy"></div>
-                    <div class="c-loop__item"><img src="/assets/img/top/slider_img02.jpg" alt="" width="309" height="504" loading="lazy"></div>
-                    <div class="c-loop__item"><img src="/assets/img/top/slider_img03.jpg" alt="" width="309" height="504" loading="lazy"></div>
-                    <div class="c-loop__item"><img src="/assets/img/top/slider_img04.jpg" alt="" width="309" height="504" loading="lazy"></div>
-                    <div class="c-loop__item"><img src="/assets/img/top/slider_img05.jpg" alt="" width="309" height="504" loading="lazy"></div>
-                    <div class="c-loop__item"><img src="/assets/img/top/slider_img06.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                    <div class="c-loop__item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/slider_img01.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                    <div class="c-loop__item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/slider_img02.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                    <div class="c-loop__item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/slider_img03.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                    <div class="c-loop__item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/slider_img04.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                    <div class="c-loop__item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/slider_img05.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                    <div class="c-loop__item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/slider_img06.jpg" alt="" width="309" height="504" loading="lazy"></div>
                   </div>
                   <div class="c-loop__list c-loop__list--02">
-                    <div class="c-loop__item"><img src="/assets/img/top/slider_img01.jpg" alt="" width="309" height="504" loading="lazy"></div>
-                    <div class="c-loop__item"><img src="/assets/img/top/slider_img02.jpg" alt="" width="309" height="504" loading="lazy"></div>
-                    <div class="c-loop__item"><img src="/assets/img/top/slider_img03.jpg" alt="" width="309" height="504" loading="lazy"></div>
-                    <div class="c-loop__item"><img src="/assets/img/top/slider_img04.jpg" alt="" width="309" height="504" loading="lazy"></div>
-                    <div class="c-loop__item"><img src="/assets/img/top/slider_img05.jpg" alt="" width="309" height="504" loading="lazy"></div>
-                    <div class="c-loop__item"><img src="/assets/img/top/slider_img06.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                    <div class="c-loop__item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/slider_img01.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                    <div class="c-loop__item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/slider_img02.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                    <div class="c-loop__item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/slider_img03.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                    <div class="c-loop__item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/slider_img04.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                    <div class="c-loop__item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/slider_img05.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                    <div class="c-loop__item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/slider_img06.jpg" alt="" width="309" height="504" loading="lazy"></div>
                   </div>
                 </div>
               </div>
@@ -125,11 +125,11 @@
           </div>
           <div class="p-top-business__division-container l-grid l-grid--col2 js-fadeUp">
             <div class="c-media">
-              <a href="/corporate-sales/">
+              <a href="<?php echo esc_url(home_url()); ?>/corporate-sales/">
                 <div class="c-media__inner">
                   <div class="c-media__img-wrap">
                     <figure class="c-media__img">
-                      <img src="/assets/img/top/division_img01.jpg" alt="" width="226" height="114" loading="lazy">
+                      <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/division_img01.jpg" alt="" width="226" height="114" loading="lazy">
                     </figure>
                   </div>
                   <div class="c-media__body">
@@ -144,11 +144,11 @@
               </a>
             </div>
             <div class="c-media">
-              <a href="/product-division/">
+              <a href="<?php echo esc_url(home_url()); ?>/product-division/">
                 <div class="c-media__inner">
                   <div class="c-media__img-wrap">
                     <figure class="c-media__img">
-                      <img src="/assets/img/top/division_img02.jpg" alt="" width="226" height="114" loading="lazy">
+                      <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/division_img02.jpg" alt="" width="226" height="114" loading="lazy">
                     </figure>
                   </div>
                   <div class="c-media__body">
@@ -163,11 +163,11 @@
               </a>
             </div>
             <div class="c-media">
-              <a href="/management-department/">
+              <a href="<?php echo esc_url(home_url()); ?>/management-department/">
                 <div class="c-media__inner">
                   <div class="c-media__img-wrap">
                     <figure class="c-media__img">
-                      <img src="/assets/img/top/division_img03.jpg" alt="" width="226" height="114" loading="lazy">
+                      <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/division_img03.jpg" alt="" width="226" height="114" loading="lazy">
                     </figure>
                   </div>
                   <div class="c-media__body">
@@ -182,11 +182,11 @@
               </a>
             </div>
             <div class="c-media">
-              <a href="/system-department/">
+              <a href="<?php echo esc_url(home_url()); ?>/system-department/">
                 <div class="c-media__inner">
                   <div class="c-media__img-wrap">
                     <figure class="c-media__img">
-                      <img src="/assets/img/top/division_img04.jpg" alt="" width="226" height="114" loading="lazy">
+                      <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/division_img04.jpg" alt="" width="226" height="114" loading="lazy">
                     </figure>
                   </div>
                   <div class="c-media__body">
@@ -207,7 +207,7 @@
 
     <div class="p-bg">
       <div class="p-bg__img-wrap">
-        <img src="/assets/img/top/bg_img.jpg" class="p-bg__img" alt="" width="1600" height="448" loading="lazy">
+        <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/bg_img.jpg" class="p-bg__img" alt="" width="1600" height="448" loading="lazy">
       </div>
     </div>
 
@@ -221,39 +221,39 @@
             </hgroup>
             <p class="p-top-company__text js-fadeUp">私たちは通信機器やITソリューションを通じて、お客様一人ひとりに寄り添い、課題の本質を見極めたうえで、最適な手段で解決へ導くことを大切にしています。</p>
             <div class="p-top-company__btn js-fadeUp">
-              <a href="/company/" class="c-btn">会社情報を詳しく見る<span class="c-btn__icon"></span></a>
+              <a href="<?php echo esc_url(home_url()); ?>/company/" class="c-btn">会社情報を詳しく見る<span class="c-btn__icon"></span></a>
             </div>
           </div>
           <div class="p-top-company__link-area js-fadeUp">
             <ul class="p-top-company__list">
               <li class="p-top-company__item">
-                <a href="/company/#greeting">
+                <a href="<?php echo esc_url(home_url()); ?>/company/#greeting">
                   <div class="p-top-company__item-img">
-                    <img src="/assets/img/top/company_img01.jpg" alt="" width="261" height="164" loading="lazy">
+                    <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/company_img01.jpg" alt="" width="261" height="164" loading="lazy">
                   </div>
                   <p class="p-top-company__item-text">社長挨拶<span class="icon"></span></p>
                 </a>
               </li>
               <li class="p-top-company__item">
-                <a href="/company/#about">
+                <a href="<?php echo esc_url(home_url()); ?>/company/#about">
                   <div class="p-top-company__item-img">
-                    <img src="/assets/img/top/company_img02.jpg" alt="" width="261" height="164" loading="lazy">
+                    <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/company_img02.jpg" alt="" width="261" height="164" loading="lazy">
                   </div>
                   <p class="p-top-company__item-text">会社概要<span class="icon"></span></p>
                 </a>
               </li>
               <li class="p-top-company__item">
-                <a href="/company/#history">
+                <a href="<?php echo esc_url(home_url()); ?>/company/#history">
                   <div class="p-top-company__item-img">
-                    <img src="/assets/img/top/company_img03.jpg" alt="" width="261" height="164" loading="lazy">
+                    <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/company_img03.jpg" alt="" width="261" height="164" loading="lazy">
                   </div>
                   <p class="p-top-company__item-text">沿革<span class="icon"></span></p>
                 </a>
               </li>
               <li class="p-top-company__item">
-                <a href="/company/#office">
+                <a href="<?php echo esc_url(home_url()); ?>/company/#office">
                   <div class="p-top-company__item-img">
-                    <img src="/assets/img/top/company_img04.jpg" alt="" width="261" height="164" loading="lazy">
+                    <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/company_img04.jpg" alt="" width="261" height="164" loading="lazy">
                   </div>
                   <p class="p-top-company__item-text">事業所<span class="icon"></span></p>
                 </a>
@@ -277,20 +277,29 @@
                 <p class="p-top-recruit__text">私たちと一緒に、可能性を広げていきませんか？</p>
               </div>
               <div class="p-top-recruit__btn-wrap">
-                <a href="/recruit/" class="p-top-recruit__btn">採用情報へ<span class="p-top-recruit__btn-icon"></span></a>
+                <a href="<?php echo esc_url(home_url()); ?>/recruit/" class="p-top-recruit__btn">採用情報へ<span class="p-top-recruit__btn-icon"></span></a>
               </div>
             </div>
 
             <div class="p-top-recruit__slider-area">
               <section class="splide" aria-label="新卒インタビュースライダー">
                 <div class="splide__track">
+                  <?php
+                    $args = array(
+                      'post_type' => 'voices',//カスタム投稿タイプを指定
+                      'posts_per_page' => 3,//表示する記事数
+                      'paged' => $paged,
+                      'no_found_rows' => true,
+                    );
+                    $query = new WP_Query($args);//サブループを変数に格納
+                  ?>
                   <ul class="splide__list">
                     <li class="splide__slide c-card">
-                      <a href="/recruit-voice/single-voice/">
+                      <a href="<?php echo esc_url(home_url()); ?>/recruit-voice/single-voice/">
                         <div class="c-card__head">
                           <p class="c-card__name">1法人営業部　●●さん</p>
                           <div class="c-card__img">
-                            <img src="/assets/img/top/recruit_img01.jpg" alt="" width="255" height="185" loading="lazy">
+                            <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/recruit_img01.jpg" alt="" width="255" height="185" loading="lazy">
                           </div>
                         </div>
                         <div class="c-card__body">
@@ -299,11 +308,11 @@
                       </a>
                     </li>
                     <li class="splide__slide c-card">
-                      <a href="/recruit-voice/single-voice/">
+                      <a href="<?php echo esc_url(home_url()); ?>/recruit-voice/single-voice/">
                         <div class="c-card__head">
                           <p class="c-card__name">2法人営業部　●●さん</p>
                           <div class="c-card__img">
-                            <img src="/assets/img/top/recruit_img01.jpg" alt="" width="255" height="185" loading="lazy">
+                            <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/recruit_img01.jpg" alt="" width="255" height="185" loading="lazy">
                           </div>
                         </div>
                         <div class="c-card__body">
@@ -312,11 +321,11 @@
                       </a>
                     </li>
                     <li class="splide__slide c-card">
-                      <a href="/recruit-voice/single-voice/">
+                      <a href="<?php echo esc_url(home_url()); ?>/recruit-voice/single-voice/">
                         <div class="c-card__head">
                           <p class="c-card__name">3法人営業部　●●さん</p>
                           <div class="c-card__img">
-                            <img src="/assets/img/top/recruit_img01.jpg" alt="" width="255" height="185" loading="lazy">
+                            <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/recruit_img01.jpg" alt="" width="255" height="185" loading="lazy">
                           </div>
                         </div>
                         <div class="c-card__body">
@@ -325,11 +334,11 @@
                       </a>
                     </li>
                     <li class="splide__slide c-card">
-                      <a href="/recruit-voice/single-voice/">
+                      <a href="<?php echo esc_url(home_url()); ?>/recruit-voice/single-voice/">
                         <div class="c-card__head">
                           <p class="c-card__name">4法人営業部　●●さん</p>
                           <div class="c-card__img">
-                            <img src="/assets/img/top/recruit_img01.jpg" alt="" width="255" height="185" loading="lazy">
+                            <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/recruit_img01.jpg" alt="" width="255" height="185" loading="lazy">
                           </div>
                         </div>
                         <div class="c-card__body">
@@ -338,11 +347,11 @@
                       </a>
                     </li>
                     <li class="splide__slide c-card">
-                      <a href="/recruit-voice/single-voice/">
+                      <a href="<?php echo esc_url(home_url()); ?>/recruit-voice/single-voice/">
                         <div class="c-card__head">
                           <p class="c-card__name">5法人営業部　●●さん</p>
                           <div class="c-card__img">
-                            <img src="/assets/img/top/recruit_img01.jpg" alt="" width="255" height="185" loading="lazy">
+                            <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/recruit_img01.jpg" alt="" width="255" height="185" loading="lazy">
                           </div>
                         </div>
                         <div class="c-card__body">
@@ -376,18 +385,65 @@
 
           <ul class="p-top-updates__cate-wrap js-fadeUp">
             <li data-filter="all" class="is-active p-top-updates__cate">すべて</li>
-            <li data-filter="news" class="p-top-updates__cate">お知らせ</li>
+            <li data-filter="notice" class="p-top-updates__cate">お知らせ</li>
             <li data-filter="product" class="p-top-updates__cate">製品情報</li>
             <li data-filter="event" class="p-top-updates__cate">イベント</li>
             <li data-filter="blog" class="p-top-updates__cate">社員ブログ</li>
           </ul>
         </div>
 
+
+        <?php
+          $args = array(
+            'post_type' => 'post',//カスタム投稿タイプを指定
+            'posts_per_page' => -1,//表示する記事数
+            'paged' => $paged,
+            'no_found_rows' => true,
+          );
+          $query = new WP_Query($args);//サブループを変数に格納
+        ?>
+
+        <?php if ( $query->have_posts() ) : ?>
         <ul class="l-grid l-grid--cards p-top-updates__list js-fadeUp">
-          <li class="c-news p-top-updates__item" data-category="news">
-            <a href="/news/single-news01/">
+          <?php while ( $query->have_posts() ) : $query->the_post();?>
+
+          <?php
+            // タクソノミーを取得
+            $terms = get_the_terms( get_the_ID(), 'category' );
+            $slug  = '';
+            if ( $terms && ! is_wp_error($terms) ) {
+              // 複数ある場合は最初のスラッグを使う
+              $slug = $terms[0]->slug;
+            }
+          ?>
+          <li class="c-news p-top-updates__item" data-category="<?php echo esc_attr($slug); ?>">
+            <a href="<?php the_permalink() ?>">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <?php if ( has_post_thumbnail() ) : ?>
+                <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                <?php else : ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage.png" alt="No Image">
+                <?php endif; ?>
+              </figure>
+              <div class="c-news__body">
+                <span class="c-news__date"><time datetime="<?php echo get_the_date('Y-m-d') ?>"><?php echo get_the_date('Y.m.d') ?></time></span>
+                <h3 class="c-news__title"><?php the_title(); ?></h3>
+                <p class="c-news__text">お知らせ1内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
+              </div>
+            </a>
+          </li>
+          <?php endwhile; ?>
+        </ul>
+            <?php else : ?>
+          <p class="fadeshow">更新情報はありません</p>
+        <?php endif; wp_reset_postdata(); ?>
+
+
+        <!-- <ul class="l-grid l-grid--cards p-top-updates__list js-fadeUp">
+          <li class="c-news p-top-updates__item" data-category="news">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
+              <figure class="c-news__thumb">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -397,9 +453,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="event">
-            <a href="/news/single-news02/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news02/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb02.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb02.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -409,9 +465,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="product">
-            <a href="/news/single-news03/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news03/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb03.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb03.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -421,9 +477,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="news">
-            <a href="/news/single-news01/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb04.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb04.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -433,9 +489,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="news">
-            <a href="/news/single-news02/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news02/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -445,9 +501,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="blog">
-            <a href="/news/single-news03/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news03/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -457,9 +513,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="blog">
-            <a href="/news/single-news01/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -469,9 +525,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="event">
-            <a href="/news/single-news02/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news02/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -481,9 +537,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="event">
-            <a href="/news/single-news03/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news03/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -493,9 +549,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="product">
-            <a href="/news/single-news01/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -505,9 +561,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="product">
-            <a href="/news/single-news02/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news02/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -517,9 +573,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="event">
-            <a href="/news/single-news03/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news03/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -529,9 +585,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="blog">
-            <a href="/news/single-news01/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -541,9 +597,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="blog">
-            <a href="/news/single-news01/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -553,9 +609,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="news">
-            <a href="/news/single-news01/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -565,9 +621,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="news">
-            <a href="/news/single-news01/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -577,9 +633,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="news">
-            <a href="/news/single-news01/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -589,9 +645,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="event">
-            <a href="/news/single-news01/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -601,9 +657,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="product">
-            <a href="/news/single-news01/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -613,9 +669,9 @@
             </a>
           </li>
           <li class="c-news p-top-updates__item" data-category="blog">
-            <a href="/news/single-news01/">
+            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
               <figure class="c-news__thumb">
-                <img src="/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
+                <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
               </figure>
               <div class="c-news__body">
                 <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
@@ -624,9 +680,9 @@
               </div>
             </a>
           </li>
-        </ul>
+        </ul> -->
         <div class="p-top-updates__btn js-fadeUp">
-          <a href="/news/" class="c-btn">記事一覧を見る<span class="c-btn__icon"></span></a>
+          <a href="<?php echo esc_url(home_url()); ?>/news/" class="c-btn">記事一覧を見る<span class="c-btn__icon"></span></a>
         </div>
       </div>
     </section>
@@ -647,7 +703,7 @@
               <p class="p-info__tel-text">営業時間／平日9:00〜18:00</p>
             </div>
             <div class="p-info__btn">
-              <a href="/contact/" class="c-white-btn">メールでのお問合せ<span class="c-white-btn__icon"></span></a>
+              <a href="<?php echo esc_url(home_url()); ?>/contact/" class="c-white-btn">メールでのお問合せ<span class="c-white-btn__icon"></span></a>
             </div>
           </div>
         </div>

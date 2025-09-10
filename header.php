@@ -26,8 +26,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..900&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- css -->
-  <link rel="stylesheet" href="/assets/js/splide/splide.min.css">
-  <!-- <link rel="stylesheet" href="/assets/css/style.css"> -->
+  <link rel="stylesheet" href="<?php echo esc_url(home_url()); ?>/assets/js/splide/splide.min.css">
+  <!-- <link rel="stylesheet" href="<?php echo esc_url(home_url()); ?>/assets/css/style.css"> -->
   <script>
     console.log("")
   </script>
@@ -36,14 +36,20 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <header id="header" class="l-header l-header--transparent js-header">
+
+  <?php if ( is_front_page() ) : ?>
+    <header id="header" class="l-header l-header--transparent js-header">
+  <?php else : ?>
+    <header id="header" class="l-header js-header">
+  <?php endif; ?>
+
     <div class="l-header__inner">
       <!-- ロゴ -->
       <div class="l-header__logo">
-        <a href="/">
+        <a href="<?php echo esc_url(home_url()); ?>/">
           <span class="l-header__logo">
-            <img class="l-header__logo-img l-header__logo-img--white" src="/assets/img/common/logo-white.svg" alt="BAIRY" width="152" height="38">
-            <img class="l-header__logo-img l-header__logo-img--black" src="/assets/img/common/logo-black.svg" alt="BAIRY" width="152" height="38">
+            <img class="l-header__logo-img l-header__logo-img--white" src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/common/logo-white.svg" alt="BAIRY" width="152" height="38">
+            <img class="l-header__logo-img l-header__logo-img--black" src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/common/logo-black.svg" alt="BAIRY" width="152" height="38">
           </span>
         </a>
       </div>
@@ -52,25 +58,25 @@
         <nav class="p-header-nav">
           <ul class="p-header-nav__list">
             <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="/">ホーム</a>
+              <a class="p-header-nav__link" href="<?php echo esc_url(home_url()); ?>/">ホーム</a>
             </li>
             <li class="p-header-nav__item">
               <a class="p-header-nav__link" href="#business">事業案内</a>
             </li>
             <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="/corporate-sales">事業部紹介</a>
+              <a class="p-header-nav__link" href="<?php echo esc_url(home_url()); ?>/corporate-sales/">事業部紹介</a>
             </li>
             <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="/company">会社概要</a>
+              <a class="p-header-nav__link" href="<?php echo esc_url(home_url()); ?>/company/">会社概要</a>
             </li>
             <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="/recruit">採用情報</a>
+              <a class="p-header-nav__link" href="<?php echo esc_url(home_url()); ?>/recruit/">採用情報</a>
             </li>
             <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="/news">お知らせ</a>
+              <a class="p-header-nav__link" href="<?php echo esc_url(home_url()); ?>/news/">お知らせ</a>
             </li>
             <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="/contact">お問い合わせ</a>
+              <a class="p-header-nav__link" href="<?php echo esc_url(home_url()); ?>/contact/">お問い合わせ</a>
             </li>
           </ul>
         </nav>
@@ -96,27 +102,27 @@
       <div class="l-inner p-sub-nav__inner">
         <ul class="p-sub-nav__list">
           <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="/">ホーム</a></p>
+            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="<?php echo esc_url(home_url()); ?>/">ホーム</a></p>
           </li>
           <li class="p-sub-nav__item">
             <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#business">事業案内</a></p>
           </li>
           <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="/corporate-sales">事業部紹介</a></p>
+            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="<?php echo esc_url(home_url()); ?>/corporate-sales/">事業部紹介</a></p>
           </li>
           <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="/company">会社概要</a></p>
+            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="<?php echo esc_url(home_url()); ?>/company/">会社概要</a></p>
           </li>
           <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="/recruit">採用情報</a></p>
+            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="<?php echo esc_url(home_url()); ?>/recruit/">採用情報</a></p>
           </li>
           <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="/news">お知らせ</a></p>
+            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="<?php echo esc_url(home_url()); ?>/news/">お知らせ</a></p>
           </li>
         </ul>
         <div class="p-sub-nav__btn-wrap">
           <a href="" target="_blank" rel="noopener noreferrer" class="p-sub-nav__btn p-sub-nav__btn--border">製品情報サイト BAIRY</a>
-          <a href="/contact/" class="p-sub-nav__btn">お問い合わせ</a>
+          <a href="<?php echo esc_url(home_url()); ?>/contact/" class="p-sub-nav__btn">お問い合わせ</a>
         </div>
 
       </div>
