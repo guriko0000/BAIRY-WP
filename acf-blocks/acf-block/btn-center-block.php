@@ -1,5 +1,5 @@
-<?php if( get_field('btn-center-text') ) { ?>
+<?php if( get_field('btn_url') ) { ?>
 <div class="u-btn-wrap u-btn-center">
-  <a href="<?php the_field('btn-center-link'); ?>" class="c-btn"><?php the_field('btn-center-text'); ?></a>
+<a href="<?php echo get_field('btn_url'); ?>" class="c-btn">このポジションを詳しく見る<span class="c-btn__icon"></span></a>
 </div>
 <?php } ?>

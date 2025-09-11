@@ -65,3 +65,16 @@
     font-size: 2rem!important;
   }
 }
+
+.u-btn-wrap {
+  margin-top: 70px!important;
+
+  @include mq(md) {
+    margin-top: 60px!important;
+  }
+}
+
+.u-btn-center {
+  display: flex;
+  justify-content: center;
+}

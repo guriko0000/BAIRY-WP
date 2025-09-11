@@ -156,3 +156,18 @@ p {
   display: flex;
   gap: 2em;
 }
+
+.c-interview + .wp-block-columns {
+  margin-top: 40px;
+}
+
+a.c-btn {
+  text-decoration: none;
+  &:hover, &:focus-visible {
+    opacity: 1;
+  }
+}
+
+p.p-person__message-text {
+  margin-top: 0;
+}

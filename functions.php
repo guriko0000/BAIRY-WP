@@ -63,6 +63,29 @@ function customize_query_display($query)
 
 add_action('pre_get_posts', 'customize_query_display');
 
+/* --------------------------------------------
+ * taxonomyページの表示件数を設定
+ * -------------------------------------------- */
+function  my_pre_get_posts2( $query ) {
+  if ( is_admin() || ! $query->is_main_query() )
+  return;
+
+  if($query->is_tax('jobs-type')){
+    $query->set('posts_per_page',7);// 7件
+  }
+  elseif($query->is_tax('jobs-salary')){
+    $query->set('posts_per_page',7);// 7件
+  }
+  elseif($query->is_tax('jobs-area')){
+    $query->set('posts_per_page',7);// 7件
+  }
+  elseif($query->is_tax('works-cate')){
+    $query->set('posts_per_page',27);// 27件
+  }
+}
+
+add_action('pre_get_posts','my_pre_get_posts2');
+
 
 /* --------------------------------------------
  * デフォルト投稿の一覧ページ作成
@@ -87,7 +110,7 @@ add_action('after_setup_theme', 'setup_post_thumnails');
 /* --------------------------------------------
  * カスタム投稿タイプ【採用情報】
  * -------------------------------------------- */
-function cpt_register_josbs(){
+function cpt_register_jobs(){
 	$args = [
 		'label' => '採用情報',
 		'labels' => [
@@ -108,12 +131,12 @@ function cpt_register_josbs(){
 			'title', 'editor', 'thumbnail', 'custom-fields'
 		], //カスタム投稿タイプがサポートする機能
 	];
-	register_post_type('josbs', $args);
+	register_post_type('jobs', $args);
 }
-add_action('init', 'cpt_register_josbs');
+add_action('init', 'cpt_register_jobs');
 
 //  * ターム（業種）【採用情報】
-function tax_register_josbs_type(){
+function tax_register_jobs_type(){
 	$args = [
 		'label' => '業種',
 		'labels' => [
@@ -125,12 +148,12 @@ function tax_register_josbs_type(){
 		'query_var' => true, //クエリパラメーターを使えるようにする
 		'show_in_rest' => true //REST APIにカスタムタクソノミーを含めるかどうか、グーテンベルクのブロックエディターで分類を使用するにはtrue
 	];
-	register_taxonomy('josbs-type', 'josbs', $args);
+	register_taxonomy('jobs-type', 'jobs', $args);
 }
-add_action('init', 'tax_register_josbs_type');
+add_action('init', 'tax_register_jobs_type');
 
 //  * ターム（給与）【採用情報】
-function tax_register_josbs_salary(){
+function tax_register_jobs_salary(){
 	$args = [
 		'label' => '給与',
 		'labels' => [
@@ -142,12 +165,12 @@ function tax_register_josbs_salary(){
 		'query_var' => true, //クエリパラメーターを使えるようにする
 		'show_in_rest' => true //REST APIにカスタムタクソノミーを含めるかどうか、グーテンベルクのブロックエディターで分類を使用するにはtrue
 	];
-	register_taxonomy('josbs-salary', 'josbs', $args);
+	register_taxonomy('jobs-salary', 'jobs', $args);
 }
-add_action('init', 'tax_register_josbs_salary');
+add_action('init', 'tax_register_jobs_salary');
 
 //  * ターム（勤務地）【採用情報】
-function tax_register_josbs_area(){
+function tax_register_jobs_area(){
 	$args = [
 		'label' => '勤務地',
 		'labels' => [
@@ -159,30 +182,30 @@ function tax_register_josbs_area(){
 		'query_var' => true, //クエリパラメーターを使えるようにする
 		'show_in_rest' => true //REST APIにカスタムタクソノミーを含めるかどうか、グーテンベルクのブロックエディターで分類を使用するにはtrue
 	];
-	register_taxonomy('josbs-area', 'josbs', $args);
+	register_taxonomy('jobs-area', 'jobs', $args);
 }
-add_action('init', 'tax_register_josbs_area');
+add_action('init', 'tax_register_jobs_area');
 
 
 /* --------------------------------------------
  * シングルを /jobs/{ID}/ にする
  * -------------------------------------------- */
-add_filter('post_type_link', function($permalink, $post){
-  if ($post->post_type === 'josbs') {
-    // 詳細URLを /jobs/{ID}/ に固定
-    return home_url( user_trailingslashit('jobs/' . $post->ID) );
-  }
-  return $permalink;
-}, 10, 2);
+// add_filter('post_type_link', function($permalink, $post){
+//   if ($post->post_type === 'jobs') {
+//     // 詳細URLを /jobs/{ID}/ に固定
+//     return home_url( user_trailingslashit('jobs/' . $post->ID) );
+//   }
+//   return $permalink;
+// }, 10, 2);
 
-add_action('init', function(){
-  // /jobs/123/ → post_type=josbs のID=123へ解決
-  add_rewrite_rule(
-    '^jobs/([0-9]+)/?$',
-    'index.php?post_type=josbs&p=$matches[1]',
-    'top'
-  );
-});
+// add_action('init', function(){
+//   // /jobs/123/ → post_type=jobs のID=123へ解決
+//   add_rewrite_rule(
+//     '^jobs/([0-9]+)/?$',
+//     'index.php?post_type=jobs&p=$matches[1]',
+//     'top'
+//   );
+// });
 
 
 /* --------------------------------------------
@@ -235,22 +258,22 @@ add_action('init', 'tax_register_voices_type');
 /* --------------------------------------------
  * シングルを /voices/{ID}/ にする
  * -------------------------------------------- */
-add_filter('post_type_link', function($permalink, $post){
-  if ($post->post_type === 'voices') {
-    // 詳細URLを /voices/{ID}/ に固定
-    return home_url( user_trailingslashit('voices/' . $post->ID) );
-  }
-  return $permalink;
-}, 10, 2);
+// add_filter('post_type_link', function($permalink, $post){
+//   if ($post->post_type === 'voices') {
+//     // 詳細URLを /voices/{ID}/ に固定
+//     return home_url( user_trailingslashit('voices/' . $post->ID) );
+//   }
+//   return $permalink;
+// }, 10, 2);
 
-add_action('init', function(){
-  // /voices/123/ → post_type=voices のID=123へ解決
-  add_rewrite_rule(
-    '^voices/([0-9]+)/?$',
-    'index.php?post_type=voices&p=$matches[1]',
-    'top'
-  );
-});
+// add_action('init', function(){
+//   // /voices/123/ → post_type=voices のID=123へ解決
+//   add_rewrite_rule(
+//     '^voices/([0-9]+)/?$',
+//     'index.php?post_type=voices&p=$matches[1]',
+//     'top'
+//   );
+// });
 
 
 
@@ -324,13 +347,13 @@ function acf_custom_block_add() {
   if ( function_exists( 'acf_register_block_type' ) ) {
 
     
-  /* 背景色ブロック*/
+  /* 社員プロフィール*/
   acf_register_block_type(
     array(
     'name'            => 'staff-profile', 
     'title'           => __( '社員プロフィール' ), 
     'description'     => __( '社員プロフィールです。' ), 
-    'render_template' => 'acf-blocks/acf-block/bg-block.php', 
+    'render_template' => 'acf-blocks/acf-block/staff-profile-block.php', 
     'category'        => 'custom-layout-category',
     'icon'            => 'media-default', 
     'keywords'        => array( '社員プロフィール' ), 
@@ -345,7 +368,7 @@ function acf_custom_block_add() {
     'name'            => 'interview', 
     'title'           => __( 'インタビュー' ), 
     'description'     => __( 'インタビューです。' ), 
-    'render_template' => 'acf-blocks/acf-block/interview.php', 
+    'render_template' => 'acf-blocks/acf-block/interview-block.php', 
     'category'        => 'custom-layout-category',
     'icon'            => 'media-default', 
     'keywords'        => array( 'インタビュー' ), 
@@ -365,6 +388,22 @@ function acf_custom_block_add() {
     'category'        => 'custom-layout-category',
     'icon'            => 'button', 
     'keywords'        => array( 'ボタン','ボタンセンター' ), 
+    'enqueue_style'   => get_template_directory_uri() . '/assets/css/acf-block.css',
+    'mode'            => 'auto', //どのエリアにブロック入力欄を表示させるか
+    )
+);
+
+
+  /* 吹き出しコメント*/
+  acf_register_block_type(
+    array(
+    'name'            => 'staff-message-block', 
+    'title'           => __( '吹き出しメッセージ' ), 
+    'description'     => __( '吹き出しメッセージです。' ), 
+    'render_template' => 'acf-blocks/acf-block/staff-message-block.php', 
+    'category'        => 'custom-layout-category',
+    'icon'            => 'button', 
+    'keywords'        => array( '吹き出し','メッセージ','吹き出しメッセージ' ), 
     'enqueue_style'   => get_template_directory_uri() . '/assets/css/acf-block.css',
     'mode'            => 'auto', //どのエリアにブロック入力欄を表示させるか
     )

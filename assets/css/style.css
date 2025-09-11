@@ -7008,6 +7008,21 @@ a.c-tags__item:hover, a.c-tags__item:focus-visible {
   gap: 2em;
 }
 
+.c-interview + .wp-block-columns {
+  margin-top: 40px;
+}
+
+a.c-btn {
+  text-decoration: none;
+}
+a.c-btn:hover, a.c-btn:focus-visible {
+  opacity: 1;
+}
+
+p.p-person__message-text {
+  margin-top: 0;
+}
+
 /* -------------------------------------
         p-article-head
 -----------------------------------------*/
@@ -7313,10 +7328,23 @@ a.c-tags__item:hover, a.c-tags__item:focus-visible {
     margin-top: 30px;
   }
 }
+.p-person__message-img-wrap {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 151px;
+}
+@media screen and (max-width: 767px) {
+  .p-person__message-img-wrap {
+    width: 70px;
+  }
+}
 .p-person__message-img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 151px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100%;
 }
 @media screen and (max-width: 767px) {
   .p-person__message-img {
@@ -7325,6 +7353,15 @@ a.c-tags__item:hover, a.c-tags__item:focus-visible {
 }
 .p-person__message-img img {
   border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .p-person__message-bubble {
   position: relative;
@@ -7808,6 +7845,24 @@ a.c-tags__item:hover, a.c-tags__item:focus-visible {
   .text-l {
     font-size: 2rem !important;
   }
+}
+
+.u-btn-wrap {
+  margin-top: 70px !important;
+}
+@media screen and (max-width: 767px) {
+  .u-btn-wrap {
+    margin-top: 60px !important;
+  }
+}
+
+.u-btn-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* -------------------------------------
