@@ -1,0 +1,384 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-form
+-----------------------------------------*/
+.c-form {
+  max-width: 786px;
+  margin: 50px auto 0;
+
+// Snow Monkey Forms
+  .smf-form--simple-table .smf-item {
+    padding: 24px 0;
+    border-top: 1px solid #EDEDED;
+
+    &:last-child {
+      border-bottom: 1px solid #EDEDED;
+    }
+  }
+
+  .smf-form--simple-table .smf-item__col--controls {
+    font-size: 1.5rem;
+    @include mq(md) {
+      font-size: 1.6rem;
+    }
+  }
+
+  .smf-form--simple-table textarea {
+    font-family: $base-font-family;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    @include mq(md) {
+      font-size: 1.6rem;
+    }
+  }
+
+  .form-flex .smf-item__controls{
+    display: flex;
+    gap: 10px;
+  }
+
+  .smf-form .smf-text-control__control, 
+  .smf-form .smf-textarea-control__control {
+    width: 100%;
+    background-color: #EFEEEE;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    padding: 1.5rem 1.5rem;
+    @include mq(md) {
+      padding: 0.8rem;
+    }
+
+    &.postcode {
+      width: 35%;
+    }
+  }
+
+  .form-main-size .smf-item__col--controls {
+    flex: 1 1 470px;
+    max-width: 470px;
+    .smf-placeholder, .smf-text-control__control {
+      width: 100%;
+    }
+  }
+
+  .form-tel .smf-item__col--controls {
+    flex: 1 1 256px;
+    max-width: 256px;
+    @include mq(md) {
+      flex: 1 1 400px;
+      max-width: 400px;
+    }
+    .smf-placeholder, .smf-text-control__control {
+      width: 100%;
+    }
+  }
+
+  .form-birth .smf-item__col--controls {
+    flex: 1 1 502px;
+    max-width: 502px;
+    .smf-placeholder, .smf-text-control__control {
+      width: 100%;
+      @include mq(md) {
+        &:nth-of-type(1) {
+          max-width: 100px;
+        }
+        &:nth-of-type(2), &:nth-of-type(3) {
+          max-width: 62px;
+        }
+      }
+    }
+  }
+  
+  .form-season .smf-item__col--controls {
+    flex: 1 1 432px;
+    max-width: 432px;
+    @include mq(md) {
+      flex: 1 1 168px;
+      max-width: 168px;
+    }
+    .smf-placeholder, .smf-text-control__control {
+      width: 100%;
+    }
+
+    p {
+      font-size: 1.5rem;
+      @include mq(md) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  
+  .form-birth .smf-item__controls {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    @include mq(md) {
+      gap: 10px;
+    }
+  }
+
+  .form-license .smf-item__controls {
+    display: flex;
+    align-items: center;
+
+    .smf-text-control {
+      max-width: 140px;
+      margin: 0 22px 0 18px;
+      @include mq(md) {
+        max-width: 120px;
+        margin: 0 12px 0 12px;
+      }
+    }
+  }
+
+  .form-season .smf-item__controls {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    @include mq(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+
+  .smf-radio-buttons-control__control {
+    display: flex;
+
+    .smf-label {
+      &:not(:first-child) {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  .form-radio--column .smf-radio-buttons-control__control {
+    display: block;
+
+    .smf-label {
+      &:not(:first-child) {
+        margin: 10px 0 0 0;
+      }
+    }
+
+  }
+  
+  .smf-form--simple-table .smf-item__col--label {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .smf-item__label {
+    position: relative;
+    font-size: 1.5rem;
+    &::after {
+      content: '必須';
+      display: inline-block;
+      flex-shrink: 0;
+      background-color: $main-color;
+      color: #fff;
+      font-size: 1.3rem;
+      line-height: 1;
+      padding: 5px 12px;
+      margin-left: 14px;
+      @include mq(md) {
+        font-size: 1.2rem;
+        padding: 5px 8px;
+        margin-left: 12px;
+      }
+    }
+  }
+
+  .no-req .smf-item__label {
+    &::before {
+      content: '任意';
+      background-color: #707070;
+    }
+  }
+
+  .form-file {
+    .smf-file-control__label {
+      background-color: #F2F2F2;
+      background-image: none;
+      font-size: 1.3rem;
+      border: 1px solid #000;
+      padding: 6px 14px;
+    }
+  }
+
+  .form-file-text {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .smf-form--simple-table .smf-item__col--label {
+    flex-shrink: 0;
+    flex: 0 0 250px;
+    max-width: 250px;
+    padding-bottom: 0;
+    @include mq(md) {
+      max-width: 100%;
+      padding-bottom: 10px;
+    }
+  }
+
+  input::placeholder {
+    color: #A7A7A7;
+    @include mq(md) {        
+      font-size: 1.4rem;
+    }
+  }
+
+  .form-birth input::placeholder, 
+  .form-license input::placeholder
+  {
+    text-align: right;
+  }
+
+  // btn    
+  .smf-action {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    @include mq(md) {
+      gap: 16px;
+    }
+  }
+
+  .smf-button-control {
+    width: 100%;
+  }
+
+  .smf-action .smf-button-control+.smf-button-control {
+    margin-left: 0;
+  }
+
+  .smf-button-control__control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 646px;
+    width: 100%; 
+    border-radius: 48px;
+    border: 1px solid $color-black01;
+    background-color: $color-black01;
+    background-image: none;
+    color: #fff;
+    font-size: 1.6rem;  
+    font-weight: $bold;
+    letter-spacing: 0.03em;
+    text-align: center;
+    transition: 0.25s;
+    padding: 21px 10px;
+    z-index: 10;
+    @include mq(md) {
+      max-width: 296px;
+      font-size: 1.4rem;
+      padding: 12px 10px;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background: #fff;
+      mask: url(../img/icon/icon_right.svg) no-repeat center/cover;
+      margin-left: 14px;
+      transition: 0.25s;
+      @include mq(md) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  
+    &:hover, &:focus {
+      color: $color-black01;
+      background-color: #fff;
+      transition: all 0.25s;
+  
+      &::after {
+        background-color: $color-black01;
+        transition: all 0.25s;
+      }
+    }
+  }
+
+  // 戻る
+  .smf-button-control__control[data-action="back"] {
+    border-color: #CBCBCB;
+    background-color: #fff;
+    color: $color-black01;
+    &::after {
+      background: $color-black01;
+      mask: url(../img/icon/icon_right.svg) no-repeat center/cover;
+    }
+
+    &:hover, &:focus {
+      color: #fff;
+      background-color: $color-black01;
+      border-color: $color-black01;
+  
+      &::after {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .smf-form--simple-table+.smf-action {
+    margin-top: 80px;
+    @include mq(md) {
+      margin-top: 40px;
+    }
+  }
+
+  .form-hidden {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: -99999px;
+    width: 1px;
+    height: 1px;
+  }
+}
+
+.wp-block-buttons {
+  margin-top: 100px;
+  @include mq(md) {
+    margin-top: 60px;
+  }
+}
+
+.wp-block-button {
+  width: 100%;
+  text-align: center;
+}
+
+.wp-block-button__link {
+  max-width: 300px;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 20px 20px;
+  transition: opacity 0.25s;
+  @include mq(md) {
+    padding: 16px 20px;
+  }
+  &:hover, &:focus-visible {
+    opacity: 0.7;
+  }
+}
+
+.wp-block-spacer {
+  @include mq(md) {
+    height: 50px!important;
+  }
+}

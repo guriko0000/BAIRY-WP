@@ -2,41 +2,40 @@
               <div class="p-sidebar__container">
                 <h2 class="p-sidebar__title">カテゴリ一覧</h2>
                 <ul class="p-sidebar__list">
-                  <li><a href=""><span class="text">お知らせ</span><span class="num">(125)</span></a></li>
-                  <li><a href=""><span class="text">カメラ</span><span class="num">(354)</span></a></li>
-                  <li><a href=""><span class="text">ブログ</span><span class="num">(32)</span></a></li>
-                  <li><a href=""><span class="text">新製品</span><span class="num">(32)</span></a></li>
-                  <li><a href=""><span class="text">旅行</span><span class="num">(12)</span></a></li>
-                  <li><a href=""><span class="text">未分類</span><span class="num">(12)</span></a></li>
-                  <!-- <?php
-                    $terms = get_terms(array(
-                      'taxonomy'   => 'recruit_type',
-                      'hide_empty' => true,
-                    ));
+                <?php
+                  $terms = get_terms([
+                    'taxonomy'   => 'category',
+                    'hide_empty' => true,
+                    'orderby'    => 'description', // ← ディスクリプション順
+                    'order'      => 'ASC',         // 昇順（DESCで降順）
+                    // 'parent'   => 0,            // 親タームだけにしたい場合は有効化
+                  ]);
 
-                    if (!empty($terms) && !is_wp_error($terms)) {
-                      foreach ($terms as $term) {
-                        echo '<li><a href="' . get_term_link($term) . '">';
-                        echo '<span class="text">' . $term->name . '</span>';
-                        echo '<span class="num">(' . $term->count . ')</span>';
-                        echo '</a></li>';
-                      }
+                  if (!empty($terms) && !is_wp_error($terms)) {
+                    foreach ($terms as $term) {
+                      $url = get_term_link($term);
+                      if (is_wp_error($url)) { continue; }
+                      echo '<li><a href="' . esc_url($url) . '">';
+                      echo '<span class="text">' . esc_html($term->name) . '</span>';
+                      echo '<span class="num">(' . intval($term->count) . ')</span>';
+                      echo '</a></li>';
                     }
-                  ?> -->
+                  }
+                ?>
                 </ul>
               </div>
 
               <div class="p-sidebar__container">
                 <h2 class="p-sidebar__title">アーカイブ</h2>
                 <div class="c-select">
-                <select name="monthly-select" onchange="document.location.href=this.options[this.selectedIndex].value;">
+                <!-- <select name="monthly-select" onchange="document.location.href=this.options[this.selectedIndex].value;">
                   <option value="">選択してください</option>
                   <option value=""> 2025年8月 </option>
                   <option value=""> 2025年7月 </option>
                   <option value=""> 2025年6月 </option>
-                </select>
+                </select> -->
 
-                <!-- <select name="monthly-select" onChange='document.location.href=this.options[this.selectedIndex].value;'>
+                <select name="monthly-select" onChange='document.location.href=this.options[this.selectedIndex].value;'>
                   <option value="">選択してください</option>
                   <?php
                     wp_get_archives(array(
@@ -45,7 +44,7 @@
                       'post_type' => 'post'
                     ));
                   ?>
-                </select> -->
+                </select>
 
                 </div>
               </div>

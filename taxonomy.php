@@ -35,34 +35,19 @@
                     <div class="c-recruit__body">
                       <p class="c-recruit__text">サーバー/UTM/セキュリティカメラ等を主力製品としている自社プライベートブランド「Bairy」の拡大・販促を目的に、販売代理店の</p>
                       <div class="c-recruit__tag-wrap">
-                        <!-- <span class="c-recruit__tag">営業</span>
-                        <span class="c-recruit__tag">500万円 ～ 700万円</span>
-                        <span class="c-recruit__tag">東京オフィス</span> -->
-                        <?php
-                          $terms = get_the_terms($post->ID, 'jobs-type');
-                          if(!empty($terms)){
-                          foreach ($terms as $term) {
-                            echo '<span class="c-recruit__tag ' .  $term->slug . '">' . $term->name . '</span>';
-                          }
-                          }
-                        ?>
 
-                        <?php
-                          $terms = get_the_terms($post->ID, 'jobs-salary');
-                          if(!empty($terms)){
-                          foreach ($terms as $term) {
-                            echo '<span class="c-recruit__tag ' .  $term->slug . '">' . $term->name . '</span>';
-                          }
-                          }
-                        ?>
-                        
-                        <?php
-                          $terms = get_the_terms($post->ID, 'jobs-area');
-                          if(!empty($terms)){
-                          foreach ($terms as $term) {
-                            echo '<span class="c-recruit__tag ' .  $term->slug . '">' . $term->name . '</span>';
-                          }
-                          }
+                      <?php
+                        // まとめて処理したいタクソノミーを配列で指定
+                        $taxonomies = array('jobs-type', 'jobs-salary', 'jobs-area');
+
+                        foreach ($taxonomies as $taxonomy) {
+                            $terms = get_the_terms($post->ID, $taxonomy);
+                            if (!empty($terms) && !is_wp_error($terms)) {
+                                foreach ($terms as $term) {
+                                    echo '<span class="c-recruit__tag ' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</span>';
+                                }
+                            }
+                        }
                         ?>
 
                       </div>
@@ -72,105 +57,30 @@
                   <?php endwhile; ?>
                 </ul>
                     <?php else : ?>
-                  <p class="fadeshow">更新情報はありません</p>
+                  <p class="fadeshow">採用情報はありません</p>
                 <?php endif; ?>
 
-              <!-- <ul class="p-recruit__archive-list">
-                <li class="c-recruit">
-                  <a href="/recruit-jobs/single-jobs/">
-                    <h2 class="c-recruit__title">【リーダー候補】自社PBの販売代理店向け営業</h2>
-                    <div class="c-recruit__body">
-                      <p class="c-recruit__text">サーバー/UTM/セキュリティカメラ等を主力製品としている自社プライベートブランド「Bairy」の拡大・販促を目的に、販売代理店の</p>
-                      <div class="c-recruit__tag-wrap">
-                        <span class="c-recruit__tag">営業</span>
-                        <span class="c-recruit__tag">500万円 ～ 700万円</span>
-                        <span class="c-recruit__tag">東京オフィス</span>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="c-recruit">
-                  <a href="/recruit-jobs/single-jobs/">
-                    <h2 class="c-recruit__title">【リーダー候補】自社PBの販売代理店向け営業</h2>
-                    <div class="c-recruit__body">
-                      <p class="c-recruit__text">サーバー/UTM/セキュリティカメラ等を主力製品としている自社プライベートブランド「Bairy」の拡大・販促を目的に、販売代理店の</p>
-                      <div class="c-recruit__tag-wrap">
-                        <span class="c-recruit__tag">営業</span>
-                        <span class="c-recruit__tag">500万円 ～ 700万円</span>
-                        <span class="c-recruit__tag">東京オフィス</span>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="c-recruit">
-                  <a href="/recruit-jobs/single-jobs/">
-                    <h2 class="c-recruit__title">【リーダー候補】自社PBの販売代理店向け営業</h2>
-                    <div class="c-recruit__body">
-                      <p class="c-recruit__text">サーバー/UTM/セキュリティカメラ等を主力製品としている自社プライベートブランド「Bairy」の拡大・販促を目的に、販売代理店の</p>
-                      <div class="c-recruit__tag-wrap">
-                        <span class="c-recruit__tag">営業</span>
-                        <span class="c-recruit__tag">500万円 ～ 700万円</span>
-                        <span class="c-recruit__tag">東京オフィス</span>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="c-recruit">
-                  <a href="/recruit-jobs/single-jobs/">
-                    <h2 class="c-recruit__title">【リーダー候補】自社PBの販売代理店向け営業</h2>
-                    <div class="c-recruit__body">
-                      <p class="c-recruit__text">サーバー/UTM/セキュリティカメラ等を主力製品としている自社プライベートブランド「Bairy」の拡大・販促を目的に、販売代理店の</p>
-                      <div class="c-recruit__tag-wrap">
-                        <span class="c-recruit__tag">営業</span>
-                        <span class="c-recruit__tag">500万円 ～ 700万円</span>
-                        <span class="c-recruit__tag">東京オフィス</span>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="c-recruit">
-                  <a href="/recruit-jobs/single-jobs/">
-                    <h2 class="c-recruit__title">【リーダー候補】自社PBの販売代理店向け営業</h2>
-                    <div class="c-recruit__body">
-                      <p class="c-recruit__text">サーバー/UTM/セキュリティカメラ等を主力製品としている自社プライベートブランド「Bairy」の拡大・販促を目的に、販売代理店の</p>
-                      <div class="c-recruit__tag-wrap">
-                        <span class="c-recruit__tag">営業</span>
-                        <span class="c-recruit__tag">500万円 ～ 700万円</span>
-                        <span class="c-recruit__tag">東京オフィス</span>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="c-recruit">
-                  <a href="/recruit-jobs/single-jobs/">
-                    <h2 class="c-recruit__title">【リーダー候補】自社PBの販売代理店向け営業</h2>
-                    <div class="c-recruit__body">
-                      <p class="c-recruit__text">サーバー/UTM/セキュリティカメラ等を主力製品としている自社プライベートブランド「Bairy」の拡大・販促を目的に、販売代理店の</p>
-                      <div class="c-recruit__tag-wrap">
-                        <span class="c-recruit__tag">営業</span>
-                        <span class="c-recruit__tag">500万円 ～ 700万円</span>
-                        <span class="c-recruit__tag">東京オフィス</span>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="c-recruit">
-                  <a href="/recruit-jobs/single-jobs/">
-                    <h2 class="c-recruit__title">【リーダー候補】自社PBの販売代理店向け営業</h2>
-                    <div class="c-recruit__body">
-                      <p class="c-recruit__text">サーバー/UTM/セキュリティカメラ等を主力製品としている自社プライベートブランド「Bairy」の拡大・販促を目的に、販売代理店の</p>
-                      <div class="c-recruit__tag-wrap">
-                        <span class="c-recruit__tag">営業</span>
-                        <span class="c-recruit__tag">500万円 ～ 700万円</span>
-                        <span class="c-recruit__tag">東京オフィス</span>
-                      </div>
-                    </div>
-                  </a>
-                </li>
+                <?php
+                  global $query;
+                  $pagination_links = paginate_links(array(
+                    'mid_size'      => 4,
+                    'format'        => 'page/%#%',
+                    'current'       => max(1, get_query_var('paged')),
+                    'total'         => $wp_query->max_num_pages,
+                    'prev_text'     => '',
+                    'next_text'     => '',
+                    'type'          => 'list'
+                  ));
 
-              </ul> -->
+                if ($pagination_links) : ?>
+                  <div class="p-recruit__pagination">
+                    <nav class="c-pagination">
+                      <?php echo $pagination_links; ?>
+                    </nav>
+                  </div>
+                <?php endif; ?>
 
-              <div class="p-recruit__pagination">
+              <!-- <div class="p-recruit__pagination">
                 <nav class="c-pagination">
                   <ul class="page-numbers">
                     <li><a class="prev page-numbers" href=""></a></li>
@@ -181,7 +91,7 @@
                     <li><a class="next page-numbers" href=""></a></li>
                   </ul>
                 </nav>
-              </div>
+              </div> -->
             </section>
 
             <?php get_sidebar('recruit'); ?>

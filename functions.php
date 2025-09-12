@@ -47,7 +47,7 @@ function customize_query_display($query)
 
   // ホームページの場合
   if ($query->is_home()) {
-    $query->set('posts_per_page', 10);
+    $query->set('posts_per_page', 1);
   }
 
   // カテゴリーページの場合
@@ -58,6 +58,11 @@ function customize_query_display($query)
   // アーカイブページの場合
   elseif ($query->is_archive()) {
     $query->set('posts_per_page', 10);
+  }
+
+    //建築実績アーカイブ
+  if ( $query->is_post_type_archive('jobs') ) {
+    $query->set( 'posts_per_page', '1' );
   }
 }
 
@@ -71,7 +76,7 @@ function  my_pre_get_posts2( $query ) {
   return;
 
   if($query->is_tax('jobs-type')){
-    $query->set('posts_per_page',7);// 7件
+    $query->set('posts_per_page',1);// 7件
   }
   elseif($query->is_tax('jobs-salary')){
     $query->set('posts_per_page',7);// 7件
@@ -106,6 +111,13 @@ function setup_post_thumnails(){
 	add_theme_support('post-thumbnails', ['post','jobs','voices',]);
 }
 add_action('after_setup_theme', 'setup_post_thumnails');
+
+
+/* --------------------------------------------
+ * お知らせ投稿サムネイルサイズ
+ * -------------------------------------------- */
+add_image_size('news-archive-thumb', 540, 344, true); 
+add_image_size('news-single-thumb', 890, 570, true); 
 
 /* --------------------------------------------
  * カスタム投稿タイプ【採用情報】
@@ -146,7 +158,7 @@ function tax_register_jobs_type(){
 		],
 		'hierarchical' => true, //階層化するかどうか（カテゴリー的に使うならtrue、タグ的に使うならfalse）
 		'query_var' => true, //クエリパラメーターを使えるようにする
-		'show_in_rest' => true //REST APIにカスタムタクソノミーを含めるかどうか、グーテンベルクのブロックエディターで分類を使用するにはtrue
+		'show_in_rest' => true, //REST APIにカスタムタクソノミーを含めるかどうか、グーテンベルクのブロックエディターで分類を使用するにはtrue
 	];
 	register_taxonomy('jobs-type', 'jobs', $args);
 }
@@ -163,7 +175,7 @@ function tax_register_jobs_salary(){
 		],
 		'hierarchical' => true, //階層化するかどうか（カテゴリー的に使うならtrue、タグ的に使うならfalse）
 		'query_var' => true, //クエリパラメーターを使えるようにする
-		'show_in_rest' => true //REST APIにカスタムタクソノミーを含めるかどうか、グーテンベルクのブロックエディターで分類を使用するにはtrue
+		'show_in_rest' => true, //REST APIにカスタムタクソノミーを含めるかどうか、グーテンベルクのブロックエディターで分類を使用するにはtrue    
 	];
 	register_taxonomy('jobs-salary', 'jobs', $args);
 }
@@ -307,12 +319,21 @@ remove_action('admin_print_styles', 'print_emoji_styles');// 絵文字に関す�
 
 
 /* --------------------------------------------
- * Contact Form 7の自動pタグ無効
+ * snowmonkey form投稿タイトル取得
  * -------------------------------------------- */
-add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
-function wpcf7_autop_return_false() {
-  return false;
-} 
+add_filter(
+	'snow_monkey_forms/control/attributes',
+	function( $attributes ) {
+		if ( isset( $attributes['name'] ) && 'title' === $attributes['name'] ) {
+			$post_id = filter_input(INPUT_GET, 'post_id', FILTER_VALIDATE_INT);
+
+			if ( ! is_null( $post_id ) ) {
+				$attributes['value'] = get_the_title( $post_id );
+			}
+		}
+		return $attributes;
+	}
+);
 
 
 /* --------------------------------------------

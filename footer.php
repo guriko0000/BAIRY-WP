@@ -14,7 +14,7 @@
             </div>
           </address>
           <div class="l-footer__btn">
-            <a href="" class="c-btn">お問い合わせ<span class="c-btn__icon"></span></a>
+            <a href="<?php echo esc_url(home_url()); ?>/contact/" class="c-btn">お問い合わせ<span class="c-btn__icon"></span></a>
           </div>
           <div class="c-search l-footer__search">
             <script async src="https://cse.google.com/cse.js?cx=6757d19abf2304aeb">
@@ -86,13 +86,13 @@
                       <a href="<?php echo esc_url(home_url()); ?>/news/">お知らせ</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/news/">製品情報</a>
+                      <a href="<?php echo esc_url(home_url()); ?>/news/category/product/">製品情報</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/news/">イベント</a>
+                      <a href="<?php echo esc_url(home_url()); ?>/news/category/event/">イベント</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/news/">社員ブログ</a>
+                      <a href="<?php echo esc_url(home_url()); ?>/news/category/blog/">社員ブログ</a>
                     </li>
                   </ul>
                 </div>

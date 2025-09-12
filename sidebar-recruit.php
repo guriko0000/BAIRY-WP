@@ -53,20 +53,6 @@
 
               <div class="p-sidebar__container">
                 <h2 class="p-sidebar__title">勤務地から探す</h2>
-                <div class="c-select">
-                  <select name="select" onchange="location.href=value;" class="">
-                    <option>選択してください</option>
-                    <option value="">東京</option>
-                    <option value="">福岡</option>
-                    <option value="">神戸</option>
-                    <option value="">広島</option>
-                    <option value="">久留米</option>
-                  </select>
-                </div>
-
-                <p>test</p>
-                <div class="p-sidebar__container">
-                  <h2 class="p-sidebar__title">勤務地から探す</h2>
                   <div class="c-select">
                     <?php
                     $taxonomy_slug = 'jobs-area';

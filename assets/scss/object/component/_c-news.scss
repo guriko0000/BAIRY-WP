@@ -18,12 +18,8 @@
   //   padding: 5px 15px;
   // }
   
-
-
-
-  &:nth-child(1)::before, &:nth-child(2)::before {
-    content: 'NEW';
-    display: inline-block;
+&__new-tag {
+      display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
@@ -35,7 +31,7 @@
     line-height: 1.5;
     padding: 5px 11px;
     z-index: 1;
-  }
+}
 
     @include mq(pc) {  
     &:hover, &:focus {

@@ -54,7 +54,7 @@
               </div>
 
               <div class="p-recruit__single-btn">
-                <a href="" class="c-btn">この求人に応募する<span class="c-btn__icon"></span></a>
+                <a href="<?php echo home_url('/recruit/form?post_id=' . get_the_ID()); ?>" class="c-btn">この求人に応募する<span class="c-btn__icon"></span></a>
               </div>
             </article>
             <?php get_sidebar('recruit'); ?>

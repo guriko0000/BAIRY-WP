@@ -235,42 +235,47 @@ window.addEventListener('DOMContentLoaded', function () {
 
 // お知らせ絞込み
 const filterButtons = document.querySelectorAll('[data-filter]');
-const categoryContents = document.querySelectorAll('[data-category]');
+const cards = document.querySelectorAll('[data-category]');
 
-filterButtons.forEach((filterButton) => {
-  filterButton.addEventListener('click', function () {
-    filterButtons.forEach((btn) => btn.classList.remove('is-active'));
-    this.classList.add('is-active');
+const tokens = (s) => (s || '')
+  .replace(/\u00A0/g,' ').replace(/\u3000/g,' ')
+  .trim().split(/\s+/).filter(Boolean);
 
-    const buttonCategory = this.dataset.filter;
-    let matchedCount = 0;
+const show = (el) => { el.classList.add('is-show'); el.removeAttribute('aria-hidden'); el.inert = false; };
+const hide = (el) => { el.classList.remove('is-show'); el.setAttribute('aria-hidden','true'); el.inert = true; };
 
-    // 全てのコンテンツを一旦リセット
-    categoryContents.forEach((content) => {
-      content.classList.remove('is-show');
-      content.animate(
-        [{ opacity: 0 }, { opacity: 1 }],
-        { duration: 600, fill: 'forwards' }
-      );
-    });
-
-    // 4件まで表示
-    categoryContents.forEach((content) => {
-      const contentCategory = content.dataset.category;
-      const isMatch = (buttonCategory === 'all') || (contentCategory === buttonCategory);
-      if (isMatch && matchedCount < 4) {
-        content.classList.add('is-show');
-        matchedCount++;
+filterButtons.forEach(btn => {
+  // 可能なら <button> にする。liの場合は↓を併用
+  btn.setAttribute('role','button'); btn.setAttribute('tabindex','0');
+  const handle = () => {
+    filterButtons.forEach(b => b.classList.remove('is-active'));
+    btn.classList.add('is-active');
+    const f = btn.dataset.filter;
+    let shown = 0;
+    cards.forEach(el => hide(el));
+    for (const el of cards) {
+      if (shown >= 4) break;
+      const list = tokens(el.dataset.category);
+      if (f === 'all' || list.includes(f)) {
+        show(el);
+        el.animate([{opacity:0},{opacity:1}], {duration:400, fill:'both'});
+        shown++;
       }
-    });
+    }
+  };
+  btn.addEventListener('click', handle);
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handle(); }
   });
 });
-window.addEventListener('DOMContentLoaded', function () {
-  categoryContents.forEach((content) => {
-    content.classList.remove('is-show');
-  });
-  document.querySelector('[data-filter="all"]').click();
+
+window.addEventListener('DOMContentLoaded', () => {
+  cards.forEach(el => hide(el));
+  document.querySelector('[data-filter="all"]')?.click();
 });
+
+
+
 
 
 
