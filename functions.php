@@ -13,8 +13,12 @@ function my_theme_scripts(){
   wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js', ['og_jquery'], '', true);
   wp_enqueue_script('ScrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js', ['gsap'], '', true);
   wp_enqueue_script('splied', get_theme_file_uri('/assets/js/splide/splide.min.js'), ['ScrollTrigger'], '', true);
+
+if ( is_front_page() ) {
   wp_enqueue_script('toppage', get_theme_file_uri('/assets/js/top.js'), ['splied'], '', true);
-  wp_enqueue_script('allpage', get_theme_file_uri('/assets/js/common.js'), ['toppage'], '', true);
+  }
+
+  wp_enqueue_script('allpage', get_theme_file_uri('/assets/js/common.js'), [], '', true);
 }
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
 
@@ -47,7 +51,7 @@ function customize_query_display($query)
 
   // ホームページの場合
   if ($query->is_home()) {
-    $query->set('posts_per_page', 1);
+    $query->set('posts_per_page', 2);
   }
 
   // カテゴリーページの場合
@@ -60,9 +64,9 @@ function customize_query_display($query)
     $query->set('posts_per_page', 10);
   }
 
-    //建築実績アーカイブ
+    //採用情報アーカイブ
   if ( $query->is_post_type_archive('jobs') ) {
-    $query->set( 'posts_per_page', '1' );
+    $query->set( 'posts_per_page', '2' );
   }
 }
 
@@ -418,10 +422,10 @@ function acf_custom_block_add() {
   /* 吹き出しコメント*/
   acf_register_block_type(
     array(
-    'name'            => 'staff-message-block', 
+    'name'            => 'message-block', 
     'title'           => __( '吹き出しメッセージ' ), 
     'description'     => __( '吹き出しメッセージです。' ), 
-    'render_template' => 'acf-blocks/acf-block/staff-message-block.php', 
+    'render_template' => 'acf-blocks/acf-block/message-block.php', 
     'category'        => 'custom-layout-category',
     'icon'            => 'button', 
     'keywords'        => array( '吹き出し','メッセージ','吹き出しメッセージ' ), 

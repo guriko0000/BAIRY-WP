@@ -68,32 +68,6 @@
                     </div>
                   </a>
                 </li>
-                <!-- <li class="p-top-news__item">
-              <a href="<?php echo esc_url(home_url()); ?>/news/single-news02/">
-                <div class="p-top-news__item-thumb-wrap">
-                  <figure class="p-top-news__item-thumb">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb02.png" alt="" width="128" height="88" loading="lazy">
-                  </figure>
-                </div>
-                <div class="p-top-news__item-body">
-                  <span class="p-top-news__item-time"><time datetime="2025-04-10">2025.04.10</time></span>
-                  <p class="p-top-news__item-title">協賛ユニフォームを頂きました！</p>
-                </div>
-              </a>
-            </li>
-            <li class="p-top-news__item">
-              <a href="<?php echo esc_url(home_url()); ?>/news/single-news03">
-                <div class="p-top-news__item-thumb-wrap">
-                  <figure class="p-top-news__item-thumb">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb03.png" alt="" width="128" height="88" loading="lazy">
-                  </figure>
-                </div>
-                <div class="p-top-news__item-body">
-                  <span class="p-top-news__item-time"><time datetime="2025-04-10">2025.04.10</time></span>
-                  <p class="p-top-news__item-title">WS1000・BF1000発売開始について</p>
-                </div>
-              </a>
-            </li> -->
               <?php endwhile; ?>
             </ul>
           <?php else : ?>
@@ -331,8 +305,8 @@
                       <li class="splide__slide c-card">
                         <a href="<?php the_permalink() ?>">
                           <div class="c-card__head">
-                            <?php if( get_field('staff_name') ) { ?>
-                            <p class="c-card__name"><?php echo get_field('staff_division'); ?>　<?php echo get_field('staff_name'); ?>さん</p>
+                            <?php if (get_field('staff_name')) { ?>
+                              <p class="c-card__name"><?php echo get_field('staff_division'); ?>　<?php echo get_field('staff_name'); ?>さん</p>
                             <?php } ?>
                             <div class="c-card__img">
                               <?php if (has_post_thumbnail()) : ?>
@@ -347,58 +321,6 @@
                           </div>
                         </a>
                       </li>
-                      <!-- <li class="splide__slide c-card">
-                    <a href="<?php echo esc_url(home_url()); ?>/recruit-voice/single-voice/">
-                      <div class="c-card__head">
-                        <p class="c-card__name">2法人営業部　●●さん</p>
-                        <div class="c-card__img">
-                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/recruit_img01.jpg" alt="" width="255" height="185" loading="lazy">
-                        </div>
-                      </div>
-                      <div class="c-card__body">
-                        <p class="c-card__text">【新卒インタビュー】文系出身から始めるITキャリア。新卒未経験からヘルプデスクとして成長できた理由とは？ダミーテキストダミーテキストダミー</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="splide__slide c-card">
-                    <a href="<?php echo esc_url(home_url()); ?>/recruit-voice/single-voice/">
-                      <div class="c-card__head">
-                        <p class="c-card__name">3法人営業部　●●さん</p>
-                        <div class="c-card__img">
-                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/recruit_img01.jpg" alt="" width="255" height="185" loading="lazy">
-                        </div>
-                      </div>
-                      <div class="c-card__body">
-                        <p class="c-card__text">【新卒インタビュー】文系出身から始めるITキャリア。新卒未経験からヘルプデスクとして成長できた理由とは？ダミーテキストダミーテキストダミー</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="splide__slide c-card">
-                    <a href="<?php echo esc_url(home_url()); ?>/recruit-voice/single-voice/">
-                      <div class="c-card__head">
-                        <p class="c-card__name">4法人営業部　●●さん</p>
-                        <div class="c-card__img">
-                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/recruit_img01.jpg" alt="" width="255" height="185" loading="lazy">
-                        </div>
-                      </div>
-                      <div class="c-card__body">
-                        <p class="c-card__text">【新卒インタビュー】文系出身から始めるITキャリア。新卒未経験からヘルプデスクとして成長できた理由とは？ダミーテキストダミーテキストダミー</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="splide__slide c-card">
-                    <a href="<?php echo esc_url(home_url()); ?>/recruit-voice/single-voice/">
-                      <div class="c-card__head">
-                        <p class="c-card__name">5法人営業部　●●さん</p>
-                        <div class="c-card__img">
-                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/recruit_img01.jpg" alt="" width="255" height="185" loading="lazy">
-                        </div>
-                      </div>
-                      <div class="c-card__body">
-                        <p class="c-card__text">【新卒インタビュー】文系出身から始めるITキャリア。新卒未経験からヘルプデスクとして成長できた理由とは？ダミーテキストダミーテキストダミー</p>
-                      </div>
-                    </a>
-                  </li> -->
                     <?php endwhile; ?>
                   </ul>
                 <?php else : ?>
@@ -430,11 +352,25 @@
 
         <ul class="p-top-updates__cate-wrap js-fadeUp">
           <li data-filter="all" class="is-active p-top-updates__cate">すべて</li>
-          <li data-filter="notice" class="p-top-updates__cate">お知らせ</li>
-          <li data-filter="product" class="p-top-updates__cate">製品情報</li>
-          <li data-filter="event" class="p-top-updates__cate">イベント</li>
-          <li data-filter="blog" class="p-top-updates__cate">社員ブログ</li>
+          <?php
+          $args = array(
+            'taxonomy'   => 'category',
+            'hide_empty' => false,
+            'orderby'    => 'description', // ← ディスクリプション順に並べる
+            'order'      => 'ASC',
+          );
+          $categories = get_terms($args);
+
+          if (!empty($categories) && !is_wp_error($categories)) {
+            foreach ($categories as $cat) {
+              echo '<li data-filter="' . esc_attr($cat->slug) . '" class="p-top-updates__cate">'
+                . esc_html($cat->name)
+                . '</li>';
+            }
+          }
+          ?>
         </ul>
+
       </div>
 
 
@@ -483,7 +419,9 @@
                 <div class="c-news__body">
                   <span class="c-news__date"><time datetime="<?php echo get_the_date('Y-m-d') ?>"><?php echo get_the_date('Y.m.d') ?></time></span>
                   <h3 class="c-news__title"><?php the_title(); ?></h3>
-                  <p class="c-news__text">お知らせ1内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
+                  <?php if( get_field('news_extract') ) { ?>
+                  <p class="c-news__text"><?php echo get_field('news_extract'); ?></p>
+                  <?php } ?>
                 </div>
               </a>
             </li>
@@ -743,5 +681,5 @@
     </div>
   </section>
 
-<?php get_template_part('parts/parts-info'); ?>
-<?php get_footer(); ?>
+  <?php get_template_part('parts/parts-info'); ?>
+  <?php get_footer(); ?>

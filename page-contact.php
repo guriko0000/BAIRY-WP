@@ -24,13 +24,13 @@
       <div class="l-inner">
         <div class="c-progress">
           <ul class="c-progress__list">
-            <li class="c-progress__item active">
+            <li class="c-progress__item select active">
               <p class="c-progress__text">お問い合わせ<br>内容選択</p>
             </li>
-            <li class="c-progress__item">
+            <li class="c-progress__item input">
               <p class="c-progress__text">詳細入力</p>
             </li>
-            <li class="c-progress__item">
+            <li class="c-progress__item confirm">
               <p class="c-progress__text">入力内容確認</p>
             </li>
           </ul>

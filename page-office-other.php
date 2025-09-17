@@ -27,9 +27,30 @@
     <div class="l-inner">
       <div class="l-post">
         <section class="p-recruit__archive l-post__main">
-          <?php if (have_posts()) : ?>
+
+            <?php
+    // 固定ページでのページネーション対策（paged / page 両対応）
+    $paged = get_query_var('paged') ?: ( get_query_var('page') ?: 1 );
+
+    $args = array(
+      'post_type'      => 'jobs',
+      'posts_per_page' => 1,
+      'paged'          => $paged,
+      'tax_query'      => array(
+        array(
+          'taxonomy' => 'jobs-type',
+          'field'    => 'slug',
+          'terms'    => array('office', 'other'),
+          'operator' => 'IN',
+        ),
+      ),
+    );
+    $jobs = new WP_Query($args);
+    ?>
+
+          <?php if ( $jobs->have_posts() ) : ?>
             <ul class="p-recruit__archive-list">
-              <?php while (have_posts()) : the_post(); ?>
+              <?php while ( $jobs->have_posts() ) : $jobs->the_post(); ?>
                 <li class="c-recruit">
                   <a href="<?php the_permalink() ?>">
                     <h2 class="c-recruit__title"><?php the_title(); ?></h2>
@@ -68,19 +89,20 @@
                       </div>
                     </div>
                   </a>
-                <?php endwhile; ?>
-              </ul>
-            <?php else : ?>
-              <p class="fadeshow">更新情報はありません</p>
-            <?php endif; ?>
+                </li>
+              <?php endwhile; ?>
+            </ul>
+          <?php else : ?>
+            <p class="fadeshow">更新情報はありません</p>
+          <?php endif;
+          wp_reset_postdata(); ?>
 
           <?php
-          global $wp_query;
           $pagination_links = paginate_links(array(
             'mid_size'      => 4,
             'format'        => 'page/%#%',
             'current'       => max(1, get_query_var('paged')),
-            'total'         => $wp_query->max_num_pages,
+            'total'         => $jobs->max_num_pages,
             'prev_text'     => '',
             'next_text'     => '',
             'type'          => 'list'

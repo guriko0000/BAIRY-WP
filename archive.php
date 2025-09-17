@@ -33,27 +33,29 @@
                 <?php while (have_posts()) : the_post(); ?>
                   <li class="c-news">
                     <a href="<?php the_permalink(); ?>">
-                    <!-- 件数&期間(通常投稿) -->
+
+                      <!-- 件数&期間(通常投稿) -->
                       <?php
-                        $last_post_ids = array();
-                        $lastposts = get_posts('posts_per_page=2'); // NEWを付ける最新記事の件数
-                        foreach($lastposts as $lastpost) {
-                          $last_post_ids[] = $lastpost->ID;
-                        }
+                      $last_post_ids = array();
+                      $lastposts = get_posts('posts_per_page=2'); // NEWを付ける最新記事の件数
+                      foreach ($lastposts as $lastpost) {
+                        $last_post_ids[] = $lastpost->ID;
+                      }
                       ?>
                       <?php
-                        $days = 31; // NEWを付ける最新記事の期間(日数)
-                        $today = date_i18n('U');
-                        $entry = get_the_time('U');
-                        $term = date('U',($today - $entry)) / 86400 ;
-                        if( $days > $term ){
-                          ?>
-                          <?php if ( in_array( $post->ID, $last_post_ids ) ) : ?>
+                      $days = 31; // NEWを付ける最新記事の期間(日数)
+                      $today = date_i18n('U');
+                      $entry = get_the_time('U');
+                      $term = date('U', ($today - $entry)) / 86400;
+                      if ($days > $term) {
+                      ?>
+                        <?php if (in_array($post->ID, $last_post_ids)) : ?>
                           <span class="c-news__new-tag">NEW</span>
-                          <?php endif; ?>
-                          <?php
-                        }
+                        <?php endif; ?>
+                      <?php
+                      }
                       ?>
+
                       <figure class="c-news__thumb">
                         <?php if (has_post_thumbnail()) : ?>
                           <?php the_post_thumbnail(); ?>
@@ -76,7 +78,9 @@
                           </div>
                         </div>
                         <h2 class="c-news__title"><?php the_title(); ?></h2>
-                        <p class="c-news__text">お知らせ1内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
+                        <?php if (get_field('news_extract')) { ?>
+                          <p class="c-news__text"><?php echo get_field('news_extract'); ?></p>
+                        <?php } ?>
                       </div>
                     </a>
                   </li>
@@ -86,36 +90,40 @@
               <p class="fadeshow">更新情報はありません</p>
             <?php endif; ?>
 
+            <div class="p-news__pagination">
+              <nav class="c-pagination">
+                <ul class="page-numbers">
 
-                <?php
-                  global $query;
-                  $pagination_links = paginate_links(array(
-                    'mid_size'      => 4,
-                    'format'        => 'page/%#%',
-                    'current'       => max(1, get_query_var('paged')),
-                    'total'         => $wp_query->max_num_pages,
-                    'prev_text'     => '',
-                    'next_text'     => '',
-                    'type'          => 'list'
-                  ));
-
-                if ($pagination_links) : ?>
-                  <div class="p-news__pagination">
-                    <nav class="c-pagination">
-                      <?php echo $pagination_links; ?>
-                    </nav>
-                  </div>
-                <?php endif; ?>
-
-                  <!-- <li><a class="prev page-numbers" href=""></a></li>
-                  <li><a class="page-numbers" href="">1</a></li>
-                  <li><span aria-current="page" class="page-numbers current">2</span></li>
-                  <li><a class="page-numbers" href="">3</a></li>
-                  <li><a class="page-numbers" href="">4</a></li>
-                  <li><a class="next page-numbers" href=""></a></li>
+                  <?php if (wp_is_mobile()) : ?>
+                    <?php
+                    global $wp_query;
+                    echo paginate_links(array(
+                      'mid_size'      => 1, // 現在ページの左右に表示するページ番号の数
+                      'format' => '/page/%#%',
+                      'current' => max(1, get_query_var('paged')),
+                      'total' => $wp_query->max_num_pages,
+                      'prev_text' => '',
+                      'next_text' => '',
+                      'type' => 'list'
+                    ));
+                    ?>
+                  <?php else: ?>
+                    <?php
+                    global $wp_query;
+                    echo paginate_links(array(
+                      'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
+                      'format' => '/page/%#%',
+                      'current' => max(1, get_query_var('paged')),
+                      'total' => $wp_query->max_num_pages,
+                      'prev_text' => '',
+                      'next_text' => '',
+                      'type' => 'list'
+                    ));
+                    ?>
+                  <?php endif; ?>
                 </ul>
               </nav>
-            </div> -->
+            </div>
           </section>
 
           <?php get_sidebar('post'); ?>
@@ -125,5 +133,5 @@
     </div>
   </div>
 
-<?php get_template_part('parts/parts-info'); ?>
-<?php get_footer(); ?>
+  <?php get_template_part('parts/parts-info'); ?>
+  <?php get_footer(); ?>

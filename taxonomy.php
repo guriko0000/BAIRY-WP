@@ -33,9 +33,10 @@
                   <a href="<?php the_permalink() ?>">
                     <h2 class="c-recruit__title"><?php the_title(); ?></h2>
                     <div class="c-recruit__body">
-                      <p class="c-recruit__text">サーバー/UTM/セキュリティカメラ等を主力製品としている自社プライベートブランド「Bairy」の拡大・販促を目的に、販売代理店の</p>
+                      <?php if( get_field('recruit_extract') ) { ?>
+                      <p class="c-recruit__text"><?php echo get_field('recruit_extract'); ?></p>
+                      <?php } ?>
                       <div class="c-recruit__tag-wrap">
-
                       <?php
                         // まとめて処理したいタクソノミーを配列で指定
                         $taxonomies = array('jobs-type', 'jobs-salary', 'jobs-area');

@@ -18,7 +18,15 @@
   }
 
   .smf-form--simple-table .smf-item__col--controls {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    @include mq(md) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .smf-item__label__text {
+    font-size: 1.7rem;
+    font-weight: $medium;
     @include mq(md) {
       font-size: 1.6rem;
     }
@@ -26,14 +34,14 @@
 
   .smf-form--simple-table textarea {
     font-family: $base-font-family;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 1.6;
     @include mq(md) {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
     }
   }
 
-  .form-flex .smf-item__controls{
+  .form-flex .smf-item__controls {
     display: flex;
     gap: 10px;
   }
@@ -45,14 +53,18 @@
     border: none;
     border-radius: 0px;
     box-shadow: none;
-    padding: 1.5rem 1.5rem;
+    padding: 1.4rem 1.5rem;
     @include mq(md) {
-      padding: 0.8rem;
+      padding: 1.4rem 1.2rem;
     }
 
     &.postcode {
       width: 35%;
     }
+  }
+
+  .smf-form .smf-text-control__control:focus {
+    outline: 1px solid $main-color;
   }
 
   .form-main-size .smf-item__col--controls {
@@ -144,7 +156,8 @@
     }
   }
 
-  .smf-radio-buttons-control__control {
+  // radio
+  .smf-form .smf-radio-buttons-control__control {
     display: flex;
 
     .smf-label {
@@ -154,26 +167,91 @@
     }
   }
 
+  .smf-form .smf-radio-button-control {
+  
+    &:focus {
+      outline: 1px solid $main-color;
+    }
+  }
+
+  .smf-form .smf-radio-button-control__control:focus {
+    border-color: $main-color;
+    outline: 1px solid $main-color;
+  }
+
+  .smf-form .smf-radio-button-control__control {
+    width: 16px;
+    height: 16px;
+
+  }
+
+  .smf-form .smf-radio-button-control__control:checked {
+    background-color: #fff;
+    border-color:#ccc;
+  }
+
+  .smf-form .smf-radio-button-control__control:before {
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    background-color: $main-color;
+  }
+
   .form-radio--column .smf-radio-buttons-control__control {
     display: block;
 
     .smf-label {
       &:not(:first-child) {
-        margin: 10px 0 0 0;
+        margin: 8px 0 0 0;
       }
     }
-
   }
-  
+
+  // checkbox
+  .smf-form .smf-checkbox-control__control {
+    width: 24px;
+    height: 24px;
+    border-color: #ccc;
+    border-radius: 2px;
+    margin-top: 2px;
+  }
+  .smf-form .smf-checkbox-control {
+    gap: 8px;
+  }
+  .smf-form .smf-checkbox-control__control:checked {
+    background-color: #fff;
+  }
+  .smf-form .smf-checkbox-control__control:before {
+    border-color: $main-color;
+  }
+  .smf-form .smf-checkbox-control__control:focus-visible {
+    outline: 1px solid $main-color;
+  }  
   .smf-form--simple-table .smf-item__col--label {
     display: flex;
     align-items: center;
   }
-
-
+  .smf-form .smf-checkbox-control__control:before {
+    top: calc(50% - 8px);
+    left: calc(50% - 3px);
+    width: 8px;
+    height: 13px;
+    border-color: $main-color;
+    border-width: 0 2px 2px 0;
+  }
+  .smf-form .smf-checkbox-control__control:checked {
+    border-color:#ccc;
+  }
   .smf-item__label {
     position: relative;
     font-size: 1.5rem;
+  }
+  .form_tel .smf-checkboxes-control {
+    margin-top: 10px;
+  }
+
+  .req .smf-item__label {
     &::after {
       content: '必須';
       display: inline-block;
@@ -200,12 +278,17 @@
   }
 
   .form-file {
+
     .smf-file-control__label {
       background-color: #F2F2F2;
       background-image: none;
       font-size: 1.3rem;
       border: 1px solid #000;
       padding: 6px 14px;
+    }
+
+    .smf-placeholder + .smf-placeholder{
+      margin-top: 10px;
     }
   }
 
@@ -219,8 +302,8 @@
 
   .smf-form--simple-table .smf-item__col--label {
     flex-shrink: 0;
-    flex: 0 0 250px;
-    max-width: 250px;
+    flex: 0 0 266px;
+    max-width: 266px;
     padding-bottom: 0;
     @include mq(md) {
       max-width: 100%;
@@ -229,7 +312,7 @@
   }
 
   input::placeholder {
-    color: #A7A7A7;
+    color: #AAAAAA;
     @include mq(md) {        
       font-size: 1.4rem;
     }
@@ -247,7 +330,7 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     @include mq(md) {
       gap: 16px;
     }
@@ -266,71 +349,50 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    max-width: 646px;
+    max-width: 376px;
     width: 100%; 
     border-radius: 48px;
-    border: 1px solid $color-black01;
-    background-color: $color-black01;
+    border: 2px solid $main-color;
+    background-color: $main-color;
     background-image: none;
     color: #fff;
-    font-size: 1.6rem;  
-    font-weight: $bold;
-    letter-spacing: 0.03em;
+    font-size: 1.8rem;  
+    font-weight: $medium;
     text-align: center;
     transition: 0.25s;
-    padding: 21px 10px;
+    padding: 17px 10px;
     z-index: 10;
     @include mq(md) {
       max-width: 296px;
       font-size: 1.4rem;
       padding: 12px 10px;
     }
-
-    &::after {
-      content: '';
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      background: #fff;
-      mask: url(../img/icon/icon_right.svg) no-repeat center/cover;
-      margin-left: 14px;
-      transition: 0.25s;
-      @include mq(md) {
-        width: 20px;
-        height: 20px;
-      }
-    }
   
     &:hover, &:focus {
-      color: $color-black01;
+      color: $main-color;
       background-color: #fff;
       transition: all 0.25s;
-  
-      &::after {
-        background-color: $color-black01;
-        transition: all 0.25s;
-      }
     }
   }
 
   // 戻る
   .smf-button-control__control[data-action="back"] {
-    border-color: #CBCBCB;
+    border-color: $main-color;
     background-color: #fff;
-    color: $color-black01;
-    &::after {
-      background: $color-black01;
-      mask: url(../img/icon/icon_right.svg) no-repeat center/cover;
-    }
+    color: $main-color;
+    // &::after {
+    //   background: $main-color;
+    //   mask: url(../img/icon/icon_right.svg) no-repeat center/cover;
+    // }
 
     &:hover, &:focus {
       color: #fff;
-      background-color: $color-black01;
-      border-color: $color-black01;
+      background-color: $main-color;
+      border-color: $main-color;
   
-      &::after {
-        background-color: #fff;
-      }
+      // &::after {
+      //   background-color: #fff;
+      // }
     }
   }
 

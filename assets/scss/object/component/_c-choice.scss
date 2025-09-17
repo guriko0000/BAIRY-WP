@@ -1,0 +1,62 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-choice
+-----------------------------------------*/
+.c-choice {
+  max-width: 834px;
+  background-color: $main-bg;
+  border-radius: 15px;
+  padding: 40px 50px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &__main-title {
+    color: $main-color;
+    font-size: 1.5rem;
+    font-weight: $medium;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 15px;
+      background: url(../img/icon/icon_triangle-blue-s.svg) no-repeat center / contain;
+      margin-right: 6px;
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: $medium;
+    margin-top: 15px;
+  }
+
+  &__text {
+    margin-top: 8px;
+  }
+
+  &__bottom {
+    border-top: 1px solid #E0E0E0;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
+  &__tag-item {
+    display: flex;
+    gap: 15px;
+
+    & + & {
+      margin-top: 8px;
+    }
+  }
+
+  &__tag {
+    flex-shrink: 0;
+    width: 88px;
+    background-color: $main-color;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}

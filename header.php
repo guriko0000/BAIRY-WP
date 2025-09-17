@@ -26,8 +26,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..900&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- css -->
-  <link rel="stylesheet" href="<?php echo esc_url(home_url()); ?>/assets/js/splide/splide.min.css">
-  <!-- <link rel="stylesheet" href="<?php echo esc_url(home_url()); ?>/assets/css/style.css"> -->
+  <!-- <link rel="stylesheet" href="<?php echo esc_url(home_url()); ?>/assets/js/splide/splide.min.css">
+  <link rel="stylesheet" href="<?php echo esc_url(home_url()); ?>/assets/css/style.css"> -->
   <script>
     console.log("")
   </script>

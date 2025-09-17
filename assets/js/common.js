@@ -344,3 +344,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+// Snow Monkey Forms確認画面プレグラストラッカー出し分け
+window.addEventListener('load', () => {
+  const host = document.querySelector('form[data-screen], [data-screen]');
+  if (!host) return;
+
+  const items = document.querySelectorAll('li.input, li.confirm');
+  if (!items.length) return;
+
+  const apply = () => {
+    const screen = host.getAttribute('data-screen'); // "input" / "confirm" / "loading" 等
+    if (screen !== 'input' && screen !== 'confirm') return;
+    items.forEach(li => li.classList.toggle('active', li.classList.contains(screen)));
+  };
+
+  apply();
+
+  new MutationObserver(apply).observe(host, {
+    attributes: true,
+    attributeFilter: ['data-screen']
+  });
+});

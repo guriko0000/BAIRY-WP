@@ -74,9 +74,10 @@
                   <a href="<?php the_permalink() ?>">
                     <h4 class="c-recruit__title"><?php the_title(); ?></h4>
                     <div class="c-recruit__body">
-                      <p class="c-recruit__text">サーバー/UTM/セキュリティカメラ等を主力製品としている自社プライベートブランド「Bairy」の拡大・販促を目的に、販売代理店の</p>
+                      <?php if( get_field('recruit_extract') ) { ?>
+                      <p class="c-recruit__text"><?php echo get_field('recruit_extract'); ?></p>
+                      <?php } ?>
                       <div class="c-recruit__tag-wrap">
-
                         <?php
                         // まとめて処理したいタクソノミーを配列で指定
                         $taxonomies = array('jobs-type', 'jobs-salary', 'jobs-area');
@@ -130,7 +131,9 @@
                   <a href="<?php the_permalink() ?>">
                     <h4 class="c-recruit__title"><?php the_title(); ?></h4>
                     <div class="c-recruit__body">
-                      <p class="c-recruit__text">サーバー/UTM/セキュリティカメラ等を主力製品としている自社プライベートブランド「Bairy」の拡大・販促を目的に、販売代理店の</p>
+                      <?php if( get_field('recruit_extract') ) { ?>
+                      <p class="c-recruit__text"><?php echo get_field('recruit_extract'); ?></p>
+                      <?php } ?>
                       <div class="c-recruit__tag-wrap">
 
                         <?php
@@ -172,7 +175,7 @@
               array(
                 'taxonomy' => 'jobs-type',
                 'field'    => 'slug',
-                'terms'    => 'office', // 指定するターム（配列もOK）
+                'terms'    => array( 'office', 'other' ), // 指定するターム（配列もOK）
               ),
             ),
           );
@@ -186,7 +189,9 @@
                   <a href="<?php the_permalink() ?>">
                     <h4 class="c-recruit__title"><?php the_title(); ?></h4>
                     <div class="c-recruit__body">
-                      <p class="c-recruit__text">サーバー/UTM/セキュリティカメラ等を主力製品としている自社プライベートブランド「Bairy」の拡大・販促を目的に、販売代理店の</p>
+                      <?php if( get_field('recruit_extract') ) { ?>
+                      <p class="c-recruit__text"><?php echo get_field('recruit_extract'); ?></p>
+                      <?php } ?>
                       <div class="c-recruit__tag-wrap">
 
                         <?php
@@ -213,7 +218,7 @@
           <?php endif;
           wp_reset_postdata(); ?>
           <div class="p-recruit__type-btn">
-            <a href="<?php echo esc_url(home_url()); ?>/jobs/jobs-type//office-other/" class="c-btn">事務・その他の募集一覧を見る<span class="c-btn__icon"></span></a>
+            <a href="<?php echo esc_url(home_url()); ?>/jobs/office-other/" class="c-btn">事務・その他の募集一覧を見る<span class="c-btn__icon"></span></a>
           </div>
         </section>
       </div>

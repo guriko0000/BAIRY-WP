@@ -78,7 +78,9 @@
                           </div>
                         </div>
                         <h2 class="c-news__title"><?php the_title(); ?></h2>
-                        <p class="c-news__text">お知らせ1内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
+                        <?php if( get_field('news_extract') ) { ?>
+                        <p class="c-news__text"><?php echo get_field('news_extract'); ?></p>
+                        <?php } ?>
                       </div>
                     </a>
                   </li>
