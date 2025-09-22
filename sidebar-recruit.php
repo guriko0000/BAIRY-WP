@@ -87,34 +87,9 @@
                     }
                     ?>
                   </div>
+                </div>
 
-
-                  <!-- <?php
-                        $taxonomy_slug = 'product-categories';
-                        $terms = get_terms($taxonomy_slug);
-
-                        if ($terms && !is_wp_error($terms)) {
-
-
-                          $current_term_id = 0;
-                          if (is_tax($taxonomy_slug)) {
-                            $qo = get_queried_object();
-                            if (isset($qo->term_id)) {
-                              $current_term_id = (int) $qo->term_id;
-                            }
-                          }
-
-                          echo '<select name="select" onChange="location.href=this.value;" class="c-select">';
-                          echo '<option value="">選択してください</option>';
-
-                          foreach ($terms as $term) {
-                            $term_link = get_term_link($term, $taxonomy_slug);
-                            $selected  = ((int) $term->term_id === $current_term_id) ? ' selected' : '';
-                            echo '<option value="' . esc_url($term_link) . '"' . $selected . '>' . esc_html($term->name) . '</option>';
-                          }
-
-                          echo '</select>';
-                        }
-                        ?> -->
+                <div class="p-sidebar__container">
+                  <a href="<?php echo esc_url(home_url()); ?>/voices/" class="p-sidebar__banner-link"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/under/banner_voice.png" alt="社員の声はこちら" width="" height=""></a>
                 </div>
             </aside>

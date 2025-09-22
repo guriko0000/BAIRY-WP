@@ -1,5 +1,5 @@
-<?php if( get_field('bg-block') ) { ?>
-<div class="block-bg">
-<?php the_field('bg-block'); ?>
+<?php if( get_field('bg_text') ) { ?>
+<div class="c-block-bg">
+  <p><?php echo get_field('bg_text'); ?></p>
 </div>
 <?php } ?>

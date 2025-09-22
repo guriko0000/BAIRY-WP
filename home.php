@@ -6,20 +6,7 @@
         <h1 class="ja">最新情報</h1>
         <span class="en">Article</span>
       </hgroup>
-      <div class="p-under-mv__breadcrumb">
-        <div class="c-breadcrumb">
-          <span property="itemListElement" typeof="ListItem">
-            <a property="item" typeof="WebPage" title="Go to tokyo-clinic." href="" class="home"><span property="name">ホーム</span></a>
-            <meta property="position" content="1">
-          </span>
-          <span class="c-breadcrumb__icon"></span>
-          <span property="itemListElement" typeof="ListItem">
-            <span property="name" class="post post-page current-item">最新情報</span>
-            <meta property="url" content="">
-            <meta property="position" content="2">
-          </span>
-        </div>
-      </div>
+      <?php get_template_part('parts/breadcrumb'); ?>
     </div>
   </section>
 
@@ -60,7 +47,7 @@
                         <?php if (has_post_thumbnail()) : ?>
                           <?php the_post_thumbnail(); ?>
                         <?php else : ?>
-                          <img src="<?php echo esc_url(get_theme_file_uri('/assets/img/common/noimage.png')); ?>">
+                          <img src="<?php echo esc_url(get_theme_file_uri('/assets/img/common/noimage.png')); ?>" alt="No Image" >
                         <?php endif; ?>
                       </figure>
                       <div class="c-news__body">

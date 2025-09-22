@@ -5,20 +5,7 @@
       <h1 class="ja">会社情報</h1>
       <span class="en">Company</span>
     </hgroup>
-    <div class="p-under-mv__breadcrumb">
-      <div class="c-breadcrumb">
-        <span property="itemListElement" typeof="ListItem">
-          <a property="item" typeof="WebPage" title="Go to tokyo-clinic." href="" class="home"><span property="name">ホーム</span></a>
-          <meta property="position" content="1">
-        </span>
-        <span class="c-breadcrumb__icon"></span>
-        <span property="itemListElement" typeof="ListItem">
-          <span property="name" class="post post-page current-item">会社情報</span>
-          <meta property="url" content="">
-          <meta property="position" content="2">
-        </span>
-      </div>
-    </div>
+    <?php get_template_part('parts/breadcrumb'); ?>
   </div>
 </section>
 <div class="p-company">

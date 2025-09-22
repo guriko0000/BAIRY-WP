@@ -2,28 +2,10 @@
 <section class="p-under-mv">
   <div class="l-inner">
     <div class="p-under-mv__title">
-      <p class="ja">最新情報</p>
-      <span class="en">Article</span>
+      <p class="ja">採用情報</p>
+      <span class="en">Recruit</span>
     </div>
-    <div class="p-under-mv__breadcrumb">
-      <div class="c-breadcrumb">
-        <span property="itemListElement" typeof="ListItem">
-          <a property="item" typeof="WebPage" title="Go to home." href="/" class="home"><span property="name">ホーム</span></a>
-          <meta property="position" content="1">
-        </span>
-        <span class="c-breadcrumb__icon"></span>
-        <span property="itemListElement" typeof="ListItem">
-          <a property="item" typeof="WebPage" title="Go to company." href="/business/" class="home"><span property="name">最新情報</span></a>
-          <meta property="position" content="2">
-        </span>
-        <span class="c-breadcrumb__icon"></span>
-        <span property="itemListElement" typeof="ListItem">
-          <span property="name" class="post post-page current-item">製品情報</span>
-          <meta property="url" content="/corporate-sales/">
-          <meta property="position" content="3">
-        </span>
-      </div>
-    </div>
+    <?php get_template_part('parts/breadcrumb'); ?>
   </div>
 </section>
 <div class="l-section l-section--full">
@@ -36,6 +18,36 @@
             <!-- <img src="/assets/img/under/single-news_thumb01.png" alt="" width="834" height="557"> -->
             <?php the_post_thumbnail('full', array('class' => '')); ?>
           </figure>
+          <div class="p-person__box">
+            <dl class="p-person__head">
+              <?php
+              $field1 = get_field('staff_division');
+              $field2 = get_field('staff_name');
+
+              if ($field1 || $field2) : ?>
+                <div class="p-person__head-row">
+                  <dt class="p-person__head-title">Name</dt>
+                  <dd class="p-person__head-data p-person__head-data--name">
+                    <?php if ($field1) : ?>
+                      <?php echo esc_html($field1); ?>
+                      <?php endif; ?>　<?php if ($field2) : ?>
+                      <?php echo esc_html($field2); ?>さん<?php endif; ?>
+                  </dd>
+                </div>
+              <?php endif; ?>
+              <?php if (get_field('staff_position')) { ?>
+                <div class="p-person__head-row">
+                  <dt class="p-person__head-title">position</dt>
+                  <dd class="p-person__head-data"><?php echo get_field('staff_position'); ?></dd>
+                </div>
+              <?php } ?>
+            </dl>
+            <?php if (get_field('staff_text')) { ?>
+              <div class="p-person__box-body">
+                <p class="p-person__box-text"><?php echo get_field('staff_text'); ?></p>
+              </div>
+            <?php } ?>
+          </div>
 
         </div>
         <div class="p-post-news">

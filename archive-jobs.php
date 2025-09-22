@@ -5,20 +5,7 @@
       <h1 class="ja">採用情報</h1>
       <span class="en">Recruit</span>
     </hgroup>
-    <div class="p-under-mv__breadcrumb">
-      <div class="c-breadcrumb">
-        <span property="itemListElement" typeof="ListItem">
-          <a property="item" typeof="WebPage" title="Go to tokyo-clinic." href="" class="home"><span property="name">ホーム</span></a>
-          <meta property="position" content="1">
-        </span>
-        <span class="c-breadcrumb__icon"></span>
-        <span property="itemListElement" typeof="ListItem">
-          <span property="name" class="post post-page current-item">採用情報</span>
-          <meta property="url" content="">
-          <meta property="position" content="2">
-        </span>
-      </div>
-    </div>
+    <?php get_template_part('parts/breadcrumb'); ?>
   </div>
 </section>
 
@@ -37,42 +24,42 @@
                       <?php if (get_field('recruit_extract')) { ?>
                         <p class="c-recruit__text"><?php echo get_field('recruit_extract'); ?></p>
                       <?php } ?>
-                      <div class="c-recruit__tag-wrap">
-                        <?php
-                        $terms = get_the_terms($post->ID, 'jobs-type');
-                        if (!empty($terms)) {
-                          foreach ($terms as $term) {
-                            echo '<span class="c-recruit__tag ' .  $term->slug . '">' . $term->name . '</span>';
-                          }
-                        }
-                        ?>
 
-                        <?php
-                        $terms = get_the_terms($post->ID, 'jobs-salary');
-                        if (!empty($terms)) {
-                          foreach ($terms as $term) {
-                            echo '<span class="c-recruit__tag ' .  $term->slug . '">' . $term->name . '</span>';
-                          }
-                        }
-                        ?>
+                      <?php
+                      $tax_list = ['jobs-type', 'jobs-salary', 'jobs-area'];
 
-                        <?php
-                        $terms = get_the_terms($post->ID, 'jobs-area');
-                        if (!empty($terms)) {
-                          foreach ($terms as $term) {
-                            echo '<span class="c-recruit__tag ' .  $term->slug . '">' . $term->name . '</span>';
-                          }
-                        }
-                        ?>
+                      $items = [];
 
-                      </div>
+                      foreach ($tax_list as $tx) {
+                        $terms = get_the_terms(get_the_ID(), $tx);
+
+                        if (!is_wp_error($terms) && !empty($terms)) {
+                          $names = array_map(function ($t) {
+                            return $t->name;
+                          }, $terms);
+
+                          $items[] = esc_html(implode('、', $names));
+                        } else {
+                          $items[] = null;
+                        }
+                      }
+
+                      // 1つ以上中身がある場合のみ出力
+                      if (array_filter($items)) : ?>
+                        <div class="c-recruit__tag-wrap">
+                          <?php foreach ($items as $text) :
+                            if ($text === null) continue; ?>
+                            <span class="c-recruit__tag"><?php echo $text; ?></span>
+                          <?php endforeach; ?>
+                        </div>
+                      <?php endif; ?>
                     </div>
                   </a>
                 <?php endwhile; ?>
-              </ul>
-            <?php else : ?>
-              <p class="fadeshow">更新情報はありません</p>
-            <?php endif; ?>
+            </ul>
+          <?php else : ?>
+            <p class="fadeshow">更新情報はありません</p>
+          <?php endif; ?>
 
           <?php
           global $wp_query;

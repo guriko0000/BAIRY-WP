@@ -46,6 +46,18 @@
       }
     }
   }
-
   }
+
+  &__banner-link {
+    display: block;
+    transition: opacity 0.25s;
+    &:hover, &:focus-visible {
+      opacity: 0.7;
+    }
+
+    img {
+      width: 100%;
+      max-width: none;
+    }
+  } 
 }

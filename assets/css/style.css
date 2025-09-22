@@ -4591,7 +4591,7 @@ a.c-tags__item:hover, a.c-tags__item:focus-visible {
     height: 95px;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 370px) {
   .c-progress__item {
     width: 90px;
     height: 90px;
@@ -5100,6 +5100,11 @@ a.c-tags__item:hover, a.c-tags__item:focus-visible {
   left: -99999px;
   width: 1px;
   height: 1px;
+}
+
+/* 完了画面のときだけ .c-choice を非表示 */
+.p-form:has(form.snow-monkey-form[data-screen=complete]) .c-choice {
+  display: none !important;
 }
 
 .wp-block-buttons {
@@ -7334,6 +7339,18 @@ a.c-tags__item:hover, a.c-tags__item:focus-visible {
 .p-sidebar__list li a:hover, .p-sidebar__list li a:focus {
   color: #246EB8;
 }
+.p-sidebar__banner-link {
+  display: block;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+.p-sidebar__banner-link:hover, .p-sidebar__banner-link:focus-visible {
+  opacity: 0.7;
+}
+.p-sidebar__banner-link img {
+  width: 100%;
+  max-width: none;
+}
 
 /* -------------------------------------
         p-post-recruit
@@ -7544,11 +7561,11 @@ a.c-tags__item:hover, a.c-tags__item:focus-visible {
   background: linear-gradient(to right, #246EB8 10%, #ccc 10%);
 }
 .p-post-news h3 {
-  border-left: 1px solid #246EB8;
+  border-left: 2px solid #246EB8;
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.5;
-  padding-left: 10px;
+  padding-left: 12px;
   margin-top: 50px;
 }
 @media screen and (max-width: 767px) {
@@ -7571,10 +7588,21 @@ a.c-tags__item:hover, a.c-tags__item:focus-visible {
   display: -ms-flexbox;
   display: flex;
   gap: 2em;
+  margin-top: 40px;
+}
+@media screen and (max-width: 767px) {
+  .wp-block-columns {
+    margin-top: 30px;
+  }
 }
 
 .c-interview + .wp-block-columns {
   margin-top: 40px;
+}
+@media screen and (max-width: 767px) {
+  .c-interview + .wp-block-columns {
+    margin-top: 30px;
+  }
 }
 
 a.c-btn {
@@ -7586,6 +7614,16 @@ a.c-btn:hover, a.c-btn:focus-visible {
 
 p.p-person__message-text {
   margin-top: 0;
+}
+
+figure.wp-block-table {
+  border-radius: 0;
+  margin-top: 40px;
+}
+@media screen and (max-width: 767px) {
+  figure.wp-block-table {
+    margin-top: 30px;
+  }
 }
 
 /* -------------------------------------
@@ -7669,7 +7707,12 @@ p.p-person__message-text {
 .p-news__pager {
   border-top: 1px solid #ccc;
   padding-top: 30px;
-  margin-top: 40px;
+  margin-top: 60px;
+}
+@media screen and (max-width: 767px) {
+  .p-news__pager {
+    margin-right: 30px;
+  }
 }
 
 /* -------------------------------------
@@ -8255,6 +8298,9 @@ p.p-person__message-text {
 .c-block-bg > *:first-child {
   margin-top: 0;
 }
+.c-block-bg p:first-of-type {
+  margin-top: 0;
+}
 
 /* -------------------------------------
         c-block-table
@@ -8276,6 +8322,7 @@ p.p-person__message-text {
   width: 100%;
 }
 .c-block-table th, .c-block-table td {
+  width: 33.3333333333%;
   border: 1px solid #246EB8;
   line-height: 1.5;
   padding: 20px;
@@ -8288,11 +8335,14 @@ p.p-person__message-text {
 }
 .c-block-table thead th {
   background-color: #246EB8;
-  border: 1px solid #fff;
+  border-right: 1px solid #fff;
   color: #fff;
   font-weight: 400;
   line-height: 1.3;
   text-align: center;
+}
+.c-block-table thead th:last-child {
+  border: none;
 }
 
 /* -------------------------------------
@@ -8444,9 +8494,12 @@ p.p-person__message-text {
   margin-top: 30px !important;
 }
 
+.u-sp-mt40 {
+  margin-top: 40px !important;
+}
+
 .u-text-center {
   text-align: center !important;
-  line-height: 1;
 }
 
 .u-text-accent-color {

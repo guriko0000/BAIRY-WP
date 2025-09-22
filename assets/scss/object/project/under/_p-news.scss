@@ -28,6 +28,9 @@
   &__pager {
     border-top: 1px solid #ccc;
     padding-top: 30px;
-    margin-top: 40px;
+    margin-top: 60px;
+    @include mq(md) {
+      margin-right: 30px;
+    }
   } 
 }

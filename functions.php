@@ -6,7 +6,8 @@
 function my_theme_scripts(){
 
   wp_enqueue_style('spliide-css', get_theme_file_uri('/assets/js/splide/splide.min.css'));
-  wp_enqueue_style('css', get_theme_file_uri('/assets/css/style.css'), ['spliide-css'], '1.0');
+  wp_enqueue_style('scroll-hint-css', get_theme_file_uri('/assets/js/scrollhint/scroll-hint.css'), ['spliide-css'], '1.0');
+  wp_enqueue_style('css', get_theme_file_uri('/assets/css/style.css'), ['scroll-hint-css'], '1.0');
   wp_enqueue_style('custom-css', get_theme_file_uri('/assets/css/custom.css'), ['css'], '1.0');
 
   wp_enqueue_script('og_jquery', 'https://code.jquery.com/jquery-3.5.1.js', [], '3.5.1', true);
@@ -18,7 +19,8 @@ if ( is_front_page() ) {
   wp_enqueue_script('toppage', get_theme_file_uri('/assets/js/top.js'), ['splied'], '', true);
   }
 
-  wp_enqueue_script('allpage', get_theme_file_uri('/assets/js/common.js'), [], '', true);
+  wp_enqueue_script('scroll-hint', get_theme_file_uri('/assets/js/scrollhint/scroll-hint.min.js'), [], '', true);
+  wp_enqueue_script('allpage', get_theme_file_uri('/assets/js/common.js'), ['scroll-hint'], '', true);
 }
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
 
@@ -33,7 +35,7 @@ function change_set_post($query)
   }
   //トップページの場合
   if ($query->is_front_page()) {
-    $query->set('posts_per_page', '16');
+    $query->set('posts_per_page', '3');
     return;
   }
 }
@@ -51,7 +53,7 @@ function customize_query_display($query)
 
   // ホームページの場合
   if ($query->is_home()) {
-    $query->set('posts_per_page', 2);
+    $query->set('posts_per_page', 10);
   }
 
   // カテゴリーページの場合
@@ -64,9 +66,14 @@ function customize_query_display($query)
     $query->set('posts_per_page', 10);
   }
 
-    //採用情報アーカイブ
+  //採用情報アーカイブ
   if ( $query->is_post_type_archive('jobs') ) {
-    $query->set( 'posts_per_page', '2' );
+    $query->set( 'posts_per_page', '7' );
+  }
+
+  //社員の声アーカイブ
+  if ( $query->is_post_type_archive('voices') ) {
+    $query->set( 'posts_per_page', '6' );
   }
 }
 
@@ -80,16 +87,13 @@ function  my_pre_get_posts2( $query ) {
   return;
 
   if($query->is_tax('jobs-type')){
-    $query->set('posts_per_page',1);// 7件
+    $query->set('posts_per_page',7);
   }
   elseif($query->is_tax('jobs-salary')){
-    $query->set('posts_per_page',7);// 7件
+    $query->set('posts_per_page',7);
   }
   elseif($query->is_tax('jobs-area')){
-    $query->set('posts_per_page',7);// 7件
-  }
-  elseif($query->is_tax('works-cate')){
-    $query->set('posts_per_page',27);// 27件
+    $query->set('posts_per_page',7);
   }
 }
 
@@ -112,7 +116,7 @@ add_filter('register_post_type_args','post_has_archive',10,2);
  * アイキャッチ画像を有効化
  * -------------------------------------------- */
 function setup_post_thumnails(){
-	add_theme_support('post-thumbnails', ['post','jobs','voices',]);
+	add_theme_support('post-thumbnails', ['post','voices',]);
 }
 add_action('after_setup_theme', 'setup_post_thumnails');
 
@@ -253,23 +257,6 @@ function cpt_register_voices(){
 }
 add_action('init', 'cpt_register_voices');
 
-//  * ターム（業種）【社員の声】
-function tax_register_voices_type(){
-	$args = [
-		'label' => '社員の声業種',
-		'labels' => [
-			'singular_name' => '社員の声業種',
-			'edit_item' => '社員の声業種を編集',
-			'add_new_item' => '新規社員の声業種を追加'
-		],
-		'hierarchical' => true, //階層化するかどうか（カテゴリー的に使うならtrue、タグ的に使うならfalse）
-		'query_var' => true, //クエリパラメーターを使えるようにする
-		'show_in_rest' => true //REST APIにカスタムタクソノミーを含めるかどうか、グーテンベルクのブロックエディターで分類を使用するにはtrue
-	];
-	register_taxonomy('voices-type', 'voices', $args);
-}
-add_action('init', 'tax_register_voices_type');
-
 
 /* --------------------------------------------
  * シングルを /voices/{ID}/ にする
@@ -362,6 +349,20 @@ add_filter('block_categories_all', function ($categories) {
   return $categories;
 });
 
+// ACFブロック用エディタCSS（1回だけ）
+add_action('enqueue_block_editor_assets', function () {
+  $rel  = '/assets/css/acf-block.css';
+  $path = get_theme_file_path($rel);
+  $ver  = file_exists($path) ? filemtime($path) : null; // キャッシュバスター
+
+  wp_enqueue_style(
+    'ba-acf-blocks-editor',
+    get_theme_file_uri($rel),
+    ['wp-edit-blocks'], // エディタのCSSの後に読み込み
+    $ver
+  );
+});
+
 
 
 /**
@@ -372,20 +373,50 @@ function acf_custom_block_add() {
   if ( function_exists( 'acf_register_block_type' ) ) {
 
     
-  /* 社員プロフィール*/
+  /* 製品情報*/
   acf_register_block_type(
     array(
-    'name'            => 'staff-profile', 
-    'title'           => __( '社員プロフィール' ), 
-    'description'     => __( '社員プロフィールです。' ), 
-    'render_template' => 'acf-blocks/acf-block/staff-profile-block.php', 
+    'name'            => 'product-block', 
+    'title'           => __( '製品情報' ), 
+    'description'     => __( '製品情報です。' ), 
+    'render_template' => 'acf-blocks/acf-block/product-block.php', 
     'category'        => 'custom-layout-category',
-    'icon'            => 'media-default', 
-    'keywords'        => array( '社員プロフィール' ), 
-    'enqueue_style'   => get_template_directory_uri() . '/assets/css/acf-block.css',
+    'icon'            => 'admin-tools', 
+    'keywords'        => array( '製品情報' ), 
     'mode'            => 'auto', //どのエリアにブロック入力欄を表示させるか
     )
-);
+  );
+
+  
+  /* 背景色ブロック*/
+  acf_register_block_type(
+    array(
+    'name'            => 'bg-block', 
+    'title'           => __( '水色背景' ), 
+    'description'     => __( '水色背景です。' ), 
+    'render_template' => 'acf-blocks/acf-block/bg-block.php', 
+    'category'        => 'custom-layout-category',
+    'icon'            => 'media-default', 
+    'keywords'        => array( '水色背景' ), 
+    'mode'            => 'auto', //どのエリアにブロック入力欄を表示させるか
+    )
+  );
+
+  
+  /* テーブルブロック*/
+  acf_register_block_type(
+    array(
+    'name'            => 'table-block', 
+    'title'           => __( '青色テーブル' ), 
+    'description'     => __( '青色テーブルです。' ), 
+    'render_template' => 'acf-blocks/acf-block/table-block.php', 
+    'category'        => 'custom-layout-category',
+    'icon'            => 'table-col-after', 
+    'keywords'        => array( '青色' ), 
+    'mode'            => 'auto', //どのエリアにブロック入力欄を表示させるか
+    )
+  );
+
 
   /* インタビューブロック*/
   acf_register_block_type(
@@ -395,28 +426,40 @@ function acf_custom_block_add() {
     'description'     => __( 'インタビューです。' ), 
     'render_template' => 'acf-blocks/acf-block/interview-block.php', 
     'category'        => 'custom-layout-category',
-    'icon'            => 'media-default', 
+    'icon'            => 'align-left', 
     'keywords'        => array( 'インタビュー' ), 
-    'enqueue_style'   => get_template_directory_uri() . '/assets/css/acf-block.css',
     'mode'            => 'auto', //どのエリアにブロック入力欄を表示させるか
     )
-);
+  );
 
   
   /* ボタンセンターブロック*/
   acf_register_block_type(
     array(
-    'name'            => 'btn-center-block', 
-    'title'           => __( 'ボタン(センター)' ), 
-    'description'     => __( 'ボタン(センター)です。' ), 
-    'render_template' => 'acf-blocks/acf-block/btn-center-block.php', 
+    'name'            => 'btn-position-block', 
+    'title'           => __( 'ボタン(ポジション)' ), 
+    'description'     => __( 'ボタン(ポジション)です。' ), 
+    'render_template' => 'acf-blocks/acf-block/btn-position-block.php', 
     'category'        => 'custom-layout-category',
     'icon'            => 'button', 
-    'keywords'        => array( 'ボタン','ボタンセンター' ), 
-    'enqueue_style'   => get_template_directory_uri() . '/assets/css/acf-block.css',
+    'keywords'        => array( 'ボタン','ボタンポジション' ), 
     'mode'            => 'auto', //どのエリアにブロック入力欄を表示させるか
     )
-);
+  );
+  
+  /* ボタンセンターブロック*/
+  // acf_register_block_type(
+  //   array(
+  //   'name'            => 'btn-center-block', 
+  //   'title'           => __( 'ボタン(センター)' ), 
+  //   'description'     => __( 'ボタン(センター)です。' ), 
+  //   'render_template' => 'acf-blocks/acf-block/btn-center-block.php', 
+  //   'category'        => 'custom-layout-category',
+  //   'icon'            => 'button', 
+  //   'keywords'        => array( 'ボタン','ボタンセンター' ), 
+  //   'mode'            => 'auto',
+  //   )
+  // );
 
 
   /* 吹き出しコメント*/
@@ -427,16 +470,11 @@ function acf_custom_block_add() {
     'description'     => __( '吹き出しメッセージです。' ), 
     'render_template' => 'acf-blocks/acf-block/message-block.php', 
     'category'        => 'custom-layout-category',
-    'icon'            => 'button', 
+    'icon'            => 'admin-comments', 
     'keywords'        => array( '吹き出し','メッセージ','吹き出しメッセージ' ), 
-    'enqueue_style'   => get_template_directory_uri() . '/assets/css/acf-block.css',
     'mode'            => 'auto', //どのエリアにブロック入力欄を表示させるか
     )
-);
-  
-
-
-
+  );
 
   }
 }

@@ -411,7 +411,14 @@
     width: 1px;
     height: 1px;
   }
+
 }
+
+/* 完了画面のときだけ .c-choice を非表示 */
+.p-form:has(form.snow-monkey-form[data-screen="complete"]) .c-choice {
+  display: none !important;
+}
+
 
 .wp-block-buttons {
   margin-top: 100px;
@@ -444,3 +451,7 @@
     height: 50px!important;
   }
 }
+
+
+
+

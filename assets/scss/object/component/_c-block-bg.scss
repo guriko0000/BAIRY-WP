@@ -16,4 +16,9 @@
   & > *:first-child {
     margin-top: 0;
   }
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+
 }

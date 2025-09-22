@@ -14,7 +14,7 @@
             </div>
           </address>
           <div class="l-footer__btn">
-            <a href="<?php echo esc_url(home_url()); ?>/contact/" class="c-btn">お問い合わせ<span class="c-btn__icon"></span></a>
+            <a href="<?php echo esc_url(home_url('/contact')); ?>" class="c-btn">お問い合わせ<span class="c-btn__icon"></span></a>
           </div>
           <div class="c-search l-footer__search">
             <script async src="https://cse.google.com/cse.js?cx=6757d19abf2304aeb">
@@ -27,72 +27,72 @@
             <div class="l-footer__nav">
               <div class="l-footer__nav-item-wrap">
                 <div class="l-footer__nav-item">
-                  <p class="l-footer__nav-item-main"><a href="<?php echo esc_url(home_url()); ?>/#business">事業内容<span class="icon"></span></a></p>
+                  <p class="l-footer__nav-item-main"><a href="<?php echo esc_url(home_url('/#business')); ?>">事業内容<span class="icon"></span></a></p>
                   <ul class="l-footer__nav-sub">
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/corporate-sales/">法人営業部</a>
+                      <a href="<?php echo esc_url(home_url('/corporate-sales/')); ?>">法人営業部</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/product-division/">プロダクト事業部</a>
+                      <a href="<?php echo esc_url(home_url('/product-division/')); ?>">プロダクト事業部</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/management-department/">管理部</a>
+                      <a href="<?php echo esc_url(home_url('/management-department/')); ?>">管理部</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/system-department/">情通システム部</a>
+                      <a href="<?php echo esc_url(home_url('/system-department/')); ?>">情通システム部</a>
                     </li>
                   </ul>
                 </div>
                 <div class="l-footer__nav-item">
-                  <p class="l-footer__nav-item-main"><a href="<?php echo esc_url(home_url()); ?>/company/">企業情報<span class="icon"></span></a></p>
+                  <p class="l-footer__nav-item-main"><a href="<?php echo esc_url(home_url('/company/')); ?>">企業情報<span class="icon"></span></a></p>
                   <ul class="l-footer__nav-sub">
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/company/#greeting">代表挨拶</a>
+                      <a href="<?php echo esc_url(home_url('/company/#greeting')); ?>">代表挨拶</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/company/#about">会社概要</a>
+                      <a href="<?php echo esc_url(home_url('/company/#about')); ?>">会社概要</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/company/#history">沿革</a>
+                      <a href="<?php echo esc_url(home_url('/company/#history')); ?>">沿革</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/company/#office">事業所</a>
+                      <a href="<?php echo esc_url(home_url('/company/#office')); ?>">事業所</a>
                     </li>
                   </ul>
                 </div>
               </div>
               <div class="l-footer__nav-item-wrap">
                 <div class="l-footer__nav-item">
-                  <p class="l-footer__nav-item-main"><a href="<?php echo esc_url(home_url()); ?>/recruit/">採用情報<span class="icon"></span></a></p>
+                  <p class="l-footer__nav-item-main"><a href="<?php echo esc_url(home_url('/recruit/')); ?>">採用情報<span class="icon"></span></a></p>
                   <ul class="l-footer__nav-sub">
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/recruit/#positions">現在募集中の職種</a>
+                      <a href="<?php echo esc_url(home_url('/recruit/#positions')); ?>">現在募集中の職種</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/recruit/#voice">社員の声</a>
+                      <a href="<?php echo esc_url(home_url('/recruit/#voice')); ?>">社員の声</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/recruit/#benefits">福利厚生</a>
+                      <a href="<?php echo esc_url(home_url('/recruit/#benefits')); ?>">福利厚生</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="">応募フォーム</a>
+                      <a href="<?php echo esc_url(home_url('/recruit/form/')); ?>">応募フォーム</a>
                     </li>
                   </ul>
                 </div>
                 <div class="l-footer__nav-item">
-                  <p class="l-footer__nav-item-main"><a href="<?php echo esc_url(home_url()); ?>/news/">最新情報<span class="icon"></span></a></p>
+                  <p class="l-footer__nav-item-main"><a href="<?php echo esc_url(home_url('/news/')); ?>">最新情報<span class="icon"></span></a></p>
                   <ul class="l-footer__nav-sub">
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/news/">お知らせ</a>
+                      <a href="<?php echo esc_url(home_url('/news/category/notice/')); ?>">お知らせ</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/news/category/product/">製品情報</a>
+                      <a href="<?php echo esc_url(home_url('/news/category/product/')); ?>">製品情報</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/news/category/event/">イベント</a>
+                      <a href="<?php echo esc_url(home_url('/news/category/event/')); ?>">イベント</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url()); ?>/news/category/blog/">社員ブログ</a>
+                      <a href="<?php echo esc_url(home_url('/news/category/blog/')); ?>">社員ブログ</a>
                     </li>
                   </ul>
                 </div>
@@ -101,8 +101,8 @@
                 <div class="l-footer__nav-item">
                   <p class="l-footer__nav-item-main"><a href="">製品情報サイト<span class="icon"></span></a></p>
                   <ul class="l-footer__nav-menu">
-                    <li class="l-footer__nav-menu-item"><a href="<?php echo esc_url(home_url()); ?>/privacy-policy/">プライバシーポリシー</a></li>
-                    <li class="l-footer__nav-menu-item"><a href="<?php echo esc_url(home_url()); ?>/cookie-policy/">クッキーポリシー</a></li>
+                    <li class="l-footer__nav-menu-item"><a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>">プライバシーポリシー</a></li>
+                    <li class="l-footer__nav-menu-item"><a href="<?php echo esc_url(home_url('/cookie-policy/')); ?>">クッキーポリシー</a></li>
                   </ul>
                   <div class="l-footer__nav-sns">
                     <a href="" target="_blank" rel="noopener noreferrer" class="l-footer__nav-sns-item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/icon_insta.svg" alt="Instagram" width="21" height="21" loading="lazy"></a>
@@ -127,16 +127,3 @@
 </body>
 
 </html>
-
-
-<ul class="c-progress__list">
-  <li class="c-progress__item select">
-    <p class="c-progress__text">お問い合わせ<br>内容選択</p>
-  </li>
-  <li class="c-progress__item input active">
-    <p class="c-progress__text">詳細入力</p>
-  </li>
-  <li class="c-progress__item confirm">
-    <p class="c-progress__text">入力内容確認</p>
-  </li>
-</ul>
