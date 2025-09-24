@@ -49,11 +49,16 @@
 
   &__title {
     font-weight: $medium;
+    line-height: 1.4;
     text-align: center;
     margin-top: 20px;
     @include mq(md) {
       font-size: 1.5rem;
       margin-top: 10px;
+    }
+
+    small {
+      font-size: 70%;
     }
   }
 

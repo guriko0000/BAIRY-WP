@@ -4385,6 +4385,7 @@ input.gsc-input::placeholder {
 }
 .c-benefits__title {
   font-weight: 500;
+  line-height: 1.4;
   text-align: center;
   margin-top: 20px;
 }
@@ -4393,6 +4394,9 @@ input.gsc-input::placeholder {
     font-size: 1.5rem;
     margin-top: 10px;
   }
+}
+.c-benefits__title small {
+  font-size: 70%;
 }
 .c-benefits__text {
   font-size: 1.4rem;

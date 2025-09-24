@@ -289,21 +289,6 @@
         <p class="fadeshow">更新情報はありません</p>
       <?php endif;
       wp_reset_postdata(); ?>
-
-      <!-- <a href="<?php echo esc_url(home_url()); ?>/voice/" class="c-voice">
-              <div class="c-voice__text-area">
-                <h3 class="c-voice__title">法人営業部 <span class="c-voice__name">Tさん</span></h3>
-                <div class="c-voice__body">
-                  <p class="c-voice__text">前職は生命保険の営業。そんなTさんが新たな挑戦の場に選んだのが、ブロードアピールの法人営業部でした。<br>「この人にお願いしたい」――お客様からのその一言を原動力に、日々やりがいを感じながら働いています。<br>Tさんが語る、社内の雰囲気や仕事の魅力、そしてこれから仲間になる方へのメッセージとは？<br>“営業って、こんなに面白い”と思える、リアルな声をお届けします。</p>
-                </div>
-              </div>
-              <div class="c-voice__img-area">
-                <div class="c-voice__img">
-                  <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/under/voice_img02.jpg" alt="" width="300" height="219" loading="lazy">
-                </div>
-              </div>
-            </a>
-          </div> -->
       <div class="p-recruit__voice-btn">
         <a href="<?php echo esc_url(home_url()); ?>/voices/" class="c-btn c-btn--larg">社員の声をもっと見る<span class="c-btn__icon"></span></a>
       </div>
@@ -329,52 +314,31 @@
         <ul class="p-recruit__benefits-list c-benefits">
           <li class="c-benefits__item">
             <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
+              <h4 class="c-benefits__title">完全週休二日制</h4>
               <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
+            <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
+              <h4 class="c-benefits__title">年末年始休暇</h4>
               <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
+            <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
+              <h4 class="c-benefits__title">GW休暇</h4>
               <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
+            <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
+              <h4 class="c-benefits__title">年間休日128日</h4>
               <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
-          </li>
-          <li class="c-benefits__item">
-            <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
-            </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
-          </li>
-          <li class="c-benefits__item">
-            <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
-            </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
-          </li>
-          <li class="c-benefits__item">
-            <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
-            </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
+            <!-- <p class="c-benefits__text"></p> -->
           </li>
         </ul>
       </section>
@@ -383,31 +347,31 @@
         <ul class="p-recruit__benefits-list c-benefits">
           <li class="c-benefits__item">
             <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
+              <h4 class="c-benefits__title">健康保険</h4>
               <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
+            <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
+              <h4 class="c-benefits__title">厚生年金保険</h4>
               <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
+            <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
+              <h4 class="c-benefits__title">労災保険</h4>
               <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
+            <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
+              <h4 class="c-benefits__title">雇用保険</h4>
               <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
+            <!-- <p class="c-benefits__text"></p> -->
           </li>
         </ul>
       </section>
@@ -416,24 +380,45 @@
         <ul class="p-recruit__benefits-list c-benefits">
           <li class="c-benefits__item">
             <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
+              <h4 class="c-benefits__title">インセンティブ<br><small>*部門/役職による</small></h4>
               <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
+            <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
+              <h4 class="c-benefits__title">昇給年2回<br><small>*部門/役職による</small></h4>
               <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
+            <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
+              <h4 class="c-benefits__title">ボーナス年2回<br><small>*部門/役職による</small></h4>
               <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
+            <!-- <p class="c-benefits__text"></p> -->
+          </li>
+          <li class="c-benefits__item">
+            <div class="c-benefits__head">
+              <h4 class="c-benefits__title">交通費支給<br><small>*月30,000円まで</small></h4>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+            </div>
+            <!-- <p class="c-benefits__text"></p> -->
+          </li>
+          <li class="c-benefits__item">
+            <div class="c-benefits__head">
+              <h4 class="c-benefits__title">都市手当<br><small>*勤務地による</small></h4>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+            </div>
+            <!-- <p class="c-benefits__text"></p> -->
+          </li>
+          <li class="c-benefits__item">
+            <div class="c-benefits__head">
+              <h4 class="c-benefits__title">住宅手当<br><small>*世帯主のみ</small></h4>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+            </div>
+            <!-- <p class="c-benefits__text"></p> -->
           </li>
         </ul>
       </section>
@@ -442,59 +427,24 @@
         <ul class="p-recruit__benefits-list c-benefits">
           <li class="c-benefits__item">
             <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
+              <h4 class="c-benefits__title">クラブオフサービス</h4>
               <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
+            <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
+              <h4 class="c-benefits__title">健康支援サービス</h4>
               <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
+            <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
+              <h4 class="c-benefits__title">弁護士相談サービス</h4>
               <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
-          </li>
-          <li class="c-benefits__item">
-            <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
-            </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
-          </li>
-          <li class="c-benefits__item">
-            <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
-            </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
-          </li>
-          <li class="c-benefits__item">
-            <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
-            </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
-          </li>
-          <li class="c-benefits__item">
-            <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
-            </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
-          </li>
-          <li class="c-benefits__item">
-            <div class="c-benefits__head">
-              <h4 class="c-benefits__title">年間休日XXX日</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
-            </div>
-            <p class="c-benefits__text">完全週休二日制・<br>GW・年末年始等</p>
+            <!-- <p class="c-benefits__text"></p> -->
           </li>
         </ul>
       </section>

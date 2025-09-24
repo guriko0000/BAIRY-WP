@@ -355,9 +355,17 @@ window.addEventListener('load', () => {
   if (!items.length) return;
 
   const apply = () => {
-    const screen = host.getAttribute('data-screen'); // "input" / "confirm" / "loading" 等
+    let screen = host.getAttribute('data-screen');
+
+    // "back" は入力画面と同じ扱いにする
+    if (screen === 'back') screen = 'input';
+
+    // 対象外は何もしない
     if (screen !== 'input' && screen !== 'confirm') return;
-    items.forEach(li => li.classList.toggle('active', li.classList.contains(screen)));
+
+    items.forEach(li => {
+      li.classList.toggle('active', li.classList.contains(screen));
+    });
   };
 
   apply();

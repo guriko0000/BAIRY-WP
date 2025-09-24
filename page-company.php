@@ -27,12 +27,12 @@
       </hgroup>
       <div class="p-company__media">
         <div class="p-company__media-text-area">
-          <h3 class="p-company__media-title">ネットワークから始まる、<br class="u-onliy-sp">ビジネスの進化。<br>お客様に寄り添ったIT支援で、共に前へ。</h3>
-          <p class="p-company__media-text">弊社は2016年の創立以来、通信機器やネットワーク商材など中小企業様に必要不可欠な製品を取り扱い、お客様のさまざまなお悩みを解決してまいりました。</p>
-          <p class="p-company__media-text">お客様が抱えているお悩みは、100社あれば100通りの解決方法があります。弊社の強みは、多彩なカテゴリの製品を取り扱うことにより、それぞれのお客様にあった商品を提案できること。新製品の開発に力を入れ、定期的なアップデートによってブラッシュアップを続けることで、時代に合った、本当にお客様が求めているサービスをお届けしています。専門性の高い課題に対しても豊富な知識で迅速にお応えすることが可能です。</p>
-          <p class="p-company__media-text">現在、私どもは全国への事業拡大をすすめており、より多くのお客様のお悩みや課題解決のお手伝いをさせていただくべくまい進中です。そのため、年齢・性別・経験を問わず優秀な人材を積極的に採用し、すべてのスタッフが活躍できる場を整えています。</p>
-          <p class="p-company__media-text">今まで競合関係にあった会社様も、ビジネスパートナーとなっていただき、製品のご提供のみならず、技術やノウハウなどの共有により通信業界全体を盛り上げていくことを目指しております。</p>
-          <p class="p-company__media-text">最後になりますが、会社の代表として、お客様、パートナー様、スタッフのすべての方々が幸せだと感じる会社を全力で創ってまいります。今後とも、ブロードアピールにご期待いただけたら幸いです。</p>
+          <h3 class="p-company__media-title">新生・BAIRYのテーマは<br class="u-onliy-sp">”想像を超える創造”。<br>2025年、さらなる飛躍を目指して。</h3>
+          <p class="p-company__media-text">2016年の設立以来、通信機器やネットワーク商材などの多彩な製品の開発・提供・施工を通じて、お客様のさまざまなお悩みを解決してまいりました。</p>
+          <p class="p-company__media-text">弊社の強みは、多彩なカテゴリの製品を取り扱うことによりそれぞれのお客様のニーズに合った商品を提案できること。新製品の開発に力を入れながらも継続的にブラッシュアップを続けることで、時代に合った、本当にお客様が求めている製品やサービスをお届けしています。専門性の高い課題に対しても豊富な知識で迅速にお応えすることが可能です。</p>
+          <p class="p-company__media-text">そして2025年、創業10期目という節目を迎えた私たちは、社名を製品ブランド名でもある “BAIRY（ベイリー）” に改め、新たなスタートを切りました。ベイリーは、古語の「城壁（Bailey）」を語源としたブランド名。お客様のビジネスを強固に守り支える存在でありたい、という想いが込められています。</p>
+          <p class="p-company__media-text">同時に、福岡本社・東京本社の二拠点体制を整え、より広いエリアへの拡大を本格的に推進しております。より多くのお客様の課題解決に貢献できるよう、一層の努力を重ねてまいります。</p>
+          <p class="p-company__media-text">“想像を超える創造” を胸に、私たちはこれからも、お客様・販売パートナー様・スタッフをはじめ、関わるすべての方々が満足を得られる企業を目指してまいります。<br>今後とも、株式会社BAIRYにご期待賜りますようお願い申し上げます。</p>
           <p class="p-company__media-name"><span class="name-position">代表取締役</span>西川 将広</p>
         </div>
         <figure class="p-company__media-img">
@@ -69,7 +69,7 @@
             </div>
             <div class="c-row-table__item">
               <dt class="c-row-table__head">資本金</dt>
-              <dd class="c-row-table__data">10,000,000円</dd>
+              <dd class="c-row-table__data">50,000,000円</dd>
             </div>
             <div class="c-row-table__item">
               <dt class="c-row-table__head">住所</dt>
@@ -156,7 +156,7 @@
           <li class="c-timeline__item">
             <time datetime="2025" class="c-timeline__time">2025</time>
             <div class="c-timeline__body">
-              <p class="c-timeline__text">社名を株式会社BAIRYに変更<br>本社を千代田区飯田橋に移転<br>資本金を3000 or 5000万(未定)に増資<br>仙台支店を仙台市〇〇〇に開設​</p>
+              <p class="c-timeline__text">社名を株式会社BAIRYに変更<br>本社を千代田区飯田橋に移転<br>資本金を5000万に増資<br>仙台支店を開設​</p>
             </div>
           </li>
         </ul>
@@ -217,25 +217,6 @@
           </div>
         </div>
         <div class="c-office c-office--noimage">
-          <h3 class="c-office__title">神戸支店</h3>
-          <div class="c-office__container">
-            <div class="c-office__text-area">
-              <div class="c-office__body">
-                <p class="c-office__address">〒650-0001<br>神戸市中央区加納町4-8-15<br>キーウェストビルディング3F</p>
-                <div class="c-office__tel">
-                  <p class="c-office__tel-item">TEL：<a href="tel:078-945-8422">078-945-8422</a></p>
-                  <p class="c-office__tel-item">FAX：078-945-8423</p>
-                </div>
-              </div>
-            </div>
-            <div class="c-office__map-area">
-              <div class="c-office__map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.3426669505634!2d135.1927546!3d34.696536099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008ee422815d2d%3A0xf45c011e595119c6!2z44CSNjUwLTAwMDEg5YW15bqr55yM56We5oi45biC5Lit5aSu5Yy65Yqg57SN55S677yU5LiB55uu77yY4oiS77yR77yVIOOCreODvOOCpuOCp-OCueODiOODk-ODq-ODh-OCo-ODs-OCsCAoQW11KQ!5e0!3m2!1sja!2sjp!4v1755659173074!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="c-office c-office--noimage">
           <h3 class="c-office__title">広島支店</h3>
           <div class="c-office__container">
             <div class="c-office__text-area">
@@ -273,6 +254,45 @@
             </div>
           </div>
         </div>
+        <div class="c-office c-office--noimage">
+          <h3 class="c-office__title">神戸支店</h3>
+          <div class="c-office__container">
+            <div class="c-office__text-area">
+              <div class="c-office__body">
+                <p class="c-office__address">〒650-0001<br>神戸市中央区加納町4-8-15<br>キーウェストビルディング3F</p>
+                <div class="c-office__tel">
+                  <p class="c-office__tel-item">TEL：<a href="tel:078-945-8422">078-945-8422</a></p>
+                  <p class="c-office__tel-item">FAX：078-945-8423</p>
+                </div>
+              </div>
+            </div>
+            <div class="c-office__map-area">
+              <div class="c-office__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.3426669505634!2d135.1927546!3d34.696536099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008ee422815d2d%3A0xf45c011e595119c6!2z44CSNjUwLTAwMDEg5YW15bqr55yM56We5oi45biC5Lit5aSu5Yy65Yqg57SN55S677yU5LiB55uu77yY4oiS77yR77yVIOOCreODvOOCpuOCp-OCueODiOODk-ODq-ODh-OCo-ODs-OCsCAoQW11KQ!5e0!3m2!1sja!2sjp!4v1755659173074!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="c-office c-office--noimage">
+          <h3 class="c-office__title">仙台支店</h3>
+          <div class="c-office__container">
+            <div class="c-office__text-area">
+              <div class="c-office__body">
+                <p class="c-office__address">〒650-0001<br>神戸市中央区加納町4-8-15<br>キーウェストビルディング3F</p>
+                <div class="c-office__tel">
+                  <p class="c-office__tel-item">TEL：<a href="tel:078-945-8422">078-945-8422</a></p>
+                  <p class="c-office__tel-item">FAX：078-945-8423</p>
+                </div>
+              </div>
+            </div>
+            <div class="c-office__map-area">
+              <div class="c-office__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.3426669505634!2d135.1927546!3d34.696536099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008ee422815d2d%3A0xf45c011e595119c6!2z44CSNjUwLTAwMDEg5YW15bqr55yM56We5oi45biC5Lit5aSu5Yy65Yqg57SN55S677yU5LiB55uu77yY4oiS77yR77yVIOOCreODvOOCpuOCp-OCueODiOODk-ODq-ODh-OCo-ODs-OCsCAoQW11KQ!5e0!3m2!1sja!2sjp!4v1755659173074!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
       </div>
     </div>
   </section>

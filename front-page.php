@@ -5,13 +5,12 @@
         <video class="p-mv__video" rel="preload" as="video" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/movie/mv_video.mp4" autoplay loop muted></video>
         <div class="p-mv__text-area">
           <p class="p-mv__title">
-            <span class="text-wrapper"><span class="text">テクノロジーで、</span></span><br>
-            <span class="text-wrapper"><span class="text">願いを現実に。</span></span>
+            <span class="text-wrapper"><span class="text">想像を超える</span></span><br>
+            <span class="text-wrapper"><span class="text">創造。</span></span>
           </p>
           <p class="p-mv__text">
             <span class="text-wrapper">
-              <span class="text">私たちは、技術と創造力で<br class="u-onliy-sp">お客様の課題を解決し、<br>
-                社会に価値を提供する企業です。</span>
+              <span class="text">お客様一人ひとりに寄り添い、<br class="u-onliy-sp">お客様の課題を解決し、<br>最先端の技術と創造力で課題解決へとつなげます。</span>
             </span>
           </p>
         </div>
@@ -143,7 +142,7 @@
                     <h4 class="ja">法人営業部</h4>
                     <span class="en">sales</span>
                   </hgroup>
-                  <p class="c-media__text">複合機、防犯カメラなどのOA機器の販売をはじめとし、オフィス家具、ダミーテキストダミーテキス</p>
+                  <p class="c-media__text">情報通信分野における専門性を活かし、企業が抱えるさまざまな課題に対して、自社ブランドをはじめ、国内外の信頼性の高いメーカーのOA機器を提案します。</p>
                 </div>
               </div>
               <span class="c-media__icon"></span>
@@ -162,7 +161,7 @@
                     <h4 class="ja">プロダクト事業部</h4>
                     <span class="en">product</span>
                   </hgroup>
-                  <p class="c-media__text">マーケットのニーズを見据えた、企業向けのさまざまな製品の企画・開発・設計・販売をしている</p>
+                  <p class="c-media__text">プロダクト事業部では、自社セキュリティブランド「BAIRY（ベイリー）」の高性能ネットワーク機器の企画・開発・製造を手がけています。</p>
                 </div>
               </div>
               <span class="c-media__icon"></span>
@@ -181,7 +180,7 @@
                     <h4 class="ja">管理部</h4>
                     <span class="en">management</span>
                   </hgroup>
-                  <p class="c-media__text">お客様からの注文やエンドユーザー様からのご注文を請け、倉庫内の在庫の有無を確認後、必要に応じて発</p>
+                  <p class="c-media__text">情通システム部は、防犯・監視カメラ工事やネットワーク構築、ビジネスフォンの導入、電気設備工事をはじめとした、さまざまな電気通信インフラの施工を担っています。</p>
                 </div>
               </div>
               <span class="c-media__icon"></span>
@@ -200,7 +199,7 @@
                     <h4 class="ja">情通システム部</h4>
                     <span class="en">system</span>
                   </hgroup>
-                  <p class="c-media__text">お客様と入念な打ち合わせの後、監視したいポイントがしっかり映るように取り付けます。建物への防水処</p>
+                  <p class="c-media__text">製品在庫・財務を正確に管理し、健全な経営基盤を支える役割を担っています。日々の会計処理から予算管理、決算業務まで幅広く対応しています。</p>
                 </div>
               </div>
               <span class="c-media__icon"></span>

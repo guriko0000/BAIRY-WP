@@ -10,7 +10,7 @@
       </div>
       <div class="p-info__body">
         <div class="p-info__tel">
-          <a href="tel:03-0000-0000" class="p-info__tel-link">03-0000-0000</a>
+          <a href="tel:092-982-5940" class="p-info__tel-link">092-982-5940</a>
           <p class="p-info__tel-text">営業時間／平日9:00〜18:00</p>
         </div>
         <div class="p-info__btn">
