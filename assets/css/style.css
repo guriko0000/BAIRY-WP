@@ -5144,6 +5144,16 @@ a.c-tags__item:hover, a.c-tags__item:focus-visible {
   }
 }
 
+.c-form .smf-form--simple-table .smf-item.no-border {
+  border: none;
+  padding-top: 0;
+  margin-top: 10px;
+}
+
+.c-form .smf-form--simple-table .smf-item.tel {
+  padding-bottom: 0;
+}
+
 /* -------------------------------------
         c-choice
 -----------------------------------------*/
