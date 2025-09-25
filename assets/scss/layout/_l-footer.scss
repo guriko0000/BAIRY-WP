@@ -27,7 +27,8 @@
 
   &__info-area {
     flex-shrink: 0;
-    width: 315px;
+    width: 32.5%;
+    max-width: 390px;
     @include mq(lg) {
       display: contents;
     }
@@ -49,27 +50,33 @@
       }
     }
   }
+  
+  &__company {
+    font-size: 1.5rem;
+    font-weight: $medium;
+    margin-top: 15px;
+  }
 
   &__address-wrap {
     font-size: 1.5rem;
-    margin-top: 15px;
+    margin-top: 20px;
     @include mq(lg) {
       order: 1;
+    }
+    @include mq(md) {
+      font-size: 1.4rem;
+      margin-top: 15px;
     }
   }
   
   &__address {
-    margin-top: 20px;
-    @include mq(md) {
-      margin-top: 10px;
+    & + & {
+      margin-top: 15px;
     }
   }
 
-  &__tel-wrap {
-    margin-top: 20px;
-    @include mq(md) {
-      margin-top: 10px;
-    }
+  &__address-title {
+    font-weight: $medium;
   }
 
   &__tel {
@@ -83,7 +90,7 @@
   }
 
   &__btn {
-    margin-top: 20px;
+    margin-top: 30px;
     @include mq(lg) {
       order: 3;
       text-align: center;

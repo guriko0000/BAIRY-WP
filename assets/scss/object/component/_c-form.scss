@@ -9,11 +9,20 @@
 
 // Snow Monkey Forms
   .smf-form--simple-table .smf-item {
-    padding: 24px 0;
-    border-top: 1px solid #EDEDED;
+    padding: 12px 0;
+    // margin-top: 25px;
+    @include mq(md) {
+      padding: 18px 0;
+      border-top: 1px solid #EDEDED;   
+    }
 
-    &:last-child {
-      border-bottom: 1px solid #EDEDED;
+    &.form-typetitle {
+      padding: 0;
+      margin-bottom: 28px;
+      border: none;
+      @include mq(md) {
+        margin-bottom: 20px;
+      }
     }
   }
 

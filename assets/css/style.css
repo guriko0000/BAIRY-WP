@@ -1145,7 +1145,8 @@ body {
 .l-footer__info-area {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  width: 315px;
+  width: 32.5%;
+  max-width: 390px;
 }
 @media screen and (max-width: 992px) {
   .l-footer__info-area {
@@ -1172,9 +1173,14 @@ body {
 .l-footer__logo a:hover, .l-footer__logo a:focus-visible {
   opacity: 0.7;
 }
+.l-footer__company {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 15px;
+}
 .l-footer__address-wrap {
   font-size: 1.5rem;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 @media screen and (max-width: 992px) {
   .l-footer__address-wrap {
@@ -1183,21 +1189,17 @@ body {
             order: 1;
   }
 }
-.l-footer__address {
-  margin-top: 20px;
-}
 @media screen and (max-width: 767px) {
-  .l-footer__address {
-    margin-top: 10px;
+  .l-footer__address-wrap {
+    font-size: 1.4rem;
+    margin-top: 15px;
   }
 }
-.l-footer__tel-wrap {
-  margin-top: 20px;
+.l-footer__address + .l-footer__address {
+  margin-top: 15px;
 }
-@media screen and (max-width: 767px) {
-  .l-footer__tel-wrap {
-    margin-top: 10px;
-  }
+.l-footer__address-title {
+  font-weight: 500;
 }
 .l-footer__tel a {
   display: inline-block;
@@ -1208,7 +1210,7 @@ body {
   opacity: 0.7;
 }
 .l-footer__btn {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 @media screen and (max-width: 992px) {
   .l-footer__btn {
@@ -4662,11 +4664,23 @@ a.c-tags__item:hover, a.c-tags__item:focus-visible {
   margin: 50px auto 0;
 }
 .c-form .smf-form--simple-table .smf-item {
-  padding: 24px 0;
-  border-top: 1px solid #EDEDED;
+  padding: 12px 0;
 }
-.c-form .smf-form--simple-table .smf-item:last-child {
-  border-bottom: 1px solid #EDEDED;
+@media screen and (max-width: 767px) {
+  .c-form .smf-form--simple-table .smf-item {
+    padding: 18px 0;
+    border-top: 1px solid #EDEDED;
+  }
+}
+.c-form .smf-form--simple-table .smf-item.form-typetitle {
+  padding: 0;
+  margin-bottom: 28px;
+  border: none;
+}
+@media screen and (max-width: 767px) {
+  .c-form .smf-form--simple-table .smf-item.form-typetitle {
+    margin-bottom: 20px;
+  }
 }
 .c-form .smf-form--simple-table .smf-item__col--controls {
   font-size: 1.6rem;
