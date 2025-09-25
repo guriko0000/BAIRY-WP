@@ -85,7 +85,7 @@
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img03.png" alt="" width="368" height="250" loading="lazy">
           </div>
           <div class="c-product__body">
-            <p class="c-product__name">UTM</p>
+            <p class="c-product__name">ホームページの制作・運用</p>
           </div>
         </li>
         <li class="c-product">
@@ -101,7 +101,7 @@
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img05.png" alt="" width="368" height="250" loading="lazy">
           </div>
           <div class="c-product__body">
-            <p class="c-product__name">ファイルサーバー</p>
+            <p class="c-product__name">防犯カメラ</p>
           </div>
         </li>
         <li class="c-product">
@@ -109,12 +109,12 @@
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img06.png" alt="" width="368" height="250" loading="lazy">
           </div>
           <div class="c-product__body">
-            <p class="c-product__name">ホームページの制作・運用</p>
+            <p class="c-product__name">UTM</p>
           </div>
         </li>
       </ul>
       <div class="p-sales__btn">
-        <a href="" class="c-btn c-btn--larg"> 製品の導入に関する<br class="u-onliy-sp">お問い合わせ<span class="c-btn__icon"></span></a>
+        <a href="<?php echo esc_url(home_url()); ?>/contact/form02/" class="c-btn c-btn--larg"> 製品の導入に関する<br class="u-onliy-sp">お問い合わせ<span class="c-btn__icon"></span></a>
       </div>
     </div>
   </section>

@@ -25,15 +25,19 @@
       }
     }
   }
+  
+  &__head-title {
+    flex-shrink: 0;
+  }
 
   &__cate-wrap {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
-    margin-left: 20px;
+    margin-left: 40px;
     @include mq(lg) {
-      margin: 40px 0 0 0;      
+      justify-content: center;
+      margin: 40px 0 0 0;
     }
     @include mq(md) {
       max-width: 350px;

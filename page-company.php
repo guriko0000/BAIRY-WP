@@ -73,7 +73,10 @@
             </div>
             <div class="c-row-table__item">
               <dt class="c-row-table__head">住所</dt>
-              <dd class="c-row-table__data">〒815-0033<br>福岡市南区大橋1丁目9-16 Lente <br class="u-onliy-sp">FUKUOKA 5階（本社）</dd>
+              <dd class="c-row-table__data">
+                <p class="c-row-table__data-text">〒815-0033<br>福岡市南区大橋1丁目9-16 Lente <br class="u-onliy-sp">FUKUOKA 5階（福岡本社）</p>            
+                <p class="c-row-table__data-text">〒102-0072<br>東京都千代田区飯田橋3-1-5 S3千代田飯田橋 5階（東京本社）</p>            
+              </dd>
             </div>
             <div class="c-row-table__item">
               <dt class="c-row-table__head">営業時間</dt>

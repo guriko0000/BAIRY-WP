@@ -105,7 +105,7 @@
                     <li class="l-footer__nav-menu-item"><a href="<?php echo esc_url(home_url('/cookie-policy/')); ?>">クッキーポリシー</a></li>
                   </ul>
                   <div class="l-footer__nav-sns">
-                    <a href="" target="_blank" rel="noopener noreferrer" class="l-footer__nav-sns-item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/icon_insta.svg" alt="Instagram" width="21" height="21" loading="lazy"></a>
+                    <a href="https://www.instagram.com/broadappeal/" target="_blank" rel="noopener noreferrer" class="l-footer__nav-sns-item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/icon_insta.svg" alt="Instagram" width="21" height="21" loading="lazy"></a>
                   </div>
                 </div>
               </div>

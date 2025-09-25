@@ -10,7 +10,7 @@
           </p>
           <p class="p-mv__text">
             <span class="text-wrapper">
-              <span class="text">お客様一人ひとりに寄り添い、<br class="u-onliy-sp">お客様の課題を解決し、<br>最先端の技術と創造力で課題解決へとつなげます。</span>
+              <span class="text">お客様一人ひとりに寄り添い、<br>最先端の技術と創造力で<br class="u-onliy-sp">課題解決へとつなげます。</span>
             </span>
           </p>
         </div>
@@ -344,17 +344,19 @@
   <section class="p-top-updates js-fadeUp-inView">
     <div class="l-inner">
       <div class="p-top-updates__head">
-        <hgroup class="c-primary-title c-primary-title--small js-wipeAnimation">
-          <h2 class="c-primary-title__ja">最新情報</h2>
-          <span class="c-primary-title__en">News & Updates</span>
-        </hgroup>
+        <div class="p-top-updates__head-title">
+          <hgroup class="c-primary-title c-primary-title--small js-wipeAnimation">
+            <h2 class="c-primary-title__ja">最新情報</h2>
+            <span class="c-primary-title__en">News & Updates</span>
+          </hgroup>
+        </div>
 
         <ul class="p-top-updates__cate-wrap js-fadeUp">
           <li data-filter="all" class="is-active p-top-updates__cate">すべて</li>
           <?php
           $args = array(
             'taxonomy'   => 'category',
-            'hide_empty' => false,
+            'hide_empty' => true,
             'orderby'    => 'description', // ← ディスクリプション順に並べる
             'order'      => 'ASC',
           );
@@ -418,8 +420,8 @@
                 <div class="c-news__body">
                   <span class="c-news__date"><time datetime="<?php echo get_the_date('Y-m-d') ?>"><?php echo get_the_date('Y.m.d') ?></time></span>
                   <h3 class="c-news__title"><?php the_title(); ?></h3>
-                  <?php if( get_field('news_extract') ) { ?>
-                  <p class="c-news__text"><?php echo get_field('news_extract'); ?></p>
+                  <?php if (get_field('news_extract')) { ?>
+                    <p class="c-news__text"><?php echo get_field('news_extract'); ?></p>
                   <?php } ?>
                 </div>
               </a>
@@ -430,250 +432,6 @@
         <p class="fadeshow">更新情報はありません</p>
       <?php endif;
       wp_reset_postdata(); ?>
-
-
-      <!-- <ul class="l-grid l-grid--cards p-top-updates__list js-fadeUp">
-          <li class="c-news p-top-updates__item" data-category="news">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">G.W.期間中の営業日のお知らせ</h3>
-                <p class="c-news__text">お知らせ1内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="event">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news02/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb02.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">協賛ユニフォームを頂きました！</h3>
-                <p class="c-news__text">イベント1内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="product">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news03/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb03.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">WS1000・BF1000発売開始について</h3>
-                <p class="c-news__text">製品情報1内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="news">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb04.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">新年のご挨拶</h3>
-                <p class="c-news__text">お知らせ2内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="news">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news02/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">お知らせ3内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="blog">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news03/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">ブログ1内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="blog">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">ブログ2内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="event">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news02/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">イベント2内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="event">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news03/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">イベント3内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="product">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">製品情報2内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="product">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news02/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">製品情報3内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="event">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news03/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">イベント4内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="blog">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">ブログ3内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="blog">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">ブログ4内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="news">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">お知らせ4内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="news">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">お知らせ5内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="news">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">お知らせ6内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="event">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">イベント4内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="product">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">製品情報4内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-news p-top-updates__item" data-category="blog">
-            <a href="<?php echo esc_url(home_url()); ?>/news/single-news01/">
-              <figure class="c-news__thumb">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/news_thumb01.png" alt="" width="270" height="172" loading="lazy">
-              </figure>
-              <div class="c-news__body">
-                <span class="c-news__date"><time datetime="2025-04-10">2025.04.10</time></span>
-                <h3 class="c-news__title">タイトルタイトル</h3>
-                <p class="c-news__text">ブログ6内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。内容の抜粋が入ります。</p>
-              </div>
-            </a>
-          </li>
-        </ul> -->
       <div class="p-top-updates__btn js-fadeUp">
         <a href="<?php echo esc_url(home_url()); ?>/news/" class="c-btn">記事一覧を見る<span class="c-btn__icon"></span></a>
       </div>
