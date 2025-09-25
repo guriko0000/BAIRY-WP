@@ -37,69 +37,78 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
 
-  <?php if ( is_front_page() ) : ?>
+  <?php if (is_front_page()) : ?>
     <header id="header" class="l-header l-header--transparent js-header">
-  <?php else : ?>
-    <header id="header" class="l-header js-header">
-  <?php endif; ?>
+    <?php else : ?>
+      <header id="header" class="l-header js-header">
+      <?php endif; ?>
 
-    <div class="l-header__inner">
-      <!-- ロゴ -->
-      <div class="l-header__logo">
-        <a href="<?php echo esc_url(home_url()); ?>/">
-          <span class="l-header__logo">
-            <img class="l-header__logo-img l-header__logo-img--white" src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/common/logo-white.svg" alt="BAIRY" width="152" height="38">
-            <img class="l-header__logo-img l-header__logo-img--black" src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/common/logo-black.svg" alt="BAIRY" width="152" height="38">
-          </span>
-        </a>
+      <div class="l-header__inner">
+        <!-- ロゴ -->
+        <?php if (is_front_page()) : ?>
+          <h1 class="l-header__logo">
+          <?php else : ?>
+            <div class="l-header__logo">
+            <?php endif; ?>
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+              <span class="l-header__logo">
+                <img class="l-header__logo-img l-header__logo-img--white" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/common/logo-white.svg" alt="BAIRY" width="152" height="38">
+                <img class="l-header__logo-img l-header__logo-img--black" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/common/logo-black.svg" alt="BAIRY" width="152" height="38">
+              </span>
+            </a>
+            <?php if (is_front_page()) : ?>
+          </h1>
+        <?php else : ?>
       </div>
-      <!-- ヘッダーナビ -->
-      <div class="l-header__container">
-        <nav class="p-header-nav">
-          <ul class="p-header-nav__list">
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/')); ?>">ホーム</a>
-            </li>
-            <li class="p-header-nav__item">
-              <?php
-                $href = is_front_page()
-                  ? '#business'
-                  : home_url( '/#business' );
-              ?>
-              <a class="p-header-nav__link" href="<?php echo esc_url( $href ); ?>">事業案内</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/corporate-sales/')); ?>">事業部紹介</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/company/')); ?>">会社概要</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/recruit/')); ?>">採用情報</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/news/')); ?>">お知らせ</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/contact/')); ?>">お問い合わせ</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="c-search l-header__search">
-          <script async src="https://cse.google.com/cse.js?cx=6757d19abf2304aeb">
-          </script>
-          <div class="gcse-search"></div>
-        </div>
+    <?php endif; ?>
+
+    <!-- ヘッダーナビ -->
+    <div class="l-header__container">
+      <nav class="p-header-nav">
+        <ul class="p-header-nav__list">
+          <li class="p-header-nav__item">
+            <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/')); ?>">ホーム</a>
+          </li>
+          <li class="p-header-nav__item">
+            <?php
+            $href = is_front_page()
+              ? '#business'
+              : home_url('/#business');
+            ?>
+            <a class="p-header-nav__link" href="<?php echo esc_url($href); ?>">事業案内</a>
+          </li>
+          <li class="p-header-nav__item">
+            <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/corporate-sales/')); ?>">事業部紹介</a>
+          </li>
+          <li class="p-header-nav__item">
+            <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/company/')); ?>">会社概要</a>
+          </li>
+          <li class="p-header-nav__item">
+            <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/recruit/')); ?>">採用情報</a>
+          </li>
+          <li class="p-header-nav__item">
+            <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/news/')); ?>">お知らせ</a>
+          </li>
+          <li class="p-header-nav__item">
+            <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/contact/')); ?>">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="c-search l-header__search">
+        <script async src="https://cse.google.com/cse.js?cx=6757d19abf2304aeb">
+        </script>
+        <div class="gcse-search"></div>
       </div>
-      <!-- ハンバーガーメニュー -->
-      <button class="c-hamburger-btn js-header-btn" aria-label="メニューボタン" aria-expanded="false">
-        <p class="c-hamburger-btn__text">MENU</p>
-        <span class="c-hamburger-btn__inner">
-          <span class="c-hamburger-btn__line"></span>
-          <span class="c-hamburger-btn__line"></span>
-          <span class="c-hamburger-btn__line"></span>
-        </span>
-      </button>
+    </div>
+    <!-- ハンバーガーメニュー -->
+    <button class="c-hamburger-btn js-header-btn" aria-label="メニューボタン" aria-expanded="false">
+      <p class="c-hamburger-btn__text">MENU</p>
+      <span class="c-hamburger-btn__inner">
+        <span class="c-hamburger-btn__line"></span>
+        <span class="c-hamburger-btn__line"></span>
+        <span class="c-hamburger-btn__line"></span>
+      </span>
+    </button>
     </div>
 
     <!-- ハンバーガーメニュー内ナビ -->
@@ -111,12 +120,12 @@
           </li>
           <li class="p-sub-nav__item">
             <?php
-              $href = is_front_page()
-                ? '#business'
-                : home_url( '/#business' );
+            $href = is_front_page()
+              ? '#business'
+              : home_url('/#business');
             ?>
             <p class="p-sub-nav__title">
-              <a class="p-sub-nav__link" href="<?php echo esc_url( $href ); ?>">事業案内</a>
+              <a class="p-sub-nav__link" href="<?php echo esc_url($href); ?>">事業案内</a>
             </p>
           </li>
 
@@ -140,10 +149,10 @@
 
       </div>
     </nav>
-  </header>
+      </header>
 
-  <?php if ( is_front_page() ) : ?>
-    <main class="l-main l-main--top">
-  <?php else : ?>
-    <main class="l-main">
-  <?php endif; ?>
+      <?php if (is_front_page()) : ?>
+        <main class="l-main l-main--top">
+        <?php else : ?>
+          <main class="l-main">
+          <?php endif; ?>
