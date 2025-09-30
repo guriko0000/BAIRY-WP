@@ -54,7 +54,7 @@
                     foreach ($categories as $category) {
                       echo '<li><a href="' . get_category_link($category->term_id) . '" class="c-tags__item">';
                       echo $category->name;
-                      echo '</a><li>';
+                      echo '</a></li>';
                     }
                   ?>
                 </ul>

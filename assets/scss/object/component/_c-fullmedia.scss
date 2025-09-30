@@ -98,14 +98,19 @@
       max-height: 700px;
       min-height: 600px;
       border-radius: 0 15px 15px 0;
-      @include mq(md) {
+      @include mq(lg) {
+        border-radius: 12px;        
         min-height: auto;
       }
     }
 
     figcaption {
-      display: inline-block;
+      display: block;
       margin-top: 10px;
+      margin-left: 20px;
+      @include mq(lg) {
+        margin-left: 0;        
+      }
       @include mq(md) {
         font-size: 1.3rem;
         margin-top: 5px;
@@ -212,7 +217,14 @@
 
     img {
       border-radius: 15px 0 0 15px;
+      @include mq(lg) {
+        border-radius: 12px;
+      }
     }
+  }
+
+  figcaption {
+    margin-left: 0;
   }
 }
 

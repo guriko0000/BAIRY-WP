@@ -74,8 +74,8 @@
             <div class="c-row-table__item">
               <dt class="c-row-table__head">住所</dt>
               <dd class="c-row-table__data">
-                <p class="c-row-table__data-text">〒815-0033<br>福岡市南区大橋1丁目9-16 Lente <br class="u-onliy-sp">FUKUOKA 5階（福岡本社）</p>            
-                <p class="c-row-table__data-text">〒102-0072<br>東京都千代田区飯田橋3-1-5 S3千代田飯田橋 5階（東京本社）</p>            
+                <p class="c-row-table__data-text">〒102-0072<br>東京都千代田区飯田橋3-1-5 S3千代田飯田橋 5階（東京本社）</p>
+                <p class="c-row-table__data-text">〒815-0033<br>福岡市南区大橋1丁目9-16 Lente <br class="u-onliy-sp">FUKUOKA 5階（福岡本社）</p>
               </dd>
             </div>
             <div class="c-row-table__item">
@@ -175,6 +175,28 @@
       </hgroup>
       <div class="p-company__office-list">
         <div class="c-office">
+          <h3 class="c-office__title">東京本店</h3>
+          <div class="c-office__container">
+            <div class="c-office__text-area">
+              <figure class="c-office__img">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/company_office02.jpg" alt="東京本店ビル外観" width="369" height="333" loading="lazy">
+              </figure>
+              <div class="c-office__body">
+                <p class="c-office__address">〒102-0072<br>東京都千代田区飯田橋3-1-5 S3千代田飯田橋 5階</p>
+                <div class="c-office__tel">
+                  <p class="c-office__tel-item">TEL：<a href="tel:03-6380-8835">03-6380-8835</a></p>
+                  <p class="c-office__tel-item">FAX：03-6380-8836</p>
+                </div>
+              </div>
+            </div>
+            <div class="c-office__map-area">
+              <div class="c-office__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25934.02715193036!2d139.702164!3d35.65844700000001!3m2!1i1024!2i768!4f5.1!3m3!1m2!1s0x60188b6c607d6f83%3A0xfcc8a9287e9b0ca!2z5qCq5byP5Lya56S-44OW44Ot44O844OJ44Ki44OU44O844OrIOadseS6rOaUr-W6lw!5e0!3m2!1sja!2sjp!4v1755658694219!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-office">
           <h3 class="c-office__title">福岡本社</h3>
           <div class="c-office__container">
             <div class="c-office__text-area">
@@ -197,28 +219,7 @@
             </div>
           </div>
         </div>
-        <div class="c-office">
-          <h3 class="c-office__title">東京本店</h3>
-          <div class="c-office__container">
-            <div class="c-office__text-area">
-              <figure class="c-office__img">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/company_office02.jpg" alt="東京本店ビル外観" width="369" height="333" loading="lazy">
-              </figure>
-              <div class="c-office__body">
-                <p class="c-office__address">〒102-0072<br>東京都千代田区飯田橋3-1-5 S3千代田飯田橋 5階</p>
-                <div class="c-office__tel">
-                  <p class="c-office__tel-item">TEL：<a href="tel:03-6380-8835">03-6380-8835</a></p>
-                  <p class="c-office__tel-item">FAX：03-6380-8836</p>
-                </div>
-              </div>
-            </div>
-            <div class="c-office__map-area">
-              <div class="c-office__map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25934.02715193036!2d139.702164!3d35.65844700000001!3m2!1i1024!2i768!4f5.1!3m3!1m2!1s0x60188b6c607d6f83%3A0xfcc8a9287e9b0ca!2z5qCq5byP5Lya56S-44OW44Ot44O844OJ44Ki44OU44O844OrIOadseS6rOaUr-W6lw!5e0!3m2!1sja!2sjp!4v1755658694219!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div class="c-office c-office--noimage">
           <h3 class="c-office__title">広島支店</h3>
           <div class="c-office__container">

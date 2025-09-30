@@ -6,16 +6,17 @@
         <div class="l-footer__info-area">
           <div class="l-footer__logo"><a href="<?php echo esc_url(home_url()); ?>/"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/common/logo-footer.svg" alt="" width="158" height="40" loading="lazy"></a></div>
           <p class="l-footer__company">株式会社BAIRY</p>
+          <p class="l-footer__tel">TEL:<a href="tel:092-982-5940">092-982-5940</a>（代表） FAX:092-982-5941</p>
           <address class="l-footer__address-wrap">
+            <div class="l-footer__address">
+              <p class="l-footer__address-title">東京本店</p>
+              <p class="l-footer__address-item">〒102-0072<br>東京都千代田区飯田橋3-1-5 <br class="u-onliy-sp">S3千代田飯田橋 5階</p>
+            </div>
             <div class="l-footer__address">
             <p class="l-footer__address-title">福岡本店</p>
             <p class="l-footer__address-item">〒815-0033<br>福岡県福岡市南区大橋1丁目9-16 <br class="u-onliy-sp">Lente FUKUOKA 5階</p>
-            <p class="l-footer__tel">TEL:<a href="tel:092-982-5940">092-982-5940</a>（代表） FAX:092-982-5941</p>
           </div>
-          <div class="l-footer__address">
-              <p class="l-footer__address-title">東京本店</p>
-            <p class="l-footer__address-item">〒102-0072<br>東京都千代田区飯田橋3-1-5 <br class="u-onliy-sp">S3千代田飯田橋 5階</p>
-            </div>
+
           </address>
           <div class="l-footer__btn">
             <a href="<?php echo esc_url(home_url('/contact')); ?>" class="c-btn">お問い合わせ<span class="c-btn__icon"></span></a>
@@ -103,7 +104,7 @@
               </div>
               <div class="l-footer__nav-item-wrap">
                 <div class="l-footer__nav-item">
-                  <p class="l-footer__nav-item-main"><a href="">製品情報サイト<span class="icon"></span></a></p>
+                  <p class="l-footer__nav-item-main"><a href="https://bairy.jp/" target="_blank" rel="noopener noreferrer">製品情報サイト<span class="icon"></span></a></p>
                   <ul class="l-footer__nav-menu">
                     <li class="l-footer__nav-menu-item"><a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>">プライバシーポリシー</a></li>
                     <li class="l-footer__nav-menu-item"><a href="<?php echo esc_url(home_url('/cookie-policy/')); ?>">クッキーポリシー</a></li>

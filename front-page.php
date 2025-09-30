@@ -104,6 +104,8 @@
                   <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img04.jpg" alt="" width="309" height="504" loading="lazy"></div>
                   <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img05.jpg" alt="" width="309" height="504" loading="lazy"></div>
                   <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img06.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img07.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img08.jpg" alt="" width="309" height="504" loading="lazy"></div>
                 </div>
                 <div class="c-loop__list c-loop__list--02">
                   <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img01.jpg" alt="" width="309" height="504" loading="lazy"></div>
@@ -112,6 +114,8 @@
                   <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img04.jpg" alt="" width="309" height="504" loading="lazy"></div>
                   <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img05.jpg" alt="" width="309" height="504" loading="lazy"></div>
                   <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img06.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img07.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img08.jpg" alt="" width="309" height="504" loading="lazy"></div>
                 </div>
               </div>
             </div>

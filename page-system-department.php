@@ -31,6 +31,7 @@
         <div class="c-fullmedia__img-area">
           <figure class="c-fullmedia__img">
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/system_img01.jpg" alt="" width="721" height="600" loading="lazy">
+            <figcaption>防犯・監視カメラ工事</figcaption>
           </figure>
         </div>
       </div>
@@ -74,7 +75,6 @@
         <div class="c-fullmedia__img-area">
           <figure class="c-fullmedia__img">
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/system_img02.jpg" alt="" width="721" height="600" loading="lazy">
-            <figcaption>防犯・監視カメラ工事</figcaption>
           </figure>
         </div>
       </div>

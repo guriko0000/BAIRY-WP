@@ -40,7 +40,7 @@
           <h3 class="p-product__box-title">ネットワーク機器ブランドBAIRY</h3>
           <p class="p-product__box-text">プロダクト事業部では、自社セキュリティブランド「BAIRY（ベイリー）」の企画・開発・製造を手がけています。ブランド名の由来は、古語で「城壁」を意味する“bairy”。<br>お客様の大切な情報資産や経営環境を堅牢に守る“城壁”のような存在を目指し、製品一つひとつにその想いを込めるべく名づけられました。</p>
           <div class="p-product__box-btn">
-            <a href="" class="c-btn c-btn--larg">BAIRY製品サイト<span class="c-btn__icon"></span></a>
+            <a href="https://bairy.jp/" target="_blank" rel="noopener noreferrer" class="c-btn c-btn--larg">BAIRY製品サイト<span class="c-btn__icon"></span></a>
           </div>
         </div>
       </section>

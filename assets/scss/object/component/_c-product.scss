@@ -6,7 +6,7 @@
 .c-product {
 
   &__img {
-    border: 1px solid #eee;
+    border: 2px solid #eee;
     border-radius: 15px;
     overflow: hidden;
     @include mq(md) {

@@ -17,7 +17,7 @@
   <meta property="og:site_name" content="">
   <meta property="og:description" content=""> -->
   <!-- ファビコン -->
-  <link rel="shortcut icon" type="image/x-icon" href="">
+  <link rel="shortcut icon" type="image/x-icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/common/favicon.png">
   <!-- fontawesome -->
   <!-- <script src="https://kit.fontawesome.com/39d42e1acb.js" crossorigin="anonymous"></script> -->
   <!-- Googleフォント -->
@@ -143,7 +143,7 @@
           </li>
         </ul>
         <div class="p-sub-nav__btn-wrap">
-          <a href="" target="_blank" rel="noopener noreferrer" class="p-sub-nav__btn p-sub-nav__btn--border">製品情報サイト BAIRY</a>
+          <a href="https://bairy.jp/" target="_blank" rel="noopener noreferrer" class="p-sub-nav__btn p-sub-nav__btn--border">製品情報サイト BAIRY</a>
           <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="p-sub-nav__btn">お問い合わせ</a>
         </div>
 
