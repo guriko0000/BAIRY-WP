@@ -5140,12 +5140,7 @@ a.c-tags__item:hover, a.c-tags__item:focus-visible {
   border-color: #246EB8;
 }
 .c-form .smf-form--simple-table + .smf-action {
-  margin-top: 80px;
-}
-@media screen and (max-width: 767px) {
-  .c-form .smf-form--simple-table + .smf-action {
-    margin-top: 40px;
-  }
+  margin-top: 30px;
 }
 .c-form .form-hidden {
   opacity: 0;
