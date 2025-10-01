@@ -322,21 +322,21 @@
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">年末年始休暇</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon02.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">GW休暇</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon03.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">年間休日128日</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon04.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
@@ -348,28 +348,28 @@
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">健康保険</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon05.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">厚生年金保険</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon06.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">労災保険</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon07.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">雇用保険</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon08.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
@@ -381,42 +381,42 @@
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">インセンティブ<br><small>*部門/役職による</small></h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon09.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">昇給年2回<br><small>*部門/役職による</small></h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon10.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">ボーナス年2回<br><small>*部門/役職による</small></h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon11.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">交通費支給<br><small>*月30,000円まで</small></h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon12.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">都市手当<br><small>*勤務地による</small></h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon13.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">住宅手当<br><small>*世帯主のみ</small></h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon14.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
@@ -428,21 +428,21 @@
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">クラブオフサービス</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon15.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">健康支援サービス</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon16.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>
           <li class="c-benefits__item">
             <div class="c-benefits__head">
               <h4 class="c-benefits__title">弁護士相談サービス</h4>
-              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon01.svg" alt="" width="45" height="45" loading="lazy"></span>
+              <span class="c-benefits__icon"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/benefits_icon17.svg" alt="" width="45" height="45" loading="lazy"></span>
             </div>
             <!-- <p class="c-benefits__text"></p> -->
           </li>

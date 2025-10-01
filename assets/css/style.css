@@ -8354,7 +8354,6 @@ figure.wp-block-table {
 }
 .p-policy__ordered-list {
   counter-reset: number;
-  max-width: 835px;
   padding-left: 1.2em;
   margin-top: 40px;
 }
