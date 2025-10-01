@@ -28,6 +28,7 @@
   &__head {
     width: 31%;
     max-width: 243px;
+    font-weight: $medium;
     @include mq(md) {
       width: 100%;
       max-width: none;

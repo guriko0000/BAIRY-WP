@@ -32,9 +32,11 @@
   }
 
   &__title {
+    display: inline;
     font-size: 3.4rem;
     // font-weight: $medium;
     line-height: 1.5;
+    background: linear-gradient(transparent 64%, $main-bg 64%);
     @include mq(md) {
       font-size: 2rem;
     }
@@ -106,10 +108,9 @@
 
     figcaption {
       display: block;
-      margin-top: 10px;
-      margin-left: 20px;
+      text-align: right;
       @include mq(lg) {
-        margin-left: 0;        
+        text-align: left;      
       }
       @include mq(md) {
         font-size: 1.3rem;
@@ -224,7 +225,7 @@
   }
 
   figcaption {
-    margin-left: 0;
+    text-align: left;
   }
 }
 

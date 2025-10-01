@@ -4,16 +4,16 @@
     <div class="l-inner">
       <div class="l-footer__container">
         <div class="l-footer__info-area">
-          <div class="l-footer__logo"><a href="<?php echo esc_url(home_url()); ?>/"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/common/logo-footer.svg" alt="" width="158" height="40" loading="lazy"></a></div>
+          <div class="l-footer__logo"><a href="<?php echo esc_url(home_url()); ?>/"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/common/logo-black.svg" alt="" width="158" height="40" loading="lazy"></a></div>
           <p class="l-footer__company">株式会社BAIRY</p>
           <p class="l-footer__tel">TEL:<a href="tel:092-982-5940">092-982-5940</a>（代表） FAX:092-982-5941</p>
           <address class="l-footer__address-wrap">
             <div class="l-footer__address">
-              <p class="l-footer__address-title">東京本店</p>
+              <p class="l-footer__address-title">東京本社</p>
               <p class="l-footer__address-item">〒102-0072<br>東京都千代田区飯田橋3-1-5 <br class="u-onliy-sp">S3千代田飯田橋 5階</p>
             </div>
             <div class="l-footer__address">
-            <p class="l-footer__address-title">福岡本店</p>
+            <p class="l-footer__address-title">福岡本社</p>
             <p class="l-footer__address-item">〒815-0033<br>福岡県福岡市南区大橋1丁目9-16 <br class="u-onliy-sp">Lente FUKUOKA 5階</p>
           </div>
 
@@ -107,7 +107,7 @@
                   <p class="l-footer__nav-item-main"><a href="https://bairy.jp/" target="_blank" rel="noopener noreferrer">製品情報サイト<span class="icon"></span></a></p>
                   <ul class="l-footer__nav-menu">
                     <li class="l-footer__nav-menu-item"><a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>">プライバシーポリシー</a></li>
-                    <li class="l-footer__nav-menu-item"><a href="<?php echo esc_url(home_url('/cookie-policy/')); ?>">クッキーポリシー</a></li>
+                    <!-- <li class="l-footer__nav-menu-item"><a href="<?php echo esc_url(home_url('/cookie-policy/')); ?>">クッキーポリシー</a></li> -->
                   </ul>
                   <div class="l-footer__nav-sns">
                     <a href="https://www.instagram.com/broadappeal/" target="_blank" rel="noopener noreferrer" class="l-footer__nav-sns-item"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/icon/icon_insta.svg" alt="Instagram" width="21" height="21" loading="lazy"></a>

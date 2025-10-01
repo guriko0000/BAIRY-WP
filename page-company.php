@@ -175,11 +175,11 @@
       </hgroup>
       <div class="p-company__office-list">
         <div class="c-office">
-          <h3 class="c-office__title">東京本店</h3>
+          <h3 class="c-office__title">東京本社</h3>
           <div class="c-office__container">
             <div class="c-office__text-area">
               <figure class="c-office__img">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/company_office02.jpg" alt="東京本店ビル外観" width="369" height="333" loading="lazy">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/company_office02.jpg" alt="東京本社ビル外観" width="369" height="333" loading="lazy">
               </figure>
               <div class="c-office__body">
                 <p class="c-office__address">〒102-0072<br>東京都千代田区飯田橋3-1-5 S3千代田飯田橋 5階</p>

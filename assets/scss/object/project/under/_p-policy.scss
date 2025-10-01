@@ -1,0 +1,150 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-policy
+-----------------------------------------*/
+.p-policy {
+  
+  &__text {
+    margin-top: 18px;
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
+
+    & + & {
+      margin-top: 18px;
+    }
+  }
+
+  &__list {
+    margin-top: 16px;
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__dl {
+    margin-top: 16px;
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
+    dd {
+      margin-left: 18px;
+      @include mq(md) {
+        margin-left: 16px;
+      }
+    }
+
+    ul {
+      margin-left: -18px;
+      @include mq(md) {
+        margin-left: -16px;
+      }
+    }
+
+    li {
+      display: flex;
+    }
+  }
+
+  &__address {
+    margin-top: 16px;
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__address-title {
+    font-weight: $bold;
+  }
+
+  &__ordered-list {
+    counter-reset: number;
+    max-width: 835px;
+    padding-left: 1.2em;
+    margin-top: 40px;
+
+    li {
+      counter-increment: number;
+      text-indent: -0.7em;
+      line-height: 1.5;
+      @include mq(md) {
+        font-size: 1.4rem;
+      }
+
+      &::before {
+        content: counter(number)". ";
+        display: inline-block;
+        color: $main-color;
+        margin-right: 10px;
+        @include mq(md) {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    li + li {
+      margin-top: 12px;
+    }
+  }
+    
+  &__main-title {
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: $medium;
+    margin-top: 60px;
+    padding-bottom: 10px;
+    @include mq(md) {
+      font-size: 1.8rem;
+      margin-top: 50px;
+    }
+    
+    & + * {
+      margin-top: 40px;
+      @include mq(md) {
+        margin-top: 30px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(
+        to right,
+        $main-color 7%,
+        #ccc 7%
+      );
+    }
+  }
+
+  &__title {
+    border-left: 2px solid $main-color;
+    font-size: 2rem;
+    font-weight: $medium;
+    line-height: 1.5;
+    padding-left: 12px;
+    margin-top: 50px;
+    @include mq(md) {
+      font-size: 1.6rem;
+      margin-top: 40px;
+    }
+
+    & + * {
+      margin-top: 40px;
+      @include mq(md) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  a {
+    transition: opacity 0.25s;
+    &:hover, &:focus-visible {
+      opacity: 0.7;
+    }
+  }
+}

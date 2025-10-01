@@ -184,7 +184,7 @@
                     <h4 class="ja">管理部</h4>
                     <span class="en">management</span>
                   </hgroup>
-                  <p class="c-media__text">情通システム部は、防犯・監視カメラ工事やネットワーク構築、ビジネスフォンの導入、電気設備工事をはじめとした、さまざまな電気通信インフラの施工を担っています。</p>
+                  <p class="c-media__text">製品在庫・財務を正確に管理し、健全な経営基盤を支える役割を担っています。日々の会計処理から予算管理、決算業務まで幅広く対応しています。</p>
                 </div>
               </div>
               <span class="c-media__icon"></span>
@@ -203,7 +203,7 @@
                     <h4 class="ja">情通システム部</h4>
                     <span class="en">system</span>
                   </hgroup>
-                  <p class="c-media__text">製品在庫・財務を正確に管理し、健全な経営基盤を支える役割を担っています。日々の会計処理から予算管理、決算業務まで幅広く対応しています。</p>
+                  <p class="c-media__text">情通システム部は、防犯・監視カメラ工事やネットワーク構築、ビジネスフォンの導入、電気設備工事をはじめとした、さまざまな電気通信インフラの施工を担っています。</p>
                 </div>
               </div>
               <span class="c-media__icon"></span>
