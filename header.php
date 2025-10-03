@@ -95,7 +95,7 @@
         </ul>
       </nav>
       <div class="c-search l-header__search">
-        <script async src="https://cse.google.com/cse.js?cx=6757d19abf2304aeb">
+        <script async src="https://cse.google.com/cse.js?cx=27cf4d631ff484346">
         </script>
         <div class="gcse-search"></div>
       </div>
@@ -114,7 +114,7 @@
     <!-- ハンバーガーメニュー内ナビ -->
     <nav class="p-sub-nav" aria-hidden="true">
       <div class="l-inner p-sub-nav__inner">
-        <ul class="p-sub-nav__list">
+        <ul class="p-sub-nav__list js-header-nav">
           <li class="p-sub-nav__item">
             <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="<?php echo esc_url(home_url('/')); ?>">ホーム</a></p>
           </li>

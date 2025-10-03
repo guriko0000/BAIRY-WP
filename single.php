@@ -3,7 +3,7 @@
   <div class="l-inner">
     <div class="p-under-mv__title">
       <p class="ja">最新情報</p>
-      <span class="en">Article</span>
+      <span class="en">News & Updates</span>
     </div>
     <?php get_template_part('parts/breadcrumb'); ?>
   </div>

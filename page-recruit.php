@@ -226,16 +226,13 @@
             <p class="p-recruit__media-text">また、部門を越えて連携するカルチャーが根付いており、部署間の垣根を越えたコミュニケーションが活発なのも特徴です。</p>
             <p class="p-recruit__media-text">「挑戦する人を応援する」という企業文化の中で、新たな価値をともに生み出していける仲間を歓迎しています。</p>
           </div>
-          <div class="p-recruit__media-video-area">
+          
+          <!-- <div class="p-recruit__media-video-area">
             <div class="p-recruit__media-video">
-              <!-- <picture>
-                  <source media="(min-width: 768px)" srcset="/assets/img/under/attractiveness_img.png" width="367" height="275">
-                  <source media="(max-width: 767px)" srcset="/assets/img/under/attractiveness_img-sp.png" width="300" height="208">
-                  <img src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/under/attractiveness_img.png" alt="" width="367" height="275" loading="lazy">
-                </picture> -->
               <video src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/movie/mv_video.mp4" poster="<?php echo esc_url( get_template_directory_uri()); ?>/assets/img/under/attractiveness_img.png" controls></video>
             </div>
-          </div>
+          </div> -->
+
         </div>
       </div>
     </div>

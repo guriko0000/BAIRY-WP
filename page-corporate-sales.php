@@ -114,7 +114,7 @@
         </li>
       </ul>
       <div class="p-sales__btn">
-        <a href="<?php echo esc_url(home_url()); ?>/contact/form02/" class="c-btn c-btn--larg"> 製品の導入に関する<br class="u-onliy-sp">お問い合わせ<span class="c-btn__icon"></span></a>
+        <a href="<?php echo esc_url(home_url()); ?>/contact/form02/" class="c-btn c-btn--larg"> 製品の購入に関する<br class="u-onliy-sp">お問い合わせ<span class="c-btn__icon"></span></a>
       </div>
     </div>
   </section>

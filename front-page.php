@@ -2,7 +2,7 @@
   <section id="mv" class="p-mv">
     <div class="p-mv__inner">
       <div class="p-mv__video-wrap">
-        <video class="p-mv__video" rel="preload" as="video" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/movie/mv_video.mp4" autoplay loop muted></video>
+        <video class="p-mv__video" rel="preload" as="video" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/movie/mv_video.mp4" autoplay loop muted playsinline webkit-playsinline></video>
         <div class="p-mv__text-area">
           <p class="p-mv__title">
             <span class="text-wrapper"><span class="text">想像を超える</span></span><br>
@@ -264,7 +264,7 @@
                 <div class="p-top-company__item-img">
                   <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/company_img04.jpg" alt="" width="261" height="164" loading="lazy">
                 </div>
-                <p class="p-top-company__item-text">事業所<span class="icon"></span></p>
+                <p class="p-top-company__item-text">事業所案内<span class="icon"></span></p>
               </a>
             </li>
           </ul>

@@ -470,3 +470,14 @@
 .c-form .smf-form--simple-table .smf-item.tel {
   padding-bottom: 0;
 }
+
+
+// リキャプチャ非表示
+.grecaptcha-badge { visibility: hidden; }
+body.page-id-96 .grecaptcha-badge,
+body.page-id-101 .grecaptcha-badge,
+body.page-id-281 .grecaptcha-badge,
+body.page-id-283 .grecaptcha-badge,
+body.page-id-285 .grecaptcha-badge,
+body.page-id-84 .grecaptcha-badge
+{ visibility: visible; }

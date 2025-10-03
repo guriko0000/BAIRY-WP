@@ -4,7 +4,7 @@
     <div class="l-inner">
       <hgroup class="p-under-mv__title">
         <h1 class="ja">最新情報</h1>
-        <span class="en">Article</span>
+        <span class="en">News & Updates</span>
       </hgroup>
         <?php get_template_part('parts/breadcrumb'); ?>
     </div>

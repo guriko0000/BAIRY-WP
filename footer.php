@@ -22,7 +22,7 @@
             <a href="<?php echo esc_url(home_url('/contact')); ?>" class="c-btn">お問い合わせ<span class="c-btn__icon"></span></a>
           </div>
           <div class="c-search l-footer__search">
-            <script async src="https://cse.google.com/cse.js?cx=6757d19abf2304aeb">
+            <script async src="https://cse.google.com/cse.js?cx=27cf4d631ff484346">
             </script>
             <div class="gcse-search"></div>
           </div>
@@ -49,7 +49,7 @@
                   </ul>
                 </div>
                 <div class="l-footer__nav-item">
-                  <p class="l-footer__nav-item-main"><a href="<?php echo esc_url(home_url('/company/')); ?>">企業情報<span class="icon"></span></a></p>
+                  <p class="l-footer__nav-item-main"><a href="<?php echo esc_url(home_url('/company/')); ?>">会社情報<span class="icon"></span></a></p>
                   <ul class="l-footer__nav-sub">
                     <li class="l-footer__nav-sub-item">
                       <a href="<?php echo esc_url(home_url('/company/#greeting')); ?>">代表挨拶</a>
@@ -61,7 +61,7 @@
                       <a href="<?php echo esc_url(home_url('/company/#history')); ?>">沿革</a>
                     </li>
                     <li class="l-footer__nav-sub-item">
-                      <a href="<?php echo esc_url(home_url('/company/#office')); ?>">事業所</a>
+                      <a href="<?php echo esc_url(home_url('/company/#office')); ?>">事業所案内</a>
                     </li>
                   </ul>
                 </div>
