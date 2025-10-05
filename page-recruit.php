@@ -221,7 +221,7 @@
         </hgroup>
         <div class="p-recruit__attract-media">
           <div class="p-recruit__media-text-area">
-            <p class="p-recruit__media-text">株式会社ブロードアピールは、柔軟な発想力とスピード感を武器に、常に時代のニーズに応えるサービスを提供してきました。</p>
+            <p class="p-recruit__media-text">株式会社BAIRYは、柔軟な発想力とスピード感を武器に、常に時代のニーズに応えるサービスを提供してきました。</p>
             <p class="p-recruit__media-text">社員一人ひとりの意見を大切にするフラットな組織風土のもと、若手からベテランまでが自分らしく活躍できる環境が整っています。</p>
             <p class="p-recruit__media-text">また、部門を越えて連携するカルチャーが根付いており、部署間の垣根を越えたコミュニケーションが活発なのも特徴です。</p>
             <p class="p-recruit__media-text">「挑戦する人を応援する」という企業文化の中で、新たな価値をともに生み出していける仲間を歓迎しています。</p>
@@ -301,7 +301,7 @@
       <div class="p-recruit__benefits-intro">
         <h3 class="p-recruit__benefits-title">社員の働きやすさを重視</h3>
         <div class="p-recruit__benefits-body">
-          <p class="p-recruit__benefits-text">株式会社ブロードアピールでは、社員一人ひとりが安心して長く働ける環境づくりに力を入れています。</p>
+          <p class="p-recruit__benefits-text">株式会社BAIRYでは、社員一人ひとりが安心して長く働ける環境づくりに力を入れています。</p>
           <p class="p-recruit__benefits-text">働く時間も、プライベートも大切にできるよう、制度の充実と柔軟な働き方をサポートしています。</p>
         </div>
       </div>

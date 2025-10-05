@@ -21,7 +21,7 @@
 
     $args = array(
       'post_type'      => 'jobs',
-      'posts_per_page' => 2,
+      'posts_per_page' => 7,
       'paged'          => $paged,
       'tax_query'      => array(
         array(

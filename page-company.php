@@ -57,7 +57,7 @@
           <dl class="c-row-table">
             <div class="c-row-table__item">
               <dt class="c-row-table__head">会社名</dt>
-              <dd class="c-row-table__data">株式会社ブロードアピール</dd>
+              <dd class="c-row-table__data">株式会社BAIRY</dd>
             </div>
             <div class="c-row-table__item">
               <dt class="c-row-table__head">代表取締役</dt>
