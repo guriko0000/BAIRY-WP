@@ -87,7 +87,7 @@
             <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/recruit/')); ?>">採用情報</a>
           </li>
           <li class="p-header-nav__item">
-            <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/news/')); ?>">お知らせ</a>
+            <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/news/')); ?>">最新情報</a>
           </li>
           <li class="p-header-nav__item">
             <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/contact/')); ?>">お問い合わせ</a>
@@ -139,7 +139,7 @@
             <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="<?php echo esc_url(home_url('/recruit/')); ?>">採用情報</a></p>
           </li>
           <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="<?php echo esc_url(home_url('/news/')); ?>">お知らせ</a></p>
+            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="<?php echo esc_url(home_url('/news/')); ?>">最新情報</a></p>
           </li>
         </ul>
         <div class="p-sub-nav__btn-wrap">

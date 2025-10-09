@@ -74,8 +74,8 @@
             <div class="c-row-table__item">
               <dt class="c-row-table__head">住所</dt>
               <dd class="c-row-table__data">
-                <p class="c-row-table__data-text">〒102-0072<br>東京都千代田区飯田橋3-1-5 S3千代田飯田橋 5階（東京本社）</p>
-                <p class="c-row-table__data-text">〒815-0033<br>福岡市南区大橋1丁目9-16 Lente <br class="u-onliy-sp">FUKUOKA 5階（福岡本社）</p>
+                <p class="c-row-table__data-text">〒102-0072<br>東京都千代田区飯田橋3-1-5 S3千代田飯田橋 5F（東京本社）</p>
+                <p class="c-row-table__data-text">〒815-0033<br>福岡市南区大橋1-9-16 Lente <br class="u-onliy-sp">FUKUOKA 5F（福岡本社）</p>
               </dd>
             </div>
             <div class="c-row-table__item">
@@ -182,7 +182,7 @@
                 <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/company_office02.jpg" alt="東京本社ビル外観" width="369" height="333" loading="lazy">
               </figure>
               <div class="c-office__body">
-                <p class="c-office__address">〒102-0072<br>東京都千代田区飯田橋3-1-5 S3千代田飯田橋 5階</p>
+                <p class="c-office__address">〒102-0072<br>東京都千代田区飯田橋3-1-5 S3千代田飯田橋 5F</p>
                 <div class="c-office__tel">
                   <p class="c-office__tel-item">TEL：<a href="tel:03-6380-8835">03-6380-8835</a></p>
                   <p class="c-office__tel-item">FAX：03-6380-8836</p>
@@ -204,7 +204,7 @@
                 <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/company_office01.jpg" alt="福岡本社ビル外観" width="369" height="333" loading="lazy">
               </figure>
               <div class="c-office__body">
-                <p class="c-office__address">〒815-0033<br>福岡市南区大橋1丁目9-16 Lente FUKUOKA 5階</p>
+                <p class="c-office__address">〒815-0033<br>福岡市南区大橋1-9-16 Lente FUKUOKA 5F</p>
                 <div class="c-office__tel">
                   <p class="c-office__tel-item">TEL：<a href="tel:092-982-5940">092-982-5940</a>（代表番号）</p>
                   <p class="c-office__tel-item">TEL：<a href="tel:092-980-5757">092-980-5757</a>（プロダクト事業部）</p>
@@ -220,6 +220,45 @@
           </div>
         </div>
 
+        <!-- <div class="c-office c-office--noimage">
+          <h3 class="c-office__title">仙台支店</h3>
+          <div class="c-office__container">
+            <div class="c-office__text-area">
+              <div class="c-office__body">
+                <p class="c-office__address">〒980-0803<br>仙台市青葉区国分町1-7-16 ウッドライズ仙台 7F</p>
+                <div class="c-office__tel">
+                  <p class="c-office__tel-item">TEL：<a href="tel:022-397-9633">022-397-9633</a></p>
+                  <p class="c-office__tel-item">FAX：022-397-9670</p>
+                </div>
+              </div>
+            </div>
+            <div class="c-office__map-area">
+              <div class="c-office__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.7614996349585!2d140.86667507634797!3d38.26183718395388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a29fe3ba42c6d%3A0x28812b6e35be3e90!2z44Km44OD44OJ44Op44Kk44K65LuZ5Y-w!5e0!3m2!1sja!2sjp!4v1759975077136!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="c-office c-office--noimage">
+          <h3 class="c-office__title">神戸支店</h3>
+          <div class="c-office__container">
+            <div class="c-office__text-area">
+              <div class="c-office__body">
+                <p class="c-office__address">〒650-0001<br>神戸市中央区加納町4-8-15<br>キーウェストビルディング3F</p>
+                <div class="c-office__tel">
+                  <p class="c-office__tel-item">TEL：<a href="tel:078-945-8422">078-945-8422</a></p>
+                  <p class="c-office__tel-item">FAX：078-945-8423</p>
+                </div>
+              </div>
+            </div>
+            <div class="c-office__map-area">
+              <div class="c-office__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.3426669505634!2d135.1927546!3d34.696536099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008ee422815d2d%3A0xf45c011e595119c6!2z44CSNjUwLTAwMDEg5YW15bqr55yM56We5oi45biC5Lit5aSu5Yy65Yqg57SN55S677yU5LiB55uu77yY4oiS77yR77yVIOOCreODvOOCpuOCp-OCueODiOODk-ODq-ODh-OCo-ODs-OCsCAoQW11KQ!5e0!3m2!1sja!2sjp!4v1755659173074!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="c-office c-office--noimage">
           <h3 class="c-office__title">広島支店</h3>
           <div class="c-office__container">
@@ -258,44 +297,7 @@
             </div>
           </div>
         </div>
-        <div class="c-office c-office--noimage">
-          <h3 class="c-office__title">神戸支店</h3>
-          <div class="c-office__container">
-            <div class="c-office__text-area">
-              <div class="c-office__body">
-                <p class="c-office__address">〒650-0001<br>神戸市中央区加納町4-8-15<br>キーウェストビルディング3F</p>
-                <div class="c-office__tel">
-                  <p class="c-office__tel-item">TEL：<a href="tel:078-945-8422">078-945-8422</a></p>
-                  <p class="c-office__tel-item">FAX：078-945-8423</p>
-                </div>
-              </div>
-            </div>
-            <div class="c-office__map-area">
-              <div class="c-office__map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.3426669505634!2d135.1927546!3d34.696536099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008ee422815d2d%3A0xf45c011e595119c6!2z44CSNjUwLTAwMDEg5YW15bqr55yM56We5oi45biC5Lit5aSu5Yy65Yqg57SN55S677yU5LiB55uu77yY4oiS77yR77yVIOOCreODvOOCpuOCp-OCueODiOODk-ODq-ODh-OCo-ODs-OCsCAoQW11KQ!5e0!3m2!1sja!2sjp!4v1755659173074!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="c-office c-office--noimage">
-          <h3 class="c-office__title">仙台支店</h3>
-          <div class="c-office__container">
-            <div class="c-office__text-area">
-              <div class="c-office__body">
-                <p class="c-office__address">〒650-0001<br>神戸市中央区加納町4-8-15<br>キーウェストビルディング3F</p>
-                <div class="c-office__tel">
-                  <p class="c-office__tel-item">TEL：<a href="tel:078-945-8422">078-945-8422</a></p>
-                  <p class="c-office__tel-item">FAX：078-945-8423</p>
-                </div>
-              </div>
-            </div>
-            <div class="c-office__map-area">
-              <div class="c-office__map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.3426669505634!2d135.1927546!3d34.696536099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008ee422815d2d%3A0xf45c011e595119c6!2z44CSNjUwLTAwMDEg5YW15bqr55yM56We5oi45biC5Lit5aSu5Yy65Yqg57SN55S677yU5LiB55uu77yY4oiS77yR77yVIOOCreODvOOCpuOCp-OCueODiOODk-ODq-ODh-OCo-ODs-OCsCAoQW11KQ!5e0!3m2!1sja!2sjp!4v1755659173074!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-            </div>
-          </div>
-        </div> -->
+
 
       </div>
     </div>

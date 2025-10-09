@@ -10,11 +10,11 @@
           <address class="l-footer__address-wrap">
             <div class="l-footer__address">
               <p class="l-footer__address-title">東京本社</p>
-              <p class="l-footer__address-item">〒102-0072<br>東京都千代田区飯田橋3-1-5 <br class="u-onliy-sp">S3千代田飯田橋 5階</p>
+              <p class="l-footer__address-item">〒102-0072<br>東京都千代田区飯田橋3-1-5 <br class="u-onliy-sp">S3千代田飯田橋 5F</p>
             </div>
             <div class="l-footer__address">
             <p class="l-footer__address-title">福岡本社</p>
-            <p class="l-footer__address-item">〒815-0033<br>福岡県福岡市南区大橋1丁目9-16 <br class="u-onliy-sp">Lente FUKUOKA 5階</p>
+            <p class="l-footer__address-item">〒815-0033<br>福岡県福岡市南区大橋1-9-16 <br class="u-onliy-sp">Lente FUKUOKA 5F</p>
           </div>
 
           </address>
