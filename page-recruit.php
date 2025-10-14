@@ -125,7 +125,7 @@
 
                         <?php
                         // まとめて処理したいタクソノミーを配列で指定
-                        $taxonomies = array('jobs-type', 'jobs-area', 'jobs-feature');
+                        $taxonomies = array('jobs-type', 'jobs-salary', 'jobs-area');
 
                         foreach ($taxonomies as $taxonomy) {
                           $terms = get_the_terms($post->ID, $taxonomy);
@@ -183,7 +183,7 @@
 
                         <?php
                         // まとめて処理したいタクソノミーを配列で指定
-                        $taxonomies = array('jobs-type', 'jobs-area', 'jobs-feature');
+                        $taxonomies = array('jobs-type', 'jobs-salary', 'jobs-area');
 
                         foreach ($taxonomies as $taxonomy) {
                           $terms = get_the_terms($post->ID, $taxonomy);

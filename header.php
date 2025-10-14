@@ -69,14 +69,14 @@
           <li class="p-header-nav__item">
             <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/')); ?>">ホーム</a>
           </li>
-          <li class="p-header-nav__item">
+          <!-- <li class="p-header-nav__item">
             <?php
             $href = is_front_page()
               ? '#business'
               : home_url('/#business');
             ?>
             <a class="p-header-nav__link" href="<?php echo esc_url($href); ?>">事業案内</a>
-          </li>
+          </li> -->
           <li class="p-header-nav__item">
             <a class="p-header-nav__link" href="<?php echo esc_url(home_url('/corporate-sales/')); ?>">事業部紹介</a>
           </li>
@@ -118,7 +118,7 @@
           <li class="p-sub-nav__item">
             <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="<?php echo esc_url(home_url('/')); ?>">ホーム</a></p>
           </li>
-          <li class="p-sub-nav__item">
+          <!-- <li class="p-sub-nav__item">
             <?php
             $href = is_front_page()
               ? '#business'
@@ -127,7 +127,7 @@
             <p class="p-sub-nav__title">
               <a class="p-sub-nav__link" href="<?php echo esc_url($href); ?>">事業案内</a>
             </p>
-          </li>
+          </li> -->
 
           <li class="p-sub-nav__item">
             <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="<?php echo esc_url(home_url('/corporate-sales/')); ?>">事業部紹介</a></p>
