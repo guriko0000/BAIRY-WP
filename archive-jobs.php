@@ -25,34 +25,29 @@
                         <p class="c-recruit__text"><?php echo get_field('recruit_extract'); ?></p>
                       <?php } ?>
 
-                      <?php
-                      $tax_list = ['jobs-type', 'jobs-salary', 'jobs-area'];
+<?php
+$tax_list = ['jobs-type', 'jobs-salary', 'jobs-area'];
+$items = [];
 
-                      $items = [];
+foreach ($tax_list as $tx) {
+  $terms = get_the_terms(get_the_ID(), $tx);
 
-                      foreach ($tax_list as $tx) {
-                        $terms = get_the_terms(get_the_ID(), $tx);
+  if (!is_wp_error($terms) && !empty($terms)) {
+    foreach ($terms as $t) {
+      $items[] = esc_html($t->name);
+    }
+  }
+}
 
-                        if (!is_wp_error($terms) && !empty($terms)) {
-                          $names = array_map(function ($t) {
-                            return $t->name;
-                          }, $terms);
+// 1つ以上中身がある場合のみ出力
+if (!empty($items)) : ?>
+  <div class="c-recruit__tag-wrap">
+    <?php foreach ($items as $text) : ?>
+      <span class="c-recruit__tag"><?php echo $text; ?></span>
+    <?php endforeach; ?>
+  </div>
+<?php endif; ?>
 
-                          $items[] = esc_html(implode('、', $names));
-                        } else {
-                          $items[] = null;
-                        }
-                      }
-
-                      // 1つ以上中身がある場合のみ出力
-                      if (array_filter($items)) : ?>
-                        <div class="c-recruit__tag-wrap">
-                          <?php foreach ($items as $text) :
-                            if ($text === null) continue; ?>
-                            <span class="c-recruit__tag"><?php echo $text; ?></span>
-                          <?php endforeach; ?>
-                        </div>
-                      <?php endif; ?>
                     </div>
                   </a>
                 <?php endwhile; ?>

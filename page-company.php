@@ -220,7 +220,7 @@
           </div>
         </div>
 
-        <!-- <div class="c-office c-office--noimage">
+        <div class="c-office c-office--noimage">
           <h3 class="c-office__title">仙台支店</h3>
           <div class="c-office__container">
             <div class="c-office__text-area">
@@ -238,7 +238,7 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
 
         <div class="c-office c-office--noimage">
           <h3 class="c-office__title">神戸支店</h3>

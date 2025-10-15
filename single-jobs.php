@@ -16,36 +16,31 @@
         <article class="p-recruit__single l-post__main">
           <div class="p-article-head">
             <h1 class="p-article-head__title"><?php the_title(); ?></h1>
-            <div class="p-article-head__bottom">
-              <?php
-              $tax_list = ['jobs-type', 'jobs-salary', 'jobs-area'];
+<div class="p-article-head__bottom">
+  <?php
+  $tax_list = ['jobs-type', 'jobs-salary', 'jobs-area'];
+  $items = [];
 
-              $items = [];
+  foreach ($tax_list as $tx) {
+    $terms = get_the_terms(get_the_ID(), $tx);
 
-              foreach ($tax_list as $tx) {
-                $terms = get_the_terms(get_the_ID(), $tx);
+    if (!is_wp_error($terms) && !empty($terms)) {
+      foreach ($terms as $t) {
+        $items[] = esc_html($t->name);
+      }
+    }
+  }
 
-                if (!is_wp_error($terms) && !empty($terms)) {
-                  $names = array_map(function ($t) {
-                    return $t->name;
-                  }, $terms);
+  // 1つ以上中身がある場合のみ出力
+  if (!empty($items)) : ?>
+    <div class="c-tags c-tags--larg">
+      <?php foreach ($items as $text) : ?>
+        <span class="c-tags__item"><?php echo $text; ?></span>
+      <?php endforeach; ?>
+    </div>
+  <?php endif; ?>
+</div>
 
-                  $items[] = esc_html(implode('、', $names));
-                } else {
-                  $items[] = null;
-                }
-              }
-              // 1つ以上中身がある場合のみ出力
-              if (array_filter($items)) : ?>
-                <div class="c-tags c-tags--larg">
-                  <?php foreach ($items as $text) :
-                    if ($text === null) continue; ?>
-                    <span class="c-tags__item"><?php echo $text; ?></span>
-                  <?php endforeach; ?>
-                </div>
-              <?php endif; ?>
-
-            </div>
           </div>
           <div class="p-post-recruit">
             <?php if (have_posts()) : ?>

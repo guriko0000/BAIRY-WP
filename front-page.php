@@ -296,7 +296,7 @@
                 <?php
                 $args = array(
                   'post_type' => 'voices', //カスタム投稿タイプを指定
-                  'posts_per_page' => 3, //表示する記事数
+                  'posts_per_page' => 6, //表示する記事数
                   'paged' => $paged,
                   'no_found_rows' => true,
                 );
