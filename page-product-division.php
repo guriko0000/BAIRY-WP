@@ -40,7 +40,7 @@
           <h3 class="p-product__box-title">ネットワーク機器ブランドBAIRY</h3>
           <p class="p-product__box-text">プロダクト事業部では、自社セキュリティブランド「BAIRY（ベイリー）」の企画・開発・製造を手がけています。ブランド名の由来は、古語で「城壁」を意味する“bairy”。<br>お客様の大切な情報資産や経営環境を堅牢に守る“城壁”のような存在を目指し、製品一つひとつにその想いを込めるべく名づけられました。</p>
           <div class="p-product__box-btn">
-            <a href="https://bairy.jp/" target="_blank" rel="noopener noreferrer" class="c-btn c-btn--larg">BAIRY製品サイト<span class="c-btn__icon"></span></a>
+            <a href="https://bairy.jp/" target="_blank" rel="noopener" class="c-btn c-btn--larg">BAIRY製品サイト<span class="c-btn__icon"></span></a>
           </div>
         </div>
       </section>
@@ -75,59 +75,71 @@
         <span class="c-secondary-title__en">Products</span>
       </hgroup>
       <ul class="l-grid l-grid--col3">
-        <li class="c-product">
-          <div class="c-product__img">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img07.png" alt="" width="368" height="250" loading="lazy">
-          </div>
-          <div class="c-product__body">
-            <p class="c-product__name c-product__name--blue">セキュリティカメラ</p>
-            <p class="c-product__text">AI映像解析や高解像度録画に対応した最新のセキュリティカメラを取り扱っています。人物・車両検知ができる他、夜間や逆光下でも鮮明な映像を記録し、安全管理を強化します。</p>
-          </div>
+        <li class="">
+          <a href="https://bairy.jp/camera/" class="c-product" target="_blank" rel="noopener">
+            <div class="c-product__img">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img02-1.png" alt="" width="368" height="250" loading="lazy">
+            </div>
+            <div class="c-product__body">
+              <p class="c-product__name c-product__name--blue">セキュリティカメラ</p>
+              <p class="c-product__text">AI映像解析や高解像度録画に対応した最新のセキュリティカメラを取り扱っています。人物・車両検知ができる他、夜間や逆光下でも鮮明な映像を記録し、安全管理を強化します。</p>
+            </div>
+          </a>
         </li>
-        <li class="c-product">
-          <div class="c-product__img">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img08.png" alt="" width="368" height="250" loading="lazy">
-          </div>
-          <div class="c-product__body">
-            <p class="c-product__name c-product__name--blue">アクセスポイント・HUB</p>
-            <p class="c-product__text">Wi-Fi 6や高速有線通信に対応した最新のアクセスポイントとHUBにより、安定した大容量ネットワーク環境を構築。オフィスや施設の通信効率を向上させます。</p>
-          </div>
+        <li class="">
+          <a href="https://bairy.jp/ap/" class="c-product" target="_blank" rel="noopener">
+            <div class="c-product__img">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img02-2.png" alt="" width="368" height="250" loading="lazy">
+            </div>
+            <div class="c-product__body">
+              <p class="c-product__name c-product__name--blue">アクセスポイント・HUB</p>
+              <p class="c-product__text">Wi-Fi 6や高速有線通信に対応した最新のアクセスポイントとHUBにより、安定した大容量ネットワーク環境を構築。オフィスや施設の通信効率を向上させます。</p>
+            </div>
+          </a>
         </li>
-        <li class="c-product">
-          <div class="c-product__img">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img09.png" alt="" width="368" height="250" loading="lazy">
-          </div>
-          <div class="c-product__body">
-            <p class="c-product__name c-product__name--blue">UTM・エンドポイントセキュリティシステム</p>
-            <p class="c-product__text">多彩なデータベースによる脅威検知や自動対応機能を備えた次世代型UTMとエンドポイントセキュリティシステムは、社内外のネットワークリスクから重要データを守ります。</p>
-          </div>
+        <li class="">
+          <a href="https://bairy.jp/utm/" class="c-product" target="_blank" rel="noopener">
+            <div class="c-product__img">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img02-3.png" alt="" width="368" height="250" loading="lazy">
+            </div>
+            <div class="c-product__body">
+              <p class="c-product__name c-product__name--blue">UTM・エンドポイントセキュリティシステム</p>
+              <p class="c-product__text">多彩なデータベースによる脅威検知や自動対応機能を備えた次世代型UTMとエンドポイントセキュリティシステムは、社内外のネットワークリスクから重要データを守ります。</p>
+            </div>
+          </a>
         </li>
-        <li class="c-product">
-          <div class="c-product__img">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img10.png" alt="" width="368" height="250" loading="lazy">
-          </div>
-          <div class="c-product__body">
-            <p class="c-product__name c-product__name--blue">IPレコーダー</p>
-            <p class="c-product__text">BAIRYのセキュリティカメラに対応する高圧縮・高画質録画を実現する最新IPレコーダーは、長時間の映像保存と遠隔モニタリングに対応し、監視業務の効率化をサポートします。</p>
-          </div>
+        <li class="">
+          <a href="https://bairy.jp/camera/category/ip-recorder/" class="c-product" target="_blank" rel="noopener">
+            <div class="c-product__img">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img02-4.png" alt="" width="368" height="250" loading="lazy">
+            </div>
+            <div class="c-product__body">
+              <p class="c-product__name c-product__name--blue">IPレコーダー</p>
+              <p class="c-product__text">BAIRYのセキュリティカメラに対応する高圧縮・高画質録画を実現する最新IPレコーダーは、長時間の映像保存と遠隔モニタリングに対応し、監視業務の効率化をサポートします。</p>
+            </div>
+          </a>
         </li>
-        <li class="c-product">
-          <div class="c-product__img">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img11.png" alt="" width="368" height="250" loading="lazy">
-          </div>
-          <div class="c-product__body">
-            <p class="c-product__name c-product__name--blue">UPS</p>
-            <p class="c-product__text">電力異常時にもシステムを安定稼働させる高性能UPS。最新の電源管理技術により、重要機器への電力供給を途切れさせません。</p>
-          </div>
+        <li class="">
+          <a href="https://bairy.jp/ups/" class="c-product" target="_blank" rel="noopener">
+            <div class="c-product__img">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img02-5.png" alt="" width="368" height="250" loading="lazy">
+            </div>
+            <div class="c-product__body">
+              <p class="c-product__name c-product__name--blue">UPS</p>
+              <p class="c-product__text">電力異常時にもシステムを安定稼働させる高性能UPS。最新の電源管理技術により、重要機器への電力供給を途切れさせません。</p>
+            </div>
+          </a>
         </li>
-        <li class="c-product">
-          <div class="c-product__img">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img12.png" alt="" width="368" height="250" loading="lazy">
-          </div>
-          <div class="c-product__body">
-            <p class="c-product__name c-product__name--blue">ファイルサーバー(NAS)</p>
-            <p class="c-product__text">高速アクセスと高度なデータ保護機能を備えた最新NASを採用。リストア機能、AI技術を活用した画像管理機能などを備え、安全かつ効率的なファイル共有を実現します。</p>
-          </div>
+        <li class="">
+          <a href="https://bairy.jp/server/" class="c-product" target="_blank" rel="noopener">
+            <div class="c-product__img">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img02-6.png" alt="" width="368" height="250" loading="lazy">
+            </div>
+            <div class="c-product__body">
+              <p class="c-product__name c-product__name--blue">ファイルサーバー(NAS)</p>
+              <p class="c-product__text">高速アクセスと高度なデータ保護機能を備えた最新NASを採用。リストア機能、AI技術を活用した画像管理機能などを備え、安全かつ効率的なファイル共有を実現します。</p>
+            </div>
+          </a>
         </li>
       </ul>
     </div>

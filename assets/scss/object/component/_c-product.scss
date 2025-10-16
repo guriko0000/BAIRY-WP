@@ -9,6 +9,7 @@
     border: 2px solid #eee;
     border-radius: 15px;
     overflow: hidden;
+    transition: border-color 0.25s;
     @include mq(md) {
       border-radius: 12px;
     }
@@ -39,6 +40,42 @@
     @include mq(md) {
       font-size: 1.3rem;
       margin-top: 5px;
+    }
+  }
+}
+
+// link
+a.c-product {
+  display: inline-block;
+  transition: border-color 0.25s;
+
+  .c-product__name {
+    position: relative;
+    padding-left: 18px;
+    @include mq(md) {
+      padding-left: 14px;
+    }
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 8px;
+      height: 13px;
+      background: url(../img/icon/icon_angle-right2.svg) no-repeat center / contain;
+      @include mq(md) {
+      top: 6px;
+      left: 0;
+      width: 6px;
+      height: 10px;
+      }
+    }
+  }
+  &:hover, &:focus-visible {
+
+    .c-product__img {
+      border-color: $main-color;
     }
   }
 }

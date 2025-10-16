@@ -66,7 +66,7 @@
       <ul class="l-grid l-grid--col3">
         <li class="c-product">
           <div class="c-product__img">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img01.png" alt="" width="368" height="250" loading="lazy">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img01-1.png" alt="" width="368" height="250" loading="lazy">
           </div>
           <div class="c-product__body">
             <p class="c-product__name">複合機</p>
@@ -74,31 +74,7 @@
         </li>
         <li class="c-product">
           <div class="c-product__img">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img02.png" alt="" width="368" height="250" loading="lazy">
-          </div>
-          <div class="c-product__body">
-            <p class="c-product__name">ビジネスフォン</p>
-          </div>
-        </li>
-        <li class="c-product">
-          <div class="c-product__img">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img03.png" alt="" width="368" height="250" loading="lazy">
-          </div>
-          <div class="c-product__body">
-            <p class="c-product__name">ホームページの制作・運用</p>
-          </div>
-        </li>
-        <li class="c-product">
-          <div class="c-product__img">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img04.png" alt="" width="368" height="250" loading="lazy">
-          </div>
-          <div class="c-product__body">
-            <p class="c-product__name">ファイルサーバー</p>
-          </div>
-        </li>
-        <li class="c-product">
-          <div class="c-product__img">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img05.png" alt="" width="368" height="250" loading="lazy">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img01-2.png" alt="" width="368" height="250" loading="lazy">
           </div>
           <div class="c-product__body">
             <p class="c-product__name">防犯カメラ</p>
@@ -106,10 +82,58 @@
         </li>
         <li class="c-product">
           <div class="c-product__img">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img06.png" alt="" width="368" height="250" loading="lazy">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img01-3.png" alt="" width="368" height="250" loading="lazy">
           </div>
           <div class="c-product__body">
             <p class="c-product__name">UTM</p>
+          </div>
+        </li>
+        <li class="c-product">
+          <div class="c-product__img">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img01-4.png" alt="" width="368" height="250" loading="lazy">
+          </div>
+          <div class="c-product__body">
+            <p class="c-product__name">ビジネスフォン</p>
+          </div>
+        </li>
+        <li class="c-product">
+          <div class="c-product__img">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img01-5.png" alt="" width="368" height="250" loading="lazy">
+          </div>
+          <div class="c-product__body">
+            <p class="c-product__name">ファイルサーバー(NAS)</p>
+          </div>
+        </li>
+        <li class="c-product">
+          <div class="c-product__img">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img01-6.png" alt="" width="368" height="250" loading="lazy">
+          </div>
+          <div class="c-product__body">
+            <p class="c-product__name">UPS</p>
+          </div>
+        </li>
+        <li class="c-product">
+          <div class="c-product__img">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img01-7.png" alt="" width="368" height="250" loading="lazy">
+          </div>
+          <div class="c-product__body">
+            <p class="c-product__name">エンドポイントセキュリティシステム</p>
+          </div>
+        </li>
+        <li class="c-product">
+          <div class="c-product__img">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img01-8.png" alt="" width="368" height="250" loading="lazy">
+          </div>
+          <div class="c-product__body">
+            <p class="c-product__name">アクセスポイント・HUB</p>
+          </div>
+        </li>
+        <li class="c-product">
+          <div class="c-product__img">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img01-9.png" alt="" width="368" height="250" loading="lazy">
+          </div>
+          <div class="c-product__body">
+            <p class="c-product__name">ホームページの制作・運用</p>
           </div>
         </li>
       </ul>
