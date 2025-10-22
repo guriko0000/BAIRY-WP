@@ -77,7 +77,7 @@
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/under/product_img01-2.png" alt="" width="368" height="250" loading="lazy">
           </div>
           <div class="c-product__body">
-            <p class="c-product__name">防犯カメラ</p>
+            <p class="c-product__name">セキュリティカメラ</p>
           </div>
         </li>
         <li class="c-product">
