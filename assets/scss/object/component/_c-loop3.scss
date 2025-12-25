@@ -1,0 +1,91 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-loop3
+-----------------------------------------*/
+.c-loop3 {
+  position: relative;
+  overflow: hidden;
+  z-index: 4;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    width: 1821px;
+    margin: 0 6px;
+    // @include mq(xl) {
+    //   width: 250px;
+    //   margin: 0 16px;
+    // }
+    // @include mq(md) {
+    //   width: 138px;
+    //   margin: 0 8px;
+    // }
+    @include mq(md) {
+      width: 1000px;
+      margin: 0 4px;
+    }
+
+    img {
+      border-radius: 15px;
+      width: 100%;
+      @include mq(md) {
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+.c-loop3__list--01 {
+  animation: loop3-1 200s -100s linear infinite
+}
+
+.c-loop3__list--02 {
+  animation: loop3-2 200s linear infinite
+}
+
+@-webkit-keyframes loop3-1 {
+  0% {
+      transform: translateX(100%)
+  }
+
+  to {
+      transform: translateX(-100%)
+  }
+}
+
+@keyframes loop3-1 {
+  0% {
+      transform: translateX(100%)
+  }
+
+  to {
+      transform: translateX(-100%)
+  }
+}
+
+@-webkit-keyframes loop3-2 {
+  0% {
+      transform: translateX(0)
+  }
+
+  to {
+      transform: translateX(-200%)
+  }
+}
+
+@keyframes loop3-2 {
+  0% {
+      transform: translateX(0)
+  }
+
+  to {
+      transform: translateX(-200%)
+  }
+}
