@@ -99,6 +99,9 @@
         </script>
         <div class="gcse-search"></div>
       </div>
+      <div class="p-header-nav__btn">
+        <a href="https://bairy.jp/" class="" target="_blank" rel="noopener">製品サイトを見る</a>
+      </div>
     </div>
     <!-- ハンバーガーメニュー -->
     <button class="c-hamburger-btn js-header-btn" aria-label="メニューボタン" aria-expanded="false">

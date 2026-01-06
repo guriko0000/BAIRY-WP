@@ -20,7 +20,7 @@
 
   <section class="p-business__section">
     <div class="l-inner">
-      <div class="c-fullmedia">
+      <div class="c-fullmedia c-fullmedia--01">
         <div class="c-fullmedia__text-area">
           <h2 class="c-fullmedia__title">一歩先ゆくご提案を。</h2>
           <div class="c-fullmedia__body">
