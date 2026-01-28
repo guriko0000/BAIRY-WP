@@ -32,6 +32,8 @@ table.gsc-search-box {
 
 .gsib_a {
   padding: 0!important;
+  // background-image: url("data:image/svg+xml;utf8,<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M14.76 13.27L20.49 19L19 20.49L13.27 14.76C12.2 15.53 10.91 16 9.5 16C5.91 16 3 13.09 3 9.5C3 5.91 5.91 3 9.5 3C13.09 3 16 5.91 16 9.5C16 10.91 15.53 12.2 14.76 13.27ZM9.5 5C7.01 5 5 7.01 5 9.5C5 11.99 7.01 14 9.5 14C11.99 14 14 11.99 14 9.5C14 7.01 11.99 5 9.5 5Z' fill='%23246EB8'/></svg>") !important;
+  background-position: right 0px center!important;
 }
 
 .gsst_a {
@@ -40,7 +42,7 @@ table.gsc-search-box {
 
 .gsc-input-box {
   border: none!important;
-  border-radius: 100px 0 0 100px!important;
+  border-radius: 100px!important;
 }
 
 .gsc-input {
@@ -59,12 +61,18 @@ input.gsc-input::placeholder {
   font-weight: $medium!important;
 }
 
+form.gsc-search-box {
+  background-color: #fff!important;
+  border-radius: 100px!important;
+}
+
 // 検索ボタン
 .gsc-search-button {
   margin-left: 10px!important;
   background-color: #fff!important;
   border-radius: 0 100px 100px 0!important;
   transform: translateX(-1px);
+  // display: none!important;
 }
 .gsc-search-button-v2 {
   padding: 0 16px 0 10px!important;
@@ -83,6 +91,14 @@ input.gsc-input::placeholder {
   border-radius: 100px;
   border: 1px solid #C8C8C8;
 }
+
+
+.gsib_b {
+  width: 30px!important;
+  padding: 0 4px 0 0!important;
+}
+
+
 
 
 // footer

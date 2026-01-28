@@ -1,0 +1,29 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-form
+-----------------------------------------*/
+.p-form {
+  .scroll-contents{
+    height: 350px;
+    padding: 40px 20px;
+    border: 1px solid #CCC;
+    overflow: auto;
+    font-size: 1.4rem;
+    margin: 0px auto;
+    background: #ffffff;
+    margin-top: 30px;
+    @include mq(md) {
+      font-size: 1.2rem;
+    }
+  }
+
+  div[data-name="checkboxes-doui"] .smf-checkboxes-control__control  {
+    text-align : center;
+    margin-top: 5px;
+  }
+  div[data-name="checkboxes-doui"] .smf-error-messages {
+    text-align : center;
+    margin-top: 0;
+  }
+}
