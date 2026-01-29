@@ -52,10 +52,19 @@
     @include mq(md) {
       font-size: 1.4rem;
     }
+
+    &--mt-high {
+      margin-top: 40px;
+    }
   }
 
   &__address-title {
     font-weight: $bold;
+  }
+
+  &__address-fax {
+    display: inline-block;
+    margin-left: 40px;
   }
 
   &__ordered-list {
@@ -91,7 +100,7 @@
     position: relative;
     font-size: 2.4rem;
     font-weight: $medium;
-    margin-top: 60px;
+    margin-top: 80px;
     padding-bottom: 10px;
     @include mq(md) {
       font-size: 1.8rem;
@@ -133,7 +142,7 @@
     }
 
     & + * {
-      margin-top: 40px;
+      margin-top: 30px;
       @include mq(md) {
         margin-top: 20px;
       }
@@ -148,17 +157,95 @@
   }
 
   &__sub-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: $medium;
     line-height: 1.5;
     margin-top: 40px;
     @include mq(md) {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       margin-top: 30px;
     }
 
     & + * {
-      margin-top: 5px;
+      margin-top: 12px;
+    }
+  }
+
+  // &__sub-title {
+  //   font-size: 1.6rem;
+  //   font-weight: $medium;
+  //   line-height: 1.5;
+  //   margin-top: 40px;
+  //   @include mq(md) {
+  //     font-size: 1.4rem;
+  //     margin-top: 30px;
+  //   }
+
+  //   & + * {
+  //     margin-top: 5px;
+  //   }
+  // }
+
+  &__sign {
+    margin-top: 40px;
+    @include mq(md) {
+      margin-top: 30px;
+    }
+  }
+
+  &__sign-text {
+    text-align: right;
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__dot-list {
+    padding-left: 1.2em;
+
+    li {
+      line-height: 1.6;
+      text-indent: -0.9em;
+      @include mq(md) {
+        font-size: 1.4rem;
+        text-indent: -0.8em;
+      }
+      &:not(:first-child) {
+        margin-top: 14px;
+        @include mq(md) {
+          margin-top: 8px;
+        }
+      }
+
+      &::before {
+        content:  "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        background-color: $main-color;
+        border-radius: 50%;  
+        margin-right: 10px;
+        margin-bottom: 3px;
+        @include mq(md) {
+          width: 4px;
+          height: 4px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  &__tertiary-title {
+    font-weight: $medium;
+    line-height: 1.5;
+    margin-top: 40px;
+    @include mq(md) {
+      font-size: 1.5rem;
+      margin-top: 30px;
+    }
+
+    & + * {
+      margin-top: 10px;
     }
   }
 }
