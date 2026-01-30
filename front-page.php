@@ -79,7 +79,7 @@
   </section>
 
   <section id="business" class="p-top-business">
-    <div class="p-top-business__main js-fadeUp-inView2">
+    <!-- <div class="p-top-business__main js-fadeUp-inView2">
       <div class="l-inner">
         <div class="p-top-business__content">
           <div class="p-top-business__text-area">
@@ -89,9 +89,6 @@
             </hgroup>
             <div class="js-fadeUp">
               <p class="p-top-business__text">私たちBAIRYは、ネットワーク機器と最新テクノロジーを駆使し、中小企業の課題解決を支援する<br class="u-onliy-pc">プロフェッショナルです。技術と提案力で、ビジネスの成長と変革を力強くサポートします。</p>
-              <!-- <div class="p-top-business__btn">
-                  <a href="" class="c-btn">事業内容を詳しく見る<span class="c-btn__icon"></span></a>
-                </div> -->
             </div>
           </div>
           <div class="p-top-business__slider-wrap">
@@ -108,6 +105,51 @@
                     <div class="c-loop3__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img10.png" alt="" width="368" height="250" loading="lazy"></div>
                     <div class="c-loop3__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img10.png" alt="" width="368" height="250" loading="lazy"></div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+        <div class="p-top-business__main js-fadeUp-inView2">
+      <div class="l-inner">
+        <div class="p-top-business__content">
+          <div class="p-top-business__text-area">
+            <hgroup class="c-primary-title js-wipeAnimation">
+              <h2 class="c-primary-title__ja">事業内容</h2>
+              <span class="c-primary-title__en">Our Business</span>
+            </hgroup>
+            <div class="js-fadeUp">
+              <p class="p-top-business__text">私たちBAIRYは、ネットワーク機器と最新テクノロジーを駆使し、中小企業の課題解決を支援するプロフェッショナルです。技術と提案力で、ビジネスの成長と変革を力強くサポートします。</p>
+              <!-- <div class="p-top-business__btn">
+                  <a href="" class="c-btn">事業内容を詳しく見る<span class="c-btn__icon"></span></a>
+                </div> -->
+            </div>
+          </div>
+          <div class="p-top-business__slider">
+            <div class="c-loop js-fadeUp">
+              <div class="c-loop__inner">
+                <div class="c-loop__list c-loop__list--01">
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img01.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img02.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img03.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img04.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img05.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img06.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img07.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img08.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                </div>
+                <div class="c-loop__list c-loop__list--02">
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img01.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img02.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img03.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img04.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img05.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img06.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img07.jpg" alt="" width="309" height="504" loading="lazy"></div>
+                  <div class="c-loop__item"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/top/slider_img08.jpg" alt="" width="309" height="504" loading="lazy"></div>
                 </div>
               </div>
             </div>
